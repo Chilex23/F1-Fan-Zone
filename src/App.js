@@ -1,23 +1,22 @@
-import logo from './logo.svg';
 import './App.css';
+import { AiOutlineQuestionCircle } from "react-icons/ai";
+import Main from './components/main/main.component';
+import Gallery from './components/gallery/gallery.component';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <header className="mb-12 pl-3">
+        <h1 className="text-3xl font-bold">Summer Art Camp! 5 Days of Artists and Painting Monet, Van Gogh, Matise & More</h1>
+        <div className="text-gray-500 flex content-center">
+          <p className="mr-1">Multi Day Course</p>
+          <AiOutlineQuestionCircle className="self-center" />
+        </div>
       </header>
+      <div className="grid grid-cols-2">
+        <Main />
+        <Gallery />
+      </div>
     </div>
   );
 }
