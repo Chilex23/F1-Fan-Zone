@@ -5,7 +5,7 @@ import Gallery from './components/gallery/gallery.component';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App h-screen">
       <header className="mb-12 pl-3">
         <h1 className="text-3xl font-bold">Summer Art Camp! 5 Days of Artists and Painting Monet, Van Gogh, Matise & More</h1>
         <div className="text-gray-500 flex content-center">
@@ -13,7 +13,7 @@ function App() {
           <AiOutlineQuestionCircle className="self-center" />
         </div>
       </header>
-      <div className="grid grid-cols-2">
+      <div className="grid grid-cols-2 gap-x-2">
         <Main />
         <Gallery />
       </div>
