@@ -1,16 +1,10 @@
 import React from 'react';
 import avatar from "../../assets/woman.jpg";
-import { AiFillStar } from "react-icons/ai";
 import { IoIosArrowForward } from "react-icons/io";
 import TabIcon from '../TabIcon/tabicon.component';
+import Stars from '../stars/stars.component';
 
-const Main = () => {
-    const fiveStars = []
-    for (let i = 0; i < 5; i++) {
-        fiveStars.push(<AiFillStar className="text-yellow-400 text-xl self-center" />)
-    }
-
-    return (
+const Main = () =>  (
         <div className="px-3">
             <p className="mb-3">In this 5 day class we will explore artists Monet, Matisse, Van Gogh, among others and then recreate paintings using crayon and watercolor. Students will have fun learning about the artists & creating their own art inspired by their work</p>
 
@@ -20,18 +14,8 @@ const Main = () => {
             </figure>
 
             <>
-                <div className="flex">
-                    {
-                        fiveStars.map(el => el)
-                    }
-                    <span className="ml-3 text-gray-500">467 total reviews for this teacher</span>  
-                </div>
-                <div className="flex">
-                    {
-                        fiveStars.map(el => el)
-                    }
-                    <span className="ml-3 text-gray-500">5 total reviews for this class</span>  
-                </div>
+                <Stars>467 total reviews for this teacher</Stars>
+                <Stars>5 total reviews for this class</Stars>
                 <p className="text-lg font-semibold mt-2">Completed by 21 Learners</p>
             </>
 
@@ -45,7 +29,6 @@ const Main = () => {
                 </TabIcon>
             </div>
         </div>
-    )
-}
+)
 
 export default Main;
