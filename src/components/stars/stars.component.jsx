@@ -11,7 +11,7 @@ const Stars = ({ children }) => {
             {
                 fiveStars.map(el => el)
             }
-            <span className="ml-3 text-gray-500">{ children }</span>  
+            <span className="ml-3 text-gray-500 text-sm sm:text-base">{ children }</span>  
         </div>
     );
 }
