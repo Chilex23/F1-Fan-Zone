@@ -1,11 +1,12 @@
 import React from 'react';
 import NavBar from '../../components/Navbar/navbar.component';
-import StandingsMenu from '../../components/standingsMenu/standingsMenu';
+import NavProvider from '../../provider/navbar/navbar.provider';
 
 const HomePage = () => (
-    <>
-        <NavBar />
-        <StandingsMenu />
+    <>  
+        <NavProvider>
+            <NavBar />
+        </NavProvider>
     </>
 );
 
