@@ -6,11 +6,16 @@ import DriverMenuDropDwn from '../DriverMenuDropDwn/driverMenuDropdwn.component'
 import TeamsMenu from '../teams-menu/teams-menu.component';
 
 const NavBar = () => {
-    const { standHidden, driverHidden, toggleStandHidden, toggleDriverHidden } = useContext(NavBarContext);
-    console.log(standHidden, toggleStandHidden);
+    const { standHidden, 
+            driverHidden, 
+            teamHidden, 
+            toggleStandHidden, 
+            toggleDriverHidden, 
+            toggleTeamHidden, drivers } = useContext(NavBarContext);
+    
     return (
         <>
-            <div className="navbar bg-red-600 text-white">
+            <div className="navbar bg-red-600 text-white fixed top-0 z-10">
                 <div className="flex-1">
                     <Logo className="w-20" />
                 </div>
@@ -29,16 +34,11 @@ const NavBar = () => {
                             </button>
                         </li>
                         <li tabIndex="2">
-                            <button>
+                            <button onClick={() => toggleTeamHidden()}>
                                 Teams
                                 <svg className="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"/></svg>
                             </button>
-                            <ul className="p-2 bg-stone-700">
-                                <li><button>Submenu 1</button></li>
-                                <li><button>Submenu 2</button></li>
-                            </ul>
                         </li>
-                        <li><button>Item 3</button></li>
                     </ul>
                 </div>
             </div>
@@ -46,9 +46,12 @@ const NavBar = () => {
                 standHidden ? null : <StandingsMenuDropDown />
             }
             {
-                driverHidden ? null : <DriverMenuDropDwn />
+                driverHidden ? null : <DriverMenuDropDwn drivers={drivers}/>
             }
-            <TeamsMenu />
+            {
+                teamHidden ? null : <TeamsMenu />
+            }
+          
         </>
     )    
 };
