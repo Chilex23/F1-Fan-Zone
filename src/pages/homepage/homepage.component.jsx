@@ -7,26 +7,31 @@ import fetchNews from '../../utils/fetchNews';
 const HomePage = () => {
     const [isLoading, setLoading] = useState(true);
     const [results, setResults] = useState([]);
+    const [isError, setIsError ] = useState(false);
 
     useEffect(() => {
         const fetchData = async () => {
-            const data = await fetchNews();
-            setResults(data.articles);
-            setLoading(false);
+            try {
+                const data = await fetchNews();
+                setResults(data.articles);
+                setLoading(false);
+            } catch (error) {
+                setIsError(true);
+            }
+            
         };
 
         fetchData();
     }, [])
 
-    console.log(results);
-    console.log(isLoading);
     return (
         <>  
             <NavProvider>
                 <NavBar />
+                <h1 className="text-5xl uppercase font-extrabold top-20 relative text-center mb-4">Latest News</h1>
             </NavProvider>
-                { isLoading ?
-                  <div className='top-20 relative'>Loading</div>  : results &&
+                { isError && <div className='top-20 relative'>Something went wrong</div> }
+                { isLoading ? <div className='top-20 relative'>Loading</div>  : 
                     <News results={results} />
                 }
             

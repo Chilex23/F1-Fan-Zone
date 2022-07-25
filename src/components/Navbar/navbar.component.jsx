@@ -15,7 +15,7 @@ const NavBar = () => {
     
     return (
         <>
-            <div className="navbar bg-red-600 text-white fixed top-0 z-10">
+            <div className="navbar bg-red-600 text-white fixed top-0 z-10 shadow-lg">
                 <div className="flex-1">
                     <Logo className="w-20" />
                 </div>

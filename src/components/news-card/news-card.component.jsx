@@ -1,11 +1,8 @@
 import * as React from 'react';
 import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
-import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-import { Link } from "react-router-dom";
 
 const NewsCard = ({ news }) => {
   const { title, urlToImage, source, url} = news;
@@ -13,7 +10,7 @@ const NewsCard = ({ news }) => {
     <Card sx={{ maxWidth: 300 }} className="cursor-pointer">
       <CardMedia
         component="img"
-        height="140"
+        height="150"
         image={urlToImage}
         alt="news item"
         className="h-2/4"
@@ -26,10 +23,10 @@ const NewsCard = ({ news }) => {
           {title}
         </Typography>
       </CardContent>
-      <CardActions>
-        <p> Source: {source.name}</p>
-        <Link to={url}>Link to Article</Link>
-      </CardActions>
+      <div className="flex justify-between px-2 divide-x-2">
+        <p className='grow'>Source : {source.name} </p>
+        <a href={`${url}`} target="blank" className="hover:text-red-500">Article Link</a>
+      </div>
     </Card>
   );
 }
