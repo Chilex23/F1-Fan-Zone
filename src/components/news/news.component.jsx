@@ -4,7 +4,7 @@ import NewsCard from "../news-card/news-card.component";
 
 const News = ({ results }) => {
   return (
-    <div className="grid grid-cols-2 relative top-16 p-4 gap-x-4 place-items-start">
+    <div className="grid h-[35rem] grid-cols-2 relative top-16 p-4 gap-x-4 place-items-start grid-rows-[min-content]">
       <NewsHero news={results[0]}/>
       <div className="flex flex-wrap gap-4 h-[26%] overflow-y-scroll">
           {
