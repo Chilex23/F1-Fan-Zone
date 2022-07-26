@@ -1,12 +1,14 @@
-import React, { createContext, useState, useEffect } from 'react';
-import fetchDrivers from '../../utils/fetchdrivers';
+import React, { createContext, useState } from 'react';
+import Drivers from '../../data/drivers';
+import TEAMS from '../../data/teams';
 
 export const NavBarContext = createContext({
     isLoading: false,
     standHidden: true,
     driverHidden: true,
     teamHidden: true,
-    drivers: [],
+    drivers: Drivers,
+    TEAMS: TEAMS,
     toggleDriverHidden: () => {},
     toggleStandHidden: () => {},
     toggleTeamHidden: () => {}
@@ -17,15 +19,6 @@ const NavProvider = ({ children }) => {
     const [standHidden, setStandHidden] = useState(true);
     const [driverHidden, setDriverHidden] = useState(true);
     const [teamHidden, setTeamHidden] = useState(true);
-    const [isLoading, setLoading] = useState(false);
-
-    const [drivers, setDrivers] = useState([]);
-
-    useEffect(() => {
-        setLoading(true);
-        fetchDrivers().then(resp => { setDrivers(resp) });
-    }, [])
-
 
     const toggleStandHidden = () => {
         setStandHidden(!standHidden);
@@ -51,9 +44,10 @@ const NavProvider = ({ children }) => {
             toggleDriverHidden,
             teamHidden,
             toggleTeamHidden,
-            drivers
+            Drivers,
+            TEAMS
         }}>
-            {isLoading ? children : <div>Loading</div>}
+            {children}
         </NavBarContext.Provider>
     )
 }

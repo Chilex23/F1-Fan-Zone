@@ -2,8 +2,6 @@ import React from "react";
 import DriverLink from "../driverLink/driverLink.component";
 
 const DriverMenuDropDwn = ({ drivers }) => {
-    const driversArr = drivers.MRData.DriverTable.Drivers;
-    // console.log(driversArr);
     return (
         <div className="w-screen h-fit bg-stone-800 fixed py-10 border-b-2 border-red-600 top-16 z-10">
             <div className="flex text-white w-5/6 mx-auto justify-start gap-12 p-3 rounded-br-2xl border-b-2 border-r-2 border-gray-400">
@@ -17,7 +15,7 @@ const DriverMenuDropDwn = ({ drivers }) => {
 
             <div className="w-5/6 mx-auto grid grid-cols-4 grid-rows-5 mt-7 gap-7">
                 {
-                   driversArr.map((elem, i) => <DriverLink key={i + 1} familyName={elem.familyName} givenName={elem.givenName} />)
+                   drivers.map((elem, i) => <DriverLink key={i + 1} familyName={elem.familyName} givenName={elem.givenName} />)
                 }
             </div>
         </div>

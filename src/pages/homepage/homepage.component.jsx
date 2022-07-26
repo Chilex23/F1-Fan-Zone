@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import NavBar from '../../components/Navbar/navbar.component';
 import News from '../../components/news/news.component';
+import ScheduleWrapper from '../../components/schedule/schedule-wrapper.component';
 import NavProvider from '../../provider/navbar/navbar.provider';
 import fetchNews from '../../utils/fetchNews';
 
@@ -34,7 +35,7 @@ const HomePage = () => {
                 { isLoading ? <div className='top-20 relative'>Loading</div>  : 
                     <News results={results} />
                 }
-            
+            <ScheduleWrapper />
         </>
     )    
 };
