@@ -1,33 +1,19 @@
 import * as React from 'react';
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import Typography from '@mui/material/Typography';
 
 const NewsCard = ({ news }) => {
   const { title, urlToImage, source, url} = news;
   return (
-    <Card sx={{ maxWidth: 300 }} className="cursor-pointer">
-      <CardMedia
-        component="img"
-        height="150"
-        image={urlToImage}
-        alt="news item"
-        className="h-2/4"
-      />
-      <CardContent>
-        <Typography gutterBottom paragraph component="div" className="text-red-500 uppercase">
-          News
-        </Typography>
-        <Typography paragraph className="font-extrabold text-3xl">
-          {title}
-        </Typography>
-      </CardContent>
-      <div className="flex justify-between px-2 divide-x-2">
-        <p className='grow'>Source : {source.name} </p>
-        <a href={`${url}`} target="blank" className="hover:text-red-500">Article Link</a>
+    <div class="card card-compact w-[48%] bg-base-100 shadow-2xl">
+      <figure className="h-[10rem] overflow-clip"><img src={urlToImage} alt="headline" /></figure>
+      <div class="card-body border-r-2 border-b-2 hover:border-red-600 rounded-br-2xl">
+        <h2 class="card-title uppercase text-red-600">News</h2>
+        <p className="text-ellipsis text-lg">{title}</p>
+        <div class="card-actions justify-end items-center">
+          <p className="text-base">Source: {source.name}</p>
+          <button class="py-2 px-4 bg-red-600 text-white uppercase rounded-md font-bold"><a href={url} target="blank">Read</a></button>
+        </div>
       </div>
-    </Card>
+    </div>
   );
 }
 
