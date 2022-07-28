@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import NavBar from '../../components/Navbar/navbar.component';
 import News from '../../components/news/news.component';
 import ScheduleWrapper from '../../components/schedule/schedule-wrapper.component';
+import StandingsWrapper from '../../components/standings-wrapper/standings-wrapper';
 import NavProvider from '../../provider/navbar/navbar.provider';
 import fetchNews from '../../utils/fetchNews';
 
@@ -29,13 +30,14 @@ const HomePage = () => {
         <>  
             <NavProvider>
                 <NavBar />
-                <h1 className="text-5xl uppercase font-extrabold top-20 relative text-center mb-4">Latest News</h1>
+                <h1 className="text-5xl uppercase font-extrabold top-20 relative text-center mb-8 mt-3">Latest News</h1>
             </NavProvider>
                 { isError && <div className='top-20 relative'>Something went wrong</div> }
                 { isLoading ? <div className='top-20 relative'>Loading</div>  : 
                     <News results={results} />
                 }
             <ScheduleWrapper />
+            <StandingsWrapper />
         </>
     )    
 };

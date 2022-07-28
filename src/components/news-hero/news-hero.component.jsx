@@ -9,7 +9,7 @@ const NewsHero = ({ news }) => {
             <img src={urlToImage} alt="news"/>
             <div className="flex justify-between items-center mt-2">
                 <p>Source: {source.name}</p>
-                <button class="py-2 px-4 bg-red-600 text-white uppercase rounded-md font-bold"><a href={url} target="blank">Read</a></button>
+                <button className="py-2 px-4 bg-red-600 text-white uppercase rounded-md font-bold"><a href={url} target="blank">Read</a></button>
             </div>
         </div>
     )

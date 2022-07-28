@@ -6,6 +6,12 @@ import UK from "../assets/img/UK.jpg";
 import mexico from "../assets/img/mexico.gif";
 import monaco from "../assets/img/monaco.jpg";
 import finland from "../assets/img/finland.gif"; 
+import leclercShort from "../assets/img/leclerx.png";
+import leclercFull from "../assets/img/leclercFull.jpg";
+import maxShort from "../assets/img/verstappen.png";
+import maxFull from "../assets/img/versFull.jpg";
+import perezShort from "../assets/img/perez.png";
+import perezFull from "../assets/img/perezfull.jpg";
 
 const Drivers = [
     {
@@ -27,7 +33,9 @@ const Drivers = [
         "givenName": "Charles",
         "number": 44,
         "country": monaco,
-        "team": "Ferrari"
+        "team": "Ferrari",
+        "pic": leclercShort,
+        "fullPic": leclercFull
     },
     {
         "familyName": "Sainz",
@@ -139,14 +147,18 @@ const Drivers = [
         "givenName": "Max",
         "number": 44,
         "country": holland,
-        "team": "Red Bull"
+        "team": "Red Bull",
+        "pic": maxShort,
+        "fullPic": maxFull
     },
     {
         "familyName": "Perez",
         "givenName": "Sergio",
         "number": 44,
         "country": mexico,
-        "team": "Red Bull"
+        "team": "Red Bull",
+        "pic": perezShort,
+        "fullPic": perezFull
     }
 
 ];
