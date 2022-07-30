@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from 'react';
+
 import NavBar from '../../components/Navbar/navbar.component';
 import News from '../../components/news/news.component';
 import ScheduleWrapper from '../../components/schedule/schedule-wrapper.component';
 import StandingsWrapper from '../../components/standings-wrapper/standings-wrapper';
+import Footer from '../../components/footer/footer';
+
 import NavProvider from '../../provider/navbar/navbar.provider';
 import fetchNews from '../../utils/fetchNews';
 
@@ -38,6 +41,7 @@ const HomePage = () => {
                 }
             <ScheduleWrapper />
             <StandingsWrapper />
+            <Footer />
         </>
     )    
 };

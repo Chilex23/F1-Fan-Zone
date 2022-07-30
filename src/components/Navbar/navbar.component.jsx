@@ -4,6 +4,7 @@ import { NavBarContext } from '../../provider/navbar/navbar.provider';
 import StandingsMenuDropDown from '../standingsMenu/standingsMenu';
 import DriverMenuDropDwn from '../DriverMenuDropDwn/driverMenuDropdwn.component';
 import TeamsMenu from '../teams-menu/teams-menu.component';
+import { Link } from 'react-router-dom';
 
 const NavBar = () => {
     const { standHidden, 
@@ -11,7 +12,7 @@ const NavBar = () => {
             teamHidden, 
             toggleStandHidden, 
             toggleDriverHidden, 
-            toggleTeamHidden, Drivers} = useContext(NavBarContext);
+            toggleTeamHidden } = useContext(NavBarContext);
     
     return (
         <>
@@ -21,6 +22,12 @@ const NavBar = () => {
                 </div>
                 <div className="flex-none">
                     <ul className="menu menu-horizontal p-0">
+                        <li tabIndex="0">
+                            <Link to="/">
+                                Home
+                            </Link>
+                        </li>
+                        
                         <li tabIndex="0">
                             <button onClick={toggleStandHidden}>
                                 Standings
@@ -46,7 +53,7 @@ const NavBar = () => {
                 standHidden ? null : <StandingsMenuDropDown />
             }
             {
-                driverHidden ? null : <DriverMenuDropDwn drivers={Drivers}/>
+                driverHidden ? null : <DriverMenuDropDwn />
             }
             {
                 teamHidden ? null : <TeamsMenu />

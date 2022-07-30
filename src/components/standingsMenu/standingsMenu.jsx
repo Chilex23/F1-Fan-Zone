@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const StandingsMenuDropDown = () => (
     <div className="w-screen h-24 bg-stone-800 fixed pt-4 border-b-2 border-red-600 top-16 z-10">
@@ -7,13 +8,10 @@ const StandingsMenuDropDown = () => (
                 <p className="font-semibold text-xl">2022 Season <i className="before:content-['>'] mr-4 text-2xl text-red-500"></i></p>
             </div>
             <div className="border-b-2 hover:border-red-600 border-transparent">
-                <p className="font-semibold text-xl">Drivers Standing <i className="before:content-['>'] mr-4 text-2xl text-red-500"></i></p>
+                <Link to="/driver_standings" className="font-semibold text-xl">Drivers Standing <i className="before:content-['>'] mr-4 text-2xl text-red-500"></i></Link>
             </div>
             <div className="border-b-2 hover:border-red-600 border-transparent">
-                <p className="font-semibold text-xl">Constructors Standing <i className="before:content-['>'] mr-4 text-2xl text-red-500"></i></p>
-            </div>
-            <div className="border-b-2 hover:border-red-600 border-transparent">
-                <p className="font-semibold text-xl">Archives <i className="before:content-['>'] mr-4 text-2xl text-red-500"></i></p>
+                <Link to="/constructor_standings" className="font-semibold text-xl">Constructors Standing <i className="before:content-['>'] mr-4 text-2xl text-red-500"></i></Link>
             </div>
         </div>
     </div>

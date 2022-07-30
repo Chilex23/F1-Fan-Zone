@@ -6,6 +6,7 @@ const fetchNews = async () => {
         return data;
     } catch (error) {
         console.log("fetch news failed with an error of ", error);
+        throw new Error(error);
     }
     
 }
