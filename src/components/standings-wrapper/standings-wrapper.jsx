@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import fetchDriversStand from "../../utils/fetchDriversStandings";
-import Drivers from "../../data/drivers";
+import findDriver from "../../utils/find-driver";
+import StandingsItem from "../standings-item/standings-item";
 
 const StandingsWrapper = () => {
     const [loading, setLoading] = useState(true);
@@ -11,16 +12,16 @@ const StandingsWrapper = () => {
         const fetchData = async () => {
             try {
                 const data = await fetchDriversStand();
+                setLoading(false);
                 if (data.name === "AxiosError") {
-                    setLoading(false);
                     setError(true);
                 } else {
                     setResults(data);
-                    setLoading(false);
                     // console.log(data)
                 }
             } catch (error) {
-                // console.log(error);
+                console.log(error);
+                setLoading(true);
                 setError(true);
             }
             
@@ -29,23 +30,20 @@ const StandingsWrapper = () => {
     }, []);
 
     // console.log(results);
-
-    const findDriver = (name) => {
-        return Drivers.find((elem) => elem.givenName.toLowerCase() === name.toLowerCase());
-    }
-
+    // console.log(loading)
+    
     if (loading) {
        return <div className='top-20 relative'>Loading</div>;
     } else if (error) {
         return <div className='top-20 relative'>Something went wrong</div>;
     } else {
         return (
-        <div className="relative top-20 m-4">
+        <div className="relative top-20 m-4 bg-gray-200 pb-28">
             <div className="bg-stone-900 h-56 flex justify-center items-center">
                 <h1 className="text-3xl font-extrabold text-white text-center">2022 Driver Standings</h1>
             </div>
 
-            <div className="h-48 flex gap-x-4 justify-center relative top-[-1rem] pb-4 text-white">
+            <div className="mb-3 h-48 flex gap-x-4 justify-center relative top-[-1rem] pb-4 text-white">
 
                 <div className="h-fit w-[18rem] order-2 rounded-lg relative top-[-2rem] bg-stone-800">
                     <div className="bg-white rounded-t-lg">
@@ -85,6 +83,11 @@ const StandingsWrapper = () => {
                 </div>
 
             </div>
+
+            {
+                results.slice(0, 10).map((elem, i) => <StandingsItem key={i + 1} driver={elem} />)
+            }
+            {/* <StandingsItem driver={results[0]} /> */}
         </div>
         )
     }

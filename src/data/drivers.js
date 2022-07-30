@@ -130,7 +130,7 @@ const Drivers = [
     },
     {
         "familyName": "Bottas",
-        "givenName": "Valetri",
+        "givenName": "Valtteri",
         "number": 44,
         "country": finland,
         "team": "Alfa Romeo"
