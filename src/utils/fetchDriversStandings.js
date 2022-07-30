@@ -16,6 +16,7 @@ const fetchDriversStand = async () => {
       return data;
     } catch(error) {
       console.log("Fetch drivers standings failed with an error of ", error);
+      return error;
     }
     
 }

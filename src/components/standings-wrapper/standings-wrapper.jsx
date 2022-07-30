@@ -5,23 +5,30 @@ import Drivers from "../../data/drivers";
 const StandingsWrapper = () => {
     const [loading, setLoading] = useState(true);
     const [results, setResults] = useState([]);
+    const [error, setError] = useState(false)
 
     useEffect(() => {
         const fetchData = async () => {
             try {
                 const data = await fetchDriversStand();
-                setResults(data);
-                setLoading(false);
-                console.log(data)
+                if (data.name === "AxiosError") {
+                    setLoading(false);
+                    setError(true);
+                } else {
+                    setResults(data);
+                    setLoading(false);
+                    // console.log(data)
+                }
             } catch (error) {
-                console.log(error);
+                // console.log(error);
+                setError(true);
             }
             
         };
         fetchData();
     }, []);
 
-    console.log(results);
+    // console.log(results);
 
     const findDriver = (name) => {
         return Drivers.find((elem) => elem.givenName.toLowerCase() === name.toLowerCase());
@@ -29,6 +36,8 @@ const StandingsWrapper = () => {
 
     if (loading) {
        return <div className='top-20 relative'>Loading</div>;
+    } else if (error) {
+        return <div className='top-20 relative'>Something went wrong</div>;
     } else {
         return (
         <div className="relative top-20 m-4">
