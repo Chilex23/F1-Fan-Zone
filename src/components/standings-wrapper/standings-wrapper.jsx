@@ -50,7 +50,7 @@ const StandingsWrapper = () => {
             {
                 results.slice(0, 10).map((elem, i) => <StandingsItem key={i + 1} driver={elem} />)
             }
-            <Link to="/driver-standings" className="relative top-36 left-[40%] mt-4 text-center bg-red-600 py-2 px-2 rounded-lg text-white">
+            <Link to="/driver-standings" className="relative top-36 w-fit left-[30%] sm:left-[33%] md:left-[40%] mt-4 bg-red-600 py-2 px-2 rounded-lg text-white">
                 View Full Standings
             </Link>
         </div>
