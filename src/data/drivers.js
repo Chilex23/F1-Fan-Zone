@@ -143,8 +143,8 @@ const Drivers = [
         "team": "Alfa Romeo"
     },
     {
-        "familyName": "Zhou",
-        "givenName": "Ganyu",
+        "familyName": "Guanyu",
+        "givenName": "Zhou",
         "number": 44,
         "country": UK,
         "team": "Alfa Romeo"

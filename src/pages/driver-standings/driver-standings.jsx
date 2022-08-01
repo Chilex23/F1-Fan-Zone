@@ -6,29 +6,27 @@ import TableRow from "../../components/table-row/table-row";
 import Footer from "../../components/footer/footer";
 
 const DriverStandings = () => {
-    const [loading, setLoading] = useState(true);
-    const [results, setResults] = useState(null);
-    const [error, setError] = useState(false)
+    const [loading, setLoading] = useState(false);
+    const [results, setResults] = useState([]);
+    const [error, setError] = useState(false);
 
     useEffect(() => {
         const fetchData = async () => {
+            setLoading(true);
             try {
                 const data = await fetchDriversStand();
                 setResults(data);
-                setLoading(false);
-                console.log(data)
-              
+                console.log(data);
             } catch (error) {
                 console.log(error);
-                setLoading(false);
                 setError(true);
             }
-            
+            setLoading(false);
         };
         fetchData();
     }, []);
 
-    console.log(results)
+    // console.log(results)
 
     return (
         <>
@@ -42,7 +40,7 @@ const DriverStandings = () => {
                 <table className="table table-zebra w-full">
                     <thead>
                     <tr>
-                        <th className="relative z-[-1]">Pos</th>
+                        <th>Pos</th>
                         <th>Driver</th>
                         <th>Nationality</th>
                         <th>Car</th>
@@ -52,7 +50,7 @@ const DriverStandings = () => {
 
                     <tbody>
                         {
-                            loading ? <tr><td>Loading</td></tr> : 
+                            loading ? <tr><td>Loading...</td></tr> : 
                             error ? <tr><td>Something went wrong</td></tr> :
                             results.length > 0 ?
                             results.map((elem, i) => <TableRow key={i + 1} driver={elem} />) :
