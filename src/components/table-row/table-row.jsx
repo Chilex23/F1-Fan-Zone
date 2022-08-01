@@ -1,15 +1,14 @@
 import React from "react";
-import findDriver from "../../utils/find-driver";
 
 const TableRow = ({ driver }) => {
-    const { POS, Name, Car, PTS, Country } = driver; 
+    const { position, points, Driver: { familyName, givenName }, Constructors: { name }, nationality } = driver; 
     return (
         <tr>
-            <td>{ POS }</td>
-            <td>{ findDriver(Name).givenName } { findDriver(Name).familyName }</td>
-            <td>{ Country }</td>
-            <td>{ Car }</td>
-            <td>{ PTS }</td>
+            <td>{ position }</td>
+            <td>{ givenName } { familyName }</td>
+            <td>{ nationality }</td>
+            <td>{ name }</td>
+            <td>{ points }</td>
         </tr>
     );
 };
