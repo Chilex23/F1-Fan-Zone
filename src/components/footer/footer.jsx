@@ -2,7 +2,7 @@ import React from "react";
 import { ReactComponent as Logo } from "../../assets/img/f1_logo.svg";
 
 const Footer = () => (
-    <div className="bg-stone-900 h-fit relative top-16 text-white m-4 p-6">
+    <div className="bg-stone-900 h-fit relative top-16 text-white my-4 p-6">
          <div className="w-fit mx-auto">
             <h3 className="font-bold text-lg">Standings</h3>
             <ul>

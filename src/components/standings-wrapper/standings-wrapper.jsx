@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 const StandingsWrapper = () => {
     const [loading, setLoading] = useState(true);
-    const [results, setResults] = useState([]);
+    const [results, setResults] = useState(null);
     const [error, setError] = useState(false)
 
     useEffect(() => {

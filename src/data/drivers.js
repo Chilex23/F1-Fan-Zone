@@ -73,6 +73,13 @@ const Drivers = [
         "team": "Aston Martin"
     },
     {
+        "familyName": "Hulkenberg",
+        "givenName": "Nico",
+        "number": 44,
+        "country": UK,
+        "team": "Aston Martin"
+    },
+    {
         "familyName": "Magnussen",
         "givenName": "Kevin",
         "number": 44,
