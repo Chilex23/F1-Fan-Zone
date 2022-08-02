@@ -3,16 +3,15 @@ import React from "react";
 const TableRow = ({ driver }) => {
     const { position, 
             points,
-            Driver: { familyName, givenName },
-            Constructors: { name }, 
-            nationality 
+            Driver: { familyName, givenName, nationality },
+            Constructors, 
         } = driver; 
     return (
         <tr>
             <td>{ position }</td>
             <td>{ givenName } { familyName }</td>
             <td>{ nationality }</td>
-            <td>{ name }</td>
+            <td>{ Constructors[0].name }</td>
             <td>{ points }</td>
         </tr>
     );
