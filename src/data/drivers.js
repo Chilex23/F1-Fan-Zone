@@ -158,7 +158,7 @@ const Drivers = [
         "givenName": "Mick",
         "number": 44,
         "country": germany,
-        "team": "Haas",
+        "team": "Haas F1 Team",
         "numberPic": mickNum,
         "pic": mickShort
     },
@@ -167,7 +167,7 @@ const Drivers = [
         "givenName": "Esteban",
         "number": 44,
         "country": france,
-        "team": "Alpine",
+        "team": "Alpine F1 Team",
         "numberPic": oconNum,
         "pic": oconShort
     },
@@ -176,7 +176,7 @@ const Drivers = [
         "givenName": "Fernando",
         "number": 44,
         "country": spain,
-        "team": "Alpine",
+        "team": "Alpine F1 Team",
         "numberPic": alonsoNum,
         "pic": alonsoShort
     },
@@ -185,7 +185,7 @@ const Drivers = [
         "givenName": "Pierre",
         "number": 44,
         "country": france,
-        "team": "Alpha Tauri",
+        "team": "AlphaTauri",
         "numberPic": gaslyNum,
         "pic": gaslyShort
     },
@@ -194,7 +194,7 @@ const Drivers = [
         "givenName": "Yuki",
         "number": 44,
         "country": japan,
-        "team": "Alpha Tauri",
+        "team": "AlphaTauri",
         "numberPic": yukiNum,
         "pic": yukiShort
     },

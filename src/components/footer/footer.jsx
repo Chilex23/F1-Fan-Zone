@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { ReactComponent as Logo } from "../../assets/img/f1_logo.svg";
 
 const Footer = () => (
@@ -6,8 +7,8 @@ const Footer = () => (
          <div className="w-fit mx-auto">
             <h3 className="font-bold text-lg">Standings</h3>
             <ul>
-                <li>Driver Standings</li>
-                <li>Constructor Standings</li>
+                <Link to="/driver_standings"><li>Driver Standings</li></Link>
+                <Link to="/constructor_standings"><li>Constructor Standings</li></Link>
             </ul>
          </div>
 

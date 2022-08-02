@@ -22,11 +22,11 @@ import mercedesLogo from "../assets/img/CarLogo/mercLogo.png"
 
 const TEAMS = [
     {
-        "teamName": "Scuderia Ferrari",
+        "teamName": "Ferrari",
         "Base": "Italy",
         "carImg": ferrariCar,
         "logo": ferrariLogo,
-        "color": "bg-red-700"
+        "color": "bg-red-600"
     },
 
     {
@@ -34,7 +34,7 @@ const TEAMS = [
         "Base": "Austria",
         "carImg": redBullCar,
         "logo": redBullLogo,
-        "color": "bg-blue-900"
+        "color": "bg-blue-700"
     },
 
     {
@@ -54,11 +54,11 @@ const TEAMS = [
     },
 
     {
-        "teamName": "Alpha Tauri",
+        "teamName": "AlphaTauri",
         "Base": "Austria",
         "carImg": alphaTauriCar,
         "logo": alphaTauriLogo,
-        "color": "bg-gray-300"
+        "color": "bg-sky-300"
     },
 
     {
@@ -70,7 +70,7 @@ const TEAMS = [
     },
 
     {
-        "teamName": "Alpine",
+        "teamName": "Alpine F1 Team",
         "Base": "France",
         "carImg": alpineCar,
         "logo": alpineLogo,
@@ -78,11 +78,11 @@ const TEAMS = [
     },
 
     {
-        "teamName": "Haas",
+        "teamName": "Haas F1 Team",
         "Base": "United States",
         "carImg": haasCar,
         "logo": haasLogo,
-        "color": "bg-white"
+        "color": "bg-stone-400"
     },
 
     {
@@ -98,7 +98,7 @@ const TEAMS = [
         "Base": "United Kingdom",
         "carImg": mercedesCar,
         "logo": mercedesLogo,
-        "color": "bg-gray-500"
+        "color": "bg-emerald-400"
     },
 ];
 

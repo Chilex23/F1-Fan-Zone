@@ -16,7 +16,7 @@ const ConstructorStandings = () => {
             try {
                 const data = await fetchConstructorStand();
                 setResults(data);
-                console.log(data);
+                // console.log(data);
             } catch (error) {
                 console.log(error);
                 //setLoading(false);
@@ -27,7 +27,7 @@ const ConstructorStandings = () => {
         fetchData();
     }, []);
 
-    console.log(results);
+    // console.log(results);
 
     return (
         <>

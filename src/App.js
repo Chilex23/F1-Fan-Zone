@@ -7,6 +7,7 @@ import ConstructorStandings from './pages/constructor-standings/constructor-stan
 import DriversList from './pages/drivers-list/drivers-list';
 import DriverCard from './pages/driver-card/driver-card';
 import ConstructorCard from './pages/constructor-card/constructor-card';
+import ConstructorsList from './pages/constructors-list/construtors-list';
 
 function App() {
  
@@ -18,6 +19,7 @@ function App() {
         <Route path="/constructor_standings" element={<ConstructorStandings />} />
         <Route path="/drivers_list" element={<DriversList />} />
         <Route path="/drivers_list/:driverId" element={<DriverCard />} />
+        <Route path="/constructors_list" element={<ConstructorsList />} />
         <Route path="/constructors_list/:constructorId" element={<ConstructorCard />} />
       </Routes>
     </Router>
