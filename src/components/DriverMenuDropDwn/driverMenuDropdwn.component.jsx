@@ -22,7 +22,7 @@ const DriverMenuDropDwn = () => {
 
             <div className="w-5/6 mx-auto grid grid-cols-4 grid-rows-5 mt-7 gap-7">
                 {
-                   Drivers.map((elem, i) => <DriverLink key={i + 1} familyName={elem.familyName} givenName={elem.givenName} toggle={toggleDriverHidden}/>)
+                   Drivers.map((elem, i) => <DriverLink key={i + 1} driverId={elem.driverId} familyName={elem.familyName} givenName={elem.givenName} toggle={toggleDriverHidden}/>)
                 }
             </div>
         </div>

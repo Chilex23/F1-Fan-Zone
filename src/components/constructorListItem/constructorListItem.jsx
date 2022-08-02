@@ -24,7 +24,7 @@ const ConstructorListItem = ({ constructor }) => {
                     <span className={`w-4 h-full ${FindTeam(name).color} mr-4`}>&nbsp;</span>
                     {name}
                 </span>
-                <img src={FindTeam(name).logo} alt="logo" className="w-12" />
+                <img src={FindTeam(name).logo2} alt="logo" className="w-12" />
             </div>
 
             <div className="flex justify-between border-b border-r rounded-br-xl border-gray-400 mb-4 pb-1">

@@ -5,11 +5,11 @@ import { Link } from "react-router-dom";
 const DriverListItem = ({ driver }) => {
     const { position,
         points,
-        Driver: { familyName, givenName },
+        Driver: { familyName, givenName, driverId },
         Constructors
     } = driver;
     return (
-        <Link to={`/drivers_list/${givenName}`} className="cursor-pointer border-t-2 border-r-2 border-stone-900 rounded-tr-xl pr-3 hover:border-red-600">
+        <Link to={`/drivers_list/${driverId}`} className="cursor-pointer border-t-2 border-r-2 border-stone-900 rounded-tr-xl pr-3 hover:border-red-600">
             <div className="flex justify-between items-center border-b-[1px] border-gray-400 mb-2 py-2">
                 <p className="font-black text-3xl">{position}</p>
 
