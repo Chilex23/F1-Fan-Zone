@@ -1,5 +1,6 @@
 import React from "react";
 import findDriver from "../../utils/find-driver";
+import { Link } from "react-router-dom";
 
 const DriverListItem = ({ driver }) => {
     const { position,
@@ -8,7 +9,7 @@ const DriverListItem = ({ driver }) => {
         Constructors
     } = driver;
     return (
-        <div className="border-t-2 border-r-2 border-stone-900 rounded-tr-xl pr-3">
+        <Link to={`/drivers_list/${givenName}`} className="cursor-pointer border-t-2 border-r-2 border-stone-900 rounded-tr-xl pr-3 hover:border-red-600">
             <div className="flex justify-between items-center border-b-[1px] border-gray-400 mb-2 py-2">
                 <p className="font-black text-3xl">{position}</p>
 
@@ -28,10 +29,10 @@ const DriverListItem = ({ driver }) => {
             </div>
             <p>{Constructors[0].name}</p>
             <div className="h-fit relative flex">
-                <img src={findDriver(givenName).pic} className="w-full h-[12rem]" alt="driver" />
+                <img src={findDriver(givenName).pic} className="object-contain w-full h-[12rem]" alt="driver" />
                 <img className="h-12" src={findDriver(givenName).numberPic} alt="Number" />
             </div>
-        </div>
+        </Link>
     );
 }
 export default DriverListItem;
