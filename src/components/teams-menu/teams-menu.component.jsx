@@ -5,7 +5,7 @@ import { NavBarContext } from "../../provider/navbar/navbar.provider";
 const TeamsMenu = () => {
     const { TEAMS, toggleTeamHidden } = useContext(NavBarContext);
     return (
-        <div className="w-screen h-screen overflow-y-scroll bg-stone-800 fixed py-10 border-b-2 border-red-600 top-7 z-[8]">
+        <div className="w-screen h-screen overflow-y-scroll bg-stone-800 fixed py-10 border-b-2 border-red-600 top-7 z-[18]">
             <div className="flex text-white w-5/6 mx-auto justify-start gap-12 p-3 rounded-br-2xl border-b-2 border-r-2 border-gray-400">
                 <div className="border-b-2 hover:border-red-600 border-transparent">
                     <p className="font-semibold text-xl">All Teams <i className="before:content-['>'] mr-4 text-2xl text-red-500"></i></p>
