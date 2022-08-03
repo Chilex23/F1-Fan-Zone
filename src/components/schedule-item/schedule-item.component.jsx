@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const ScheduleItem = ({ details }) => {
-    const { country, day, month, name, imgUrl } = details;
+    const { country, day, month, name, imgUrl, circuitId } = details;
     const [animate, setAnimate] = useState(false);
     const toggleAnimate = () => setAnimate(!animate);
 
@@ -30,13 +31,9 @@ const ScheduleItem = ({ details }) => {
                 </motion.div>
 
                 <motion.div animate={{display: animate ? "block" : "none", opacity: animate ? 1 : 0}} transition={timeTaken} className="text-center mt-8">
-                    <p>Practice 1: 14:00</p>
-                    <p>Practice 2: 10:00</p>
-                    <p>Race Time: 16: 00</p>
-
-                    <button className="bg-red-600 mt-4 py-2 px-4 rounded-md">
-                        Race Results
-                    </button>
+                    <Link to={`/race_results/${circuitId}`} className="bg-red-600 reltive top-20 py-2 px-4 rounded-md">
+                        View Race Results
+                    </Link>
                 </motion.div>
 
                 <motion.div>

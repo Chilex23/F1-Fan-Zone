@@ -34,9 +34,10 @@ const DriverCard = () => {
                 <NavBar />
             </NavProvider>
             {
-                loading ? "Loading..." :
-                error ? "Error..." : 
-                driver.length === 0 ? "No results..." : <div className="w-[90%] mx-auto mt-[6rem]">
+                loading ? <p className="mt-[6rem] h-screen">"Loading..."</p> :
+                error ? <p className="mt-[6rem] h-screen">"Error..."</p> : 
+                driver.length === 0 ? <p className="mt-[6rem] h-screen">"No results..."</p> :
+                <div className="w-[90%] mx-auto mt-[6rem]">
                     <div className="flex gap-x-10 flex-col md:flex-row">
                         <img src={findDriver(driver.givenName).fullPic} alt="driver" className="object-fill h-[30rem] basis-[40%] rounded-lg" />
 

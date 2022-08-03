@@ -8,6 +8,7 @@ import DriversList from './pages/drivers-list/drivers-list';
 import DriverCard from './pages/driver-card/driver-card';
 import ConstructorCard from './pages/constructor-card/constructor-card';
 import ConstructorsList from './pages/constructors-list/construtors-list';
+import RaceResults from './pages/race-results/race-results';
 
 function App() {
  
@@ -21,6 +22,7 @@ function App() {
         <Route path="/drivers_list/:driverId" element={<DriverCard />} />
         <Route path="/constructors_list" element={<ConstructorsList />} />
         <Route path="/constructors_list/:constructorId" element={<ConstructorCard />} />
+        <Route path="/race_results/:circuitId" element={<RaceResults />} />
       </Routes>
     </Router>
   );

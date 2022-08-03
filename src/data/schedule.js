@@ -21,6 +21,7 @@ import usa from "../assets/img/Country/usa.jpg";
 
 const SCHEDULE = [
     {
+        "circuitId": "bahrain",
         "country": "Bahrain",
         "day": 20,
         "month": "Mar",
@@ -30,6 +31,7 @@ const SCHEDULE = [
     },
 
     {
+        "circuitId": "jeddah",
         "country": "Saudi Arabia",
         "day": 27,
         "month": "Mar",
@@ -39,6 +41,7 @@ const SCHEDULE = [
     },
 
     {
+        "circuitId": "albert_park",
         "country": "Australia",
         "day": 10,
         "month": "Apr",
@@ -48,6 +51,7 @@ const SCHEDULE = [
     },
 
     {
+        "circuitId": "imola",
         "country": "Italy",
         "day": 24,
         "month": "Apr",
@@ -57,6 +61,7 @@ const SCHEDULE = [
     },
 
     {
+        "circuitId": "miami",
         "country": "United States",
         "day": 8,
         "month": "May",
@@ -66,6 +71,7 @@ const SCHEDULE = [
     },
 
     {
+        "circuitId": "catalunya",
         "country": "Spain",
         "day": 22,
         "month": "May",
@@ -75,6 +81,7 @@ const SCHEDULE = [
     },
 
     {
+        "circuitId": "monaco",
         "country": "Monaco",
         "day": 29,
         "month": "May",
@@ -84,6 +91,7 @@ const SCHEDULE = [
     },
 
     {
+        "circuitId": "baku",
         "country": "Azerbaijan",
         "day": 12,
         "month": "Jun",
@@ -93,6 +101,7 @@ const SCHEDULE = [
     },
 
     {
+        "circuitId": "villeneuve",
         "country": "Canada",
         "day": 12,
         "month": "Jun",
@@ -102,6 +111,7 @@ const SCHEDULE = [
     },
 
     {
+        "circuitId": "silverstone",
         "country": "Great Britain",
         "day": 3,
         "month": "Jul",
@@ -111,6 +121,7 @@ const SCHEDULE = [
     },
 
     {
+        "circuitId": "red_bull_ring",
         "country": "Austria",
         "day": 10,
         "month": "Jul",
@@ -120,6 +131,7 @@ const SCHEDULE = [
     },
 
     {
+        "circuitId": "ricard",
         "country": "France",
         "day": 24,
         "month": "Jul",
@@ -129,6 +141,7 @@ const SCHEDULE = [
     },
 
     {
+        "circuitId": "hungaroring",
         "country": "Hungary",
         "day": 31,
         "month": "Jul",
@@ -138,6 +151,7 @@ const SCHEDULE = [
     },
 
     {
+        "circuitId": "spa",
         "country": "Belgium",
         "day": 28,
         "month": "Aug",
@@ -147,6 +161,7 @@ const SCHEDULE = [
     },
 
     {
+        "circuitId": "zandvoort",
         "country": "Netherlands",
         "day": 4,
         "month": "Aug",
@@ -156,6 +171,7 @@ const SCHEDULE = [
     },
 
     {
+        "circuitId": "monza",
         "country": "Italy",
         "day": 11,
         "month": "Sep",
@@ -165,6 +181,7 @@ const SCHEDULE = [
     },
 
     {
+        "circuitId": "marina_bay",
         "country": "Singapore",
         "day": 24,
         "month": "Sep",
@@ -174,6 +191,7 @@ const SCHEDULE = [
     },
   
     {
+        "circuitId": "suzuka",
         "country": "Japan",
         "day": 9,
         "month": "Oct",
@@ -184,6 +202,7 @@ const SCHEDULE = [
 
 
     {
+        "circuitId": "americas",
         "country": "United States",
         "day": 23,
         "month": "Oct",
@@ -193,6 +212,7 @@ const SCHEDULE = [
     },
 
     {
+        "circuitId": "rodriguez",
         "country": "Mexico",
         "day": 30,
         "month": "Oct",
@@ -202,6 +222,7 @@ const SCHEDULE = [
     },
 
     {
+        "circuitId": "interlagos",
         "country": "Brazil",
         "day": 13,
         "month": "Nov",
@@ -211,6 +232,7 @@ const SCHEDULE = [
     },
 
     {
+        "circuitId": "yas_marina",
         "country": "Abu Dhabi",
         "day": 30,
         "month": "Nov",

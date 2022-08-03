@@ -39,9 +39,9 @@ const ConstructorCard = () => {
                 </h1>
             </NavProvider>
             {
-                loading ? "Loading..." :
-                error ? "Error..." : 
-                constructor.length === 0 ? "No results..." :
+                loading ? <p className="mt-[6rem] h-screen">"Loading..."</p> :
+                error ? <p className="mt-[6rem] h-screen">"Error..."</p> : 
+                constructor.length === 0 ? <p className="mt-[6rem] h-screen">"No results..."</p> :
                 <div className="w-[90%] mx-auto mt-[6rem]">
                     <div className="flex gap-x-6 flex-col md:flex-row">
                         <div className="w-[100%]">
