@@ -4,7 +4,11 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      gridTemplateColumns: {
+        "1/2": "1fr min-content",
+      }
+    },
   },
   plugins: [
     require('daisyui'),

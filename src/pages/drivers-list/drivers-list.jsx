@@ -38,7 +38,7 @@ const DriversList = () => {
                 <p className="bg-gray-200 text-black px-2 py-4 rounded-l-md">Click on a driver's card to view the driver's details</p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 grid-rows-6 mx-6 gap-x-4 gap-y-10 mt-4">
+            <div className="overflow-clip grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 grid-rows-6 mx-6 gap-x-4 gap-y-10 mt-4">
                 {
                     loading ? <p>Loading...</p> :
                     error ? <p>Error...</p> :

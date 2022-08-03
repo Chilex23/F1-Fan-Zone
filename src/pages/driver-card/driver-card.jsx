@@ -42,11 +42,31 @@ const DriverCard = () => {
 
                         <div className="flex flex-col grow">
                             <img src={findDriver(driver.givenName).helmetPic} alt="Helmet"className="h-[10rem] w-[10rem] object-contain" />
-                            <div className="text-left grid grid-cols-2">
-                                <span className="font-black text-2xl">Team</span> <span className="text-lg">Red Bull</span>
-                                <span className="font-black text-2xl">Nationality</span> <span className="text-lg">{driver.nationality}</span>
-                                <span className="font-black text-2xl">Date of Birth</span> <span className="text-lg">{driver.dateOfBirth}</span>
-                                <span className="font-black text-2xl">Permanent Number</span> <span className="text-lg  text-red-600">{driver.permanentNumber}</span>
+                            <div className="text-left grid grid-cols-1/2">
+                                <span className="font-black text-2xl">
+                                    Team
+                                </span> 
+                                <span className="text-lg">
+                                    {findDriver(driver.givenName).team}
+                                </span>
+                                <span className="font-black text-2xl">
+                                    Nationality
+                                </span> 
+                                <span className="text-lg">
+                                    {driver.nationality}
+                                </span>
+                                <span className="font-black text-2xl">
+                                    Date of Birth
+                                </span> 
+                                <span className="text-lg">
+                                    {driver.dateOfBirth}
+                                </span>
+                                <span className="font-black text-2xl">
+                                    Permanent Number
+                                </span> 
+                                <span className="text-lg text-red-600">
+                                    {driver.permanentNumber}
+                                </span>
                             </div>
                         </div>
                     </div>
@@ -61,7 +81,7 @@ const DriverCard = () => {
                         <h1 className="mt-2 py-4 font-black text-5xl">{driver.givenName} {driver.familyName}</h1>
 
                         <h3 className="py-4 font-bold text-3xl">Biography</h3>
-                        <p>
+                        <p className="leading-7 max-w-3xl">
                             { findDriver(driver.givenName).biography }
                         </p>
                     </div>
