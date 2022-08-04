@@ -78,7 +78,7 @@ const ConstructorCard = () => {
                         </div>
                     </div>
 
-                <div className="mt-6 max-w-3xl">
+                <div className="mt-6 max-w-4xl">
                     <h3 className="py-4 font-bold text-3xl">In profile</h3>
                     <p className="leading-7">
                        {

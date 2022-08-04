@@ -44,12 +44,12 @@ const StandingsWrapper = () => {
                 <h1 className="text-3xl font-extrabold text-white text-center">2022 Driver Standings</h1>
             </div>
 
-            <div className="hidden h-48 tablet:flex gap-x-4 mb-6 myXl:mb-20 2xl:mb-32 justify-center relative top-[-4rem] pb-4 text-white">
+            <div className="hidden h-48 tablet:flex gap-x-4 justify-center relative top-[-4rem] pb-4 text-white">
                 <TopThree driver={results[1]} order={1}/>
                 <TopThree driver={results[0]} order={2}/>
                 <TopThree driver={results[2]} order={3} />
             </div>
-            <div className="mb-8">
+            <div className="mb-8 sm:mb-24 lg:mb-[11rem]">
                 {
                     results.slice(0, 10).map((elem, i) => <StandingsItem key={i + 1} driver={elem} />)
                 }
