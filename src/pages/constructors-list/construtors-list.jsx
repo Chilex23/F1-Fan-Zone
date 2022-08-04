@@ -4,6 +4,7 @@ import ConstructorListItem from "../../components/constructorListItem/constructo
 import NavProvider from "../../provider/navbar/navbar.provider";
 import fetchConstructorStand from "../../utils/fetchConstructorStandings";
 import Footer from "../../components/footer/footer";
+import { TailSpin } from "react-loader-spinner";
 
 const ConstructorsList= () => {
     const [loading, setLoading] = useState(false);
@@ -43,7 +44,10 @@ const ConstructorsList= () => {
 
             <div className="grid md:grid-cols-2 mx-6 mt-4 gap-x-6 gap-y-10">
                 {
-                    loading ? <p>Loading...</p> :
+                    loading ? <div className="h-[80vh] flex justify-center">
+                        <TailSpin color="#b90202" height={80} width={80} />
+                    </div>  
+                    :
                     error ? <p>Error...</p> :
                     results.map(constructor => <ConstructorListItem key={constructor.Constructor.constructorId} constructor={constructor} />)
                 }

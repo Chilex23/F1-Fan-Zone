@@ -8,6 +8,8 @@ import Footer from '../../components/footer/footer';
 
 import NavProvider from '../../provider/navbar/navbar.provider';
 import fetchNews from '../../utils/fetchNews';
+import { TailSpin } from "react-loader-spinner";
+
 
 const HomePage = () => {
     const [isLoading, setLoading] = useState(true);
@@ -35,8 +37,12 @@ const HomePage = () => {
                 <NavBar />
                 <h1 className="text-5xl uppercase font-extrabold top-20 relative text-center mb-8 mt-3">Latest News</h1>
             </NavProvider>
-                { isError && <div className='top-20 relative'>Something went wrong</div> }
-                { isLoading ? <div className='top-20 relative'>Loading</div>  : 
+                { isLoading ? <div className='h-56 top-20 relative mb-40 flex items-center justify-center'>
+                        <TailSpin color="#b90202" height={80} width={80} />
+                    </div>  : 
+                    isError ? <div className='h-56 top-20 relative mb-40 flex items-center justify-center'>
+                        Something went wrong
+                    </div>  :
                     <News results={results} />
                 }
             <ScheduleWrapper />

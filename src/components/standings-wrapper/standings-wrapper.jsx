@@ -3,6 +3,7 @@ import fetchDriversStand from "../../utils/fetchDriversStandings";
 import TopThree from "../top-three/top-three";
 import StandingsItem from "../standings-item/standings-item";
 import { Link } from 'react-router-dom';
+import { TailSpin } from "react-loader-spinner";
 
 const StandingsWrapper = () => {
     const [loading, setLoading] = useState(true);
@@ -31,12 +32,14 @@ const StandingsWrapper = () => {
     // console.log(loading)
 
     if (loading) {
-       return <div className='top-20 relative'>Loading</div>;
+       return <div className='top-20 h-56 relative flex justify-center'>
+            <TailSpin color="#b90202" height={80} width={80}/>
+       </div>;
     } else if (error) {
         return <div className='top-20 relative'>Something went wrong</div>;
     } else if (results.length > 0) {
         return (
-        <div className="sm2:mx-1 mx-4 bg-gray-200 pb-20 rounded-b-lg mb-[-2rem]">
+        <div className="sm2:mx-1 mx-4 bg-gray-200 pb-20 mb-[-2rem]">
             <div className="bg-stone-900 h-56 flex justify-center items-center mb-6">
                 <h1 className="text-3xl font-extrabold text-white text-center">2022 Driver Standings</h1>
             </div>

@@ -4,6 +4,7 @@ import NavProvider from "../../provider/navbar/navbar.provider";
 import fetchDriversStand from "../../utils/fetchDriversStandings";
 import TableRow from "../../components/table-row/table-row";
 import Footer from "../../components/footer/footer";
+import { TailSpin } from "react-loader-spinner";
 
 const DriverStandings = () => {
     const [loading, setLoading] = useState(false);
@@ -50,7 +51,16 @@ const DriverStandings = () => {
 
                     <tbody>
                         {
-                            loading ? <tr><td>Loading...</td></tr> : 
+                            loading ? 
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td>
+                                    <TailSpin color="#b90202" height={80} width={80} />
+                                </td>
+                                <td></td>
+                                <td></td>
+                            </tr> : 
                             error ? <tr><td>Something went wrong</td></tr> :
                             results.length > 0 ?
                             results.map((elem, i) => <TableRow key={i + 1} driver={elem} />) :

@@ -4,6 +4,7 @@ import DriverListItem from "../../components/driverListItem/driverListItem";
 import Footer from "../../components/footer/footer";
 import NavProvider from "../../provider/navbar/navbar.provider";
 import fetchDriversStand from "../../utils/fetchDriversStandings";
+import { TailSpin } from "react-loader-spinner";
 
 const DriversList = () => {
     const [loading, setLoading] = useState(false);
@@ -40,7 +41,10 @@ const DriversList = () => {
             
             <div className="overflow-clip grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 grid-rows-6 mx-6 gap-x-4 gap-y-10 mt-4">
                 {
-                    loading ? <p>Loading...</p> :
+                    loading ? <div className="h-40 flex items-center justify-center">
+                        <TailSpin color="#b90202" height={80} width={80} />
+                    </div> 
+                :
                     error ? <p>Error...</p> :
                     results.map(driver => <DriverListItem key={driver.Driver.driverId} driver={driver} />)
                 }

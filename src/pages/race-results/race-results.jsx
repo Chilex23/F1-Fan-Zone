@@ -5,6 +5,7 @@ import NavBar from "../../components/Navbar/navbar.component";
 import Footer from "../../components/footer/footer";
 import RaceResultsRowItem from "../../components/race-results-row-item/race-results-row-item";
 import NavProvider from "../../provider/navbar/navbar.provider";
+import { TailSpin } from "react-loader-spinner";
 
 const RaceResults = () => {
     const { circuitId } = useParams();
@@ -35,7 +36,10 @@ const RaceResults = () => {
                 <NavBar />
             </NavProvider>
             {
-                loading ? <p className="mt-[6rem] h-screen">"Loading..."</p> :
+                loading ? 
+                <div className="h-[80vh] flex items-center justify-center">
+                    <TailSpin color="#b90202" height={80} width={80} />
+                </div> :
                 error ? <p className="mt-[6rem] h-screen">"Error..."</p> : 
                 raceResults.length === 0 || raceResults[0].length === 0 ? 
                     <p className="mt-[6rem] h-screen">"No results..."</p> 

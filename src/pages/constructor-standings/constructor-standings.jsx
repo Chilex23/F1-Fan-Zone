@@ -4,6 +4,7 @@ import NavProvider from "../../provider/navbar/navbar.provider";
 import fetchConstructorStand from "../../utils/fetchConstructorStandings";
 import ConstructorRow from "../../components/constructor-row/constructor-row";
 import Footer from "../../components/footer/footer";
+import { TailSpin } from "react-loader-spinner";
 
 const ConstructorStandings = () => {
     const [loading, setLoading] = useState(false);
@@ -49,7 +50,14 @@ const ConstructorStandings = () => {
 
                     <tbody>
                         {
-                            loading ? <tr><td>Loading...</td></tr> : 
+                            loading ? 
+                            <tr>
+                                <td></td>
+                                <td>
+                                    <TailSpin color="#b90202" height={80} width={80} />
+                                </td>
+                                <td></td>
+                            </tr> : 
                             error ? <tr><td>Something went wrong</td></tr> :
                             results.length > 0 ?
                             results.map((elem, i) => <ConstructorRow key={i + 1} team={elem} />) :

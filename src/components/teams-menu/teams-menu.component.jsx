@@ -13,7 +13,7 @@ const TeamsMenu = () => {
                 </div>
             </div>
 
-            <div className="w-5/6 mx-auto grid grid-cols-3 grid-rows-4 mt-7 gap-7">
+            <div className="w-5/6 mx-auto grid tablet:grid-cols-3 grid-rows-4 mt-7 gap-7">
                 {
                     TEAMS.map((elem, i) => <TeamLink key={i + 1} team={elem} toggle={toggleTeamHidden} />)
                 }   

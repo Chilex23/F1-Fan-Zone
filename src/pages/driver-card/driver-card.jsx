@@ -5,6 +5,7 @@ import findDriver from "../../utils/find-driver";
 import NavBar from "../../components/Navbar/navbar.component";
 import Footer from "../../components/footer/footer";
 import NavProvider from "../../provider/navbar/navbar.provider";
+import { TailSpin } from "react-loader-spinner";
 
 const DriverCard = () => {
     const { driverId } = useParams();
@@ -34,11 +35,13 @@ const DriverCard = () => {
                 <NavBar />
             </NavProvider>
             {
-                loading ? <p className="mt-[6rem] h-screen">"Loading..."</p> :
+                loading ? <div className="h-[80vh] flex items-center justify-center">
+                    <TailSpin color="#b90202" height={80} width={80} />
+                </div> :
                 error ? <p className="mt-[6rem] h-screen">"Error..."</p> : 
                 driver.length === 0 ? <p className="mt-[6rem] h-screen">"No results..."</p> :
                 <div className="w-[90%] mx-auto mt-[6rem]">
-                    <div className="flex gap-x-2 tablet:gap-x-6 lg:gap-x-10 sm2:flex-col md:flex-row">
+                    <div className="flex gap-x-2 tablet:gap-x-6 lg:gap-x-10 flex-col tablet:flex-row">
                         <img src={findDriver(driver.givenName).fullPic} alt="driver" className="object-fill h-[20rem] tablet:h-[30rem] basis-[40%] rounded-lg aspect-square"  />
 
                         <div className="flex flex-col grow">

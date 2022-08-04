@@ -6,6 +6,7 @@ import FindTeamDrivers from "../../utils/findTeamDrivers";
 import NavBar from "../../components/Navbar/navbar.component";
 import Footer from "../../components/footer/footer";
 import NavProvider from "../../provider/navbar/navbar.provider";
+import { TailSpin } from "react-loader-spinner";
 
 const ConstructorCard = () => {
     const { constructorId } = useParams();
@@ -35,11 +36,14 @@ const ConstructorCard = () => {
             <NavProvider>
                 <NavBar />
                 <h1 className="text-5xl uppercase font-extrabold top-20 relative text-center mb-8 mt-3">
-                    { constructor.name }
+                    { loading ? "" : constructor.name }
                 </h1>
             </NavProvider>
             {
-                loading ? <p className="mt-[6rem] h-screen">"Loading..."</p> :
+                loading ? <div className="mt-[6rem] h-[80vh] flex justify-center items-center">
+                    <TailSpin color="#b90202" height={80} width={80} />
+                </div> 
+                :
                 error ? <p className="mt-[6rem] h-screen">"Error..."</p> : 
                 constructor.length === 0 ? <p className="mt-[6rem] h-screen">"No results..."</p> :
                 <div className="w-[90%] mx-auto mt-[6rem]">
@@ -50,7 +54,7 @@ const ConstructorCard = () => {
                                 <div className="grid grid-cols-2 mt-4 text-lg">
                                     <span className="text-xl font-extrabold">Team Name</span>
                                     <span>{constructor.name}</span>
-                                    <span className="text-xl font-extrabold">Team Base</span>
+                                    <span className="text-xl font-extrabold">Team Nationality</span>
                                     <span>{constructor.nationality}</span>
                                 </div>
                             </div>
@@ -59,7 +63,7 @@ const ConstructorCard = () => {
                         <div className="flex gap-x-5">
                             {
                                 FindTeamDrivers(constructor.name).slice(0, 2).map((elem) => 
-                                <div key={elem.driverId} className="flex flex-col border border-gray-500 rounded-lg">
+                                <div key={elem.driverId} className="sm2:h-[20rem] lg:h-full flex flex-col border border-gray-500 rounded-lg">
                                     <img className="w-full" src={elem.fullPic} alt="driver" />
                                     <div className="flex flex-col p-4">
                                         <span className="text-5xl font-extrabold">{elem.number}</span>
