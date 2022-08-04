@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { ReactComponent as Logo } from "../../assets/img/f1_logo.svg";
 
 const Footer = () => (
-    <div className="bg-stone-900 h-fit text-white p-6">
+    <div className="bg-stone-900 h-fit text-white p-6 mt-4">
          <div className="w-fit mx-auto">
             <h3 className="font-bold text-lg">Standings</h3>
             <ul>

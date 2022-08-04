@@ -38,8 +38,8 @@ const DriverCard = () => {
                 error ? <p className="mt-[6rem] h-screen">"Error..."</p> : 
                 driver.length === 0 ? <p className="mt-[6rem] h-screen">"No results..."</p> :
                 <div className="w-[90%] mx-auto mt-[6rem]">
-                    <div className="flex gap-x-2 md:gap-x-6 lg:gap-x-10 flex-col md:flex-row">
-                        <img src={findDriver(driver.givenName).fullPic} alt="driver" className="object-fill h-[20rem] md:h-[30rem] basis-[40%] rounded-lg aspect-square"  />
+                    <div className="flex gap-x-2 tablet:gap-x-6 lg:gap-x-10 sm2:flex-col md:flex-row">
+                        <img src={findDriver(driver.givenName).fullPic} alt="driver" className="object-fill h-[20rem] tablet:h-[30rem] basis-[40%] rounded-lg aspect-square"  />
 
                         <div className="flex flex-col grow">
                             <img src={findDriver(driver.givenName).helmetPic} alt="Helmet"className="h-[10rem] w-[10rem] object-contain" />

@@ -36,7 +36,7 @@ const StandingsWrapper = () => {
         return <div className='top-20 relative'>Something went wrong</div>;
     } else if (results.length > 0) {
         return (
-        <div className="sm2:mx-1 mx-4 bg-gray-200 pb-20 rounded-b-lg">
+        <div className="sm2:mx-1 mx-4 bg-gray-200 pb-20 rounded-b-lg mb-[-2rem]">
             <div className="bg-stone-900 h-56 flex justify-center items-center mb-6">
                 <h1 className="text-3xl font-extrabold text-white text-center">2022 Driver Standings</h1>
             </div>
