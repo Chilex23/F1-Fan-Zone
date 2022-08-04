@@ -40,17 +40,17 @@ const RaceResults = () => {
                 raceResults.length === 0 || raceResults[0].length === 0 ? 
                     <p className="mt-[6rem] h-screen">"No results..."</p> 
                 : 
-                <div className="w-[90%] mx-auto mt-[6rem]">
-                    <h1 className="mt-2 py-4 font-black text-3xl text-center">
+                <div className="w-full md:w-[90%] mx-auto mt-[6rem]">
+                    <h1 className="mt-2 py-4 font-black text-xl md:text-3xl text-center">
                         {raceResults[0].raceName} Results
                     </h1>
 
-                    <div class="overflow-x-auto w-full">
-                        <table class="table w-full">
+                    <div className="overflow-x-auto w-full">
+                        <table className="table w-full">
                             <thead>
                             <tr>
                                 <th>Pos</th>
-                                <th>Driver</th>
+                                <th className="text-center">Driver</th>
                                 <th>Laps</th>
                                 <th>Points</th>
                                 <th>Grid</th>

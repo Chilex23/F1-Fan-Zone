@@ -38,32 +38,32 @@ const DriverCard = () => {
                 error ? <p className="mt-[6rem] h-screen">"Error..."</p> : 
                 driver.length === 0 ? <p className="mt-[6rem] h-screen">"No results..."</p> :
                 <div className="w-[90%] mx-auto mt-[6rem]">
-                    <div className="flex gap-x-10 flex-col md:flex-row">
-                        <img src={findDriver(driver.givenName).fullPic} alt="driver" className="object-fill h-[30rem] basis-[40%] rounded-lg" />
+                    <div className="flex gap-x-2 md:gap-x-6 lg:gap-x-10 flex-col md:flex-row">
+                        <img src={findDriver(driver.givenName).fullPic} alt="driver" className="object-fill h-[10rem] md:h-[30rem] basis-[40%] rounded-lg aspect-square"  />
 
                         <div className="flex flex-col grow">
                             <img src={findDriver(driver.givenName).helmetPic} alt="Helmet"className="h-[10rem] w-[10rem] object-contain" />
-                            <div className="text-left grid grid-cols-1/2">
-                                <span className="font-black text-2xl">
+                            <div className="text-left grid gap-x-10 sm:gap-x-3 lg:gap-x-10 items-center grid-cols-1/2">
+                                <span className="font-black text-xl lg:text-2xl">
                                     Team
                                 </span> 
                                 <span className="text-lg">
                                     {findDriver(driver.givenName).team}
                                 </span>
-                                <span className="font-black text-2xl">
+                                <span className="font-black text-xl lg:text-2xl">
                                     Nationality
                                 </span> 
                                 <span className="text-lg">
                                     {driver.nationality}
                                 </span>
-                                <span className="font-black text-2xl">
-                                    Date of Birth
+                                <span className="font-black text-xl lg:text-2xl">
+                                    D.O.B
                                 </span> 
                                 <span className="text-lg">
                                     {driver.dateOfBirth}
                                 </span>
-                                <span className="font-black text-2xl">
-                                    Permanent Number
+                                <span className="font-black text-xl lg:text-2xl">
+                                    Number
                                 </span> 
                                 <span className="text-lg text-red-600">
                                     {driver.permanentNumber}

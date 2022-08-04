@@ -6,9 +6,14 @@ module.exports = {
   theme: {
     extend: {
       gridTemplateColumns: {
-        "1/2": "1fr min-content",
+        "1/2": "min-content min-content",
       }
     },
+    screens: {
+      'homePhone': '450px',
+      'tablet': '880px',
+      'sm2': {'max': '480px'},
+    }
   },
   plugins: [
     require('daisyui'),

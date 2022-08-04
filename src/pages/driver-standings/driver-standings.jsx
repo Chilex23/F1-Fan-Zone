@@ -33,8 +33,8 @@ const DriverStandings = () => {
             <NavProvider>
                 <NavBar />
             </NavProvider>
-            <div className="overflow-x-auto mt-20 mx-6">
-                <h1 className="text-5xl uppercase font-extrabold text-center mb-8 mt-3">
+            <div className="overflow-x-auto mt-20 mx-1 md:mx-6">
+                <h1 className="text-xl md:text-5xl uppercase font-extrabold text-center mb-8 mt-3">
                     2022 Driver's Standings
                 </h1>
                 <table className="table table-zebra w-full">
