@@ -13,6 +13,8 @@ module.exports = {
       'homePhone': '450px',
       'tablet': '880px',
       'sm2': {'max': '480px'},
+      'myXl': '1150px',
+      '2xl': '1350px',
     }
   },
   plugins: [

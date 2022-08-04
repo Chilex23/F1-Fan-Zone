@@ -36,23 +36,27 @@ const StandingsWrapper = () => {
         return <div className='top-20 relative'>Something went wrong</div>;
     } else if (results.length > 0) {
         return (
-        <div className="relative top-20 m-4 bg-gray-200 pb-40 rounded-t-lg">
-            <div className="bg-stone-900 h-56 flex justify-center items-center rounded-t-lg">
+        <div className="sm2:mx-1 mx-4 bg-gray-200 pb-20 rounded-b-lg">
+            <div className="bg-stone-900 h-56 flex justify-center items-center mb-6">
                 <h1 className="text-3xl font-extrabold text-white text-center">2022 Driver Standings</h1>
             </div>
 
-            <div className="h-48 flex gap-x-4 justify-center relative top-[-1rem] pb-4 text-white">
+            <div className="hidden h-48 tablet:flex gap-x-4 mb-6 myXl:mb-20 2xl:mb-32 justify-center relative top-[-4rem] pb-4 text-white">
                 <TopThree driver={results[1]} order={1}/>
                 <TopThree driver={results[0]} order={2}/>
                 <TopThree driver={results[2]} order={3} />
             </div>
-
-            {
-                results.slice(0, 10).map((elem, i) => <StandingsItem key={i + 1} driver={elem} />)
-            }
-            <Link to="/driver_standings" className="relative top-36 w-fit left-[30%] sm:left-[33%] md:left-[40%] mt-4 bg-red-600 py-2 px-2 rounded-lg text-white">
-                View Full Standings
-            </Link>
+            <div className="mb-8">
+                {
+                    results.slice(0, 10).map((elem, i) => <StandingsItem key={i + 1} driver={elem} />)
+                }
+            </div>
+                
+            <div className="text-center">
+                <Link to="/driver_standings" className="mt-10 bg-red-600 py-3 px-2 rounded-lg text-white">
+                    View Full Standings
+                </Link>
+            </div>
         </div>
         )
     }
