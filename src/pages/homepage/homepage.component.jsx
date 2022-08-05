@@ -21,7 +21,7 @@ const HomePage = () => {
             // try {
                 const data = await fetchNews();
                 setResults(data.data.value);
-                console.log(data.data.value)
+                // console.log(data.data.value)
             // } catch (error) {
             //     setIsError(true);
             // }
@@ -30,7 +30,7 @@ const HomePage = () => {
 
         fetchData();
     }, [])
-    console.log(results);
+    // console.log(results);
 
     return (
         <>  

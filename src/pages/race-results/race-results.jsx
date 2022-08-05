@@ -37,7 +37,7 @@ const RaceResults = () => {
             </NavProvider>
             {
                 loading ? 
-                <div className="h-[80vh] flex items-center justify-center">
+                <div className="h-[80vh] flex justify-center mt-[6rem]">
                     <TailSpin color="#b90202" height={80} width={80} />
                 </div> :
                 error ? <p className="h-[80vh] flex items-center justify-center">"Error..."</p> : 
@@ -52,15 +52,15 @@ const RaceResults = () => {
                     <div className="overflow-x-auto w-full">
                         <table className="table w-full">
                             <thead>
-                            <tr>
+                            <tr className="text-center">
                                 <th>Pos</th>
-                                <th className="text-center">Driver</th>
+                                <th>Driver</th>
                                 <th>Laps</th>
-                                <th>Points</th>
+                                <th>Pts</th>
                                 <th>Status</th>
                             </tr>
                             </thead>
-                            <tbody>
+                            <tbody className="text-center">
 
                                 {
                                     raceResults[0].Results.map((item, index) => <RaceResultsRowItem key={index} item={item} />)

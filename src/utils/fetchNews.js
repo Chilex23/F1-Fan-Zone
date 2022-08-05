@@ -7,7 +7,7 @@ const fetchNews = async () => {
         params: {
             q: 'f1',
             pageNumber: '1',
-            pageSize: '10',
+            pageSize: '11',
             autoCorrect: 'true',
             fromPublishedDate: 'null',
             toPublishedDate: 'null'

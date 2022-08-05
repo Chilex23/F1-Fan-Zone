@@ -13,6 +13,7 @@ module.exports = {
       'sm': '640px',
       'md': '768px',
       'lg': '1024px',
+      'newsBreakmd': '500px',
       'homePhone': '450px',
       'tablet': '880px',
       'sm2': {'max': '480px'},
