@@ -18,18 +18,19 @@ const HomePage = () => {
 
     useEffect(() => {
         const fetchData = async () => {
-            try {
+            // try {
                 const data = await fetchNews();
-                setResults(data.articles);
-                setLoading(false);
-            } catch (error) {
-                setIsError(true);
-            }
-            
+                setResults(data.data.value);
+                console.log(data.data.value)
+            // } catch (error) {
+            //     setIsError(true);
+            // }
+            setLoading(false);
         };
 
         fetchData();
     }, [])
+    console.log(results);
 
     return (
         <>  

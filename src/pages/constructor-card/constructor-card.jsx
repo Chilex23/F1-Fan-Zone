@@ -40,7 +40,7 @@ const ConstructorCard = () => {
                 </h1>
             </NavProvider>
             {
-                loading ? <div className="mt-[6rem] h-[80vh] flex justify-center items-center">
+                loading ? <div className="mt-[10rem] h-[80vh] flex justify-center">
                     <TailSpin color="#b90202" height={80} width={80} />
                 </div> 
                 :
@@ -51,7 +51,7 @@ const ConstructorCard = () => {
                         <div className="w-[100%]">
                             <div className="h-full">
                                 <img src={FindTeam(constructor.name).logo} alt="driver" className="object-contain rounded-lg w-[10rem]" />
-                                <div className="grid grid-cols-2 mt-4 text-lg">
+                                <div className="grid grid-cols-2 my-4 text-lg">
                                     <span className="text-xl font-extrabold">Team Name</span>
                                     <span>{constructor.name}</span>
                                     <span className="text-xl font-extrabold">Team Nationality</span>

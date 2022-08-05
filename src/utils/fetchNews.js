@@ -1,14 +1,31 @@
 import axios from "axios";
 
 const fetchNews = async () => {
+    const options = {
+        method: 'GET',
+        url: 'https://contextualwebsearch-websearch-v1.p.rapidapi.com/api/search/NewsSearchAPI',
+        params: {
+            q: 'f1',
+            pageNumber: '1',
+            pageSize: '10',
+            autoCorrect: 'true',
+            fromPublishedDate: 'null',
+            toPublishedDate: 'null'
+        },
+        headers: {
+          'X-RapidAPI-Key': '6b1c785ca9mshaa113b54b221181p19b2edjsn99863a944091',
+          'X-RapidAPI-Host': 'contextualwebsearch-websearch-v1.p.rapidapi.com'
+        }
+    };
+      
     try {
-        const { data } = await axios("https://newsapi.org/v2/everything?q=f1&from=2022-07-24&sortBy=popularity&pageSize=11&language=en&apiKey=cecb65b7797a4d3cbe2ffcedce7c824f");
-        return data;
-    } catch (error) {
-        console.log("fetch news failed with an error of ", error);
-        throw new Error(error);
+        // const { data } = await axios(options);
+        return axios(options);
+    } catch(error) {
+        console.log("Fetch news failed with an error of ", error);
+        // throw new Error(error);
     }
-    
+
 }
 
 export default fetchNews;

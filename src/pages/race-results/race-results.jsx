@@ -40,7 +40,7 @@ const RaceResults = () => {
                 <div className="h-[80vh] flex items-center justify-center">
                     <TailSpin color="#b90202" height={80} width={80} />
                 </div> :
-                error ? <p className="mt-[6rem] h-screen">"Error..."</p> : 
+                error ? <p className="h-[80vh] flex items-center justify-center">"Error..."</p> : 
                 raceResults.length === 0 || raceResults[0].length === 0 ? 
                     <p className="mt-[6rem] h-screen">"No results..."</p> 
                 : 
@@ -57,7 +57,6 @@ const RaceResults = () => {
                                 <th className="text-center">Driver</th>
                                 <th>Laps</th>
                                 <th>Points</th>
-                                <th>Grid</th>
                                 <th>Status</th>
                             </tr>
                             </thead>
@@ -71,10 +70,9 @@ const RaceResults = () => {
                             <tfoot className="w-full">
                                 <tr>
                                     <th>Pos</th>
-                                    <th>Driver</th>
+                                    <th className="text-center">Driver</th>
                                     <th>Laps</th>
                                     <th>Points</th>
-                                    <th>Grid</th>
                                     <th>Status</th>
                                 </tr>
                             </tfoot>

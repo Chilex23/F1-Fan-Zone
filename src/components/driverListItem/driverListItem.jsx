@@ -28,7 +28,7 @@ const DriverListItem = ({ driver }) => {
 
             <p>{Constructors[0].name}</p>
             <div className="h-fit relative flex">
-                <img src={findDriver(givenName).pic} className="object-contain w-full h-[12rem]" alt="driver" />
+                <img src={findDriver(givenName).pic} className="object-contain h-[12rem]" alt="driver" />
                 <img className="h-10" src={findDriver(givenName).numberPic} alt="Number" />
             </div>
         </Link>

@@ -6,7 +6,7 @@ module.exports = {
   theme: {
     extend: {
       gridTemplateColumns: {
-        "1/2": "min-content min-content",
+        "1/2": "min-content max-content",
       }
     },
     screens: {

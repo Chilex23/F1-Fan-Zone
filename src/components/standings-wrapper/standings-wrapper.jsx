@@ -36,7 +36,7 @@ const StandingsWrapper = () => {
             <TailSpin color="#b90202" height={80} width={80}/>
        </div>;
     } else if (error) {
-        return <div className='top-20 relative'>Something went wrong</div>;
+        return <div className='top-20 h-56 relative flex justify-center'>Something went wrong</div>;
     } else if (results.length > 0) {
         return (
         <div className="sm2:mx-1 mx-4 bg-gray-200 pb-20 mb-[-2rem]">

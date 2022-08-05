@@ -7,7 +7,6 @@ const RaceResultsRowItem = ({ item }) => {
             Constructor: { name }, 
             laps,
             points, 
-            grid, 
             status } = item;
     return (
         <tr>
@@ -31,7 +30,7 @@ const RaceResultsRowItem = ({ item }) => {
             </td>
 
             <td>{points}</td>
-            <td>{grid}</td>
+            {/* <td>{grid}</td> */}
             <td>{status}</td>
         </tr>
     )
