@@ -22,6 +22,9 @@ module.exports = {
     },
     backgroundImage: {
       'bgGradient': 'linear-gradient(120deg, transparent 0%, transparent 50%, #dc2626 50%)'
+    },
+    fontFamily: {
+      'nunito': ['Nunito', 'sans-serif']
     }
   },
   plugins: [
