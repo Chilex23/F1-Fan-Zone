@@ -12,7 +12,7 @@ const RaceResultsRowItem = ({ item }) => {
         <tr>
             <td>{ position }</td>
             <td>
-            <div className="flex items-center space-x-3">
+            <div className="flex items-center justify-center space-x-3">
                 <div className="avatar">
                     <div className="mask mask-squircle w-12 h-12">
                         <img src={findDriver(givenName).pic} alt="Avatar Tailwind CSS Component" />

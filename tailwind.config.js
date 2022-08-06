@@ -19,6 +19,9 @@ module.exports = {
       'sm2': {'max': '480px'},
       'myXl': '1150px',
       '2xl': '1350px',
+    },
+    backgroundImage: {
+      'bgGradient': 'linear-gradient(120deg, transparent 0%, transparent 50%, #dc2626 50%)'
     }
   },
   plugins: [

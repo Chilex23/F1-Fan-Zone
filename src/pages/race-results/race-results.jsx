@@ -68,11 +68,11 @@ const RaceResults = () => {
                             </tbody>
                             
                             <tfoot className="w-full">
-                                <tr>
+                                <tr className="text-center">
                                     <th>Pos</th>
-                                    <th className="text-center">Driver</th>
+                                    <th>Driver</th>
                                     <th>Laps</th>
-                                    <th>Points</th>
+                                    <th>Pts</th>
                                     <th>Status</th>
                                 </tr>
                             </tfoot>

@@ -51,17 +51,17 @@ const ConstructorStandings = () => {
                     <tbody>
                         {
                             loading ? 
-                            <tr>
+                            <tr className="h-[90vh]">
                                 <td></td>
                                 <td>
                                     <TailSpin color="#b90202" height={80} width={80} />
                                 </td>
                                 <td></td>
                             </tr> : 
-                            error ? <tr><td>Something went wrong</td></tr> :
+                            error ? <tr className="h-[90vh]"><td>Something went wrong</td></tr> :
                             results.length > 0 ?
                             results.map((elem, i) => <ConstructorRow key={i + 1} team={elem} />) :
-                            <tr><td>No results</td></tr>
+                            <tr className="h-[90vh]"><td>No results</td></tr>
                         }
                     </tbody>
                 </table>

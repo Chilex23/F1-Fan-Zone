@@ -40,7 +40,7 @@ const DriverStandings = () => {
                 </h1>
                 <table className="table table-zebra w-full">
                     <thead>
-                    <tr>
+                    <tr className="text-center">
                         <th>Pos</th>
                         <th>Driver</th>
                         <th>Nationality</th>
@@ -52,7 +52,7 @@ const DriverStandings = () => {
                     <tbody>
                         {
                             loading ? 
-                            <tr>
+                            <tr className="h-[90vh] text-center">
                                 <td></td>
                                 <td></td>
                                 <td>
@@ -61,10 +61,10 @@ const DriverStandings = () => {
                                 <td></td>
                                 <td></td>
                             </tr> : 
-                            error ? <tr><td>Something went wrong</td></tr> :
+                            error ? <tr className="h-[90vh]"><td>Something went wrong</td></tr> :
                             results.length > 0 ?
                             results.map((elem, i) => <TableRow key={i + 1} driver={elem} />) :
-                            <tr><td>No results</td></tr>
+                            <tr className="h-[90vh]"><td>No results</td></tr>
                         }
                     </tbody>
                 </table>

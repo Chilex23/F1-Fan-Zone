@@ -4,6 +4,7 @@ import { NavBarContext } from '../../provider/navbar/navbar.provider';
 import StandingsMenuDropDown from '../standingsMenu/standingsMenu';
 import DriverMenuDropDwn from '../DriverMenuDropDwn/driverMenuDropdwn.component';
 import TeamsMenu from '../teams-menu/teams-menu.component';
+import SideBar from '../side-bar/side-bar';
 import { Link } from 'react-router-dom';
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoCloseSharp } from "react-icons/io5";
@@ -31,12 +32,12 @@ const NavBar = () => {
     
     return (
         <>
-            <div className="navbar bg-red-600 text-white fixed top-0 z-20 shadow-lg">
+            <div className="navbar bg-red-600 text-white fixed top-0 z-40 shadow-lg">
                 <div className="flex-1">
                     <Logo className="w-20" />
                 </div>
                 <div className="flex-none">
-                    { navBarWidth < 600 ? <div onClick={toggleNavBar} className="cursor-pointer">
+                    { navBarWidth < 700 ? <div onClick={toggleNavBar} className="cursor-pointer">
                         {
                             navBarHidden ?
                             <GiHamburgerMenu className='text-4xl' />
@@ -75,15 +76,15 @@ const NavBar = () => {
                 </div>
             </div>
             {
-                standHidden ? null : <StandingsMenuDropDown />
+                standHidden || navBarWidth < 700 ? null : <StandingsMenuDropDown />
             }
             {
-                driverHidden ? null : <DriverMenuDropDwn />
+                driverHidden || navBarWidth < 700 ? null : <DriverMenuDropDwn />
             }
             {
-                teamHidden ? null : <TeamsMenu />
+                teamHidden || navBarWidth < 700 ? null : <TeamsMenu />
             }
-          
+            { navBarWidth < 700 ? <SideBar hidden={navBarHidden} /> : null}
         </>
     )    
 };
