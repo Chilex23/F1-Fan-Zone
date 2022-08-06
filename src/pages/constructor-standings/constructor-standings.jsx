@@ -1,34 +1,14 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import NavBar from "../../components/Navbar/navbar.component";
 import NavProvider from "../../provider/navbar/navbar.provider";
 import fetchConstructorStand from "../../utils/fetchConstructorStandings";
 import ConstructorRow from "../../components/constructor-row/constructor-row";
 import Footer from "../../components/footer/footer";
+import useFetch from "../../hooks/useFetch";
 import { TailSpin } from "react-loader-spinner";
 
 const ConstructorStandings = () => {
-    const [loading, setLoading] = useState(false);
-    const [results, setResults] = useState([]);
-    const [error, setError] = useState(false)
-
-    useEffect(() => {
-        const fetchData = async () => {
-            setLoading(true);
-            try {
-                const data = await fetchConstructorStand();
-                setResults(data);
-                // console.log(data);
-            } catch (error) {
-                console.log(error);
-                //setLoading(false);
-                setError(true);
-            }
-            setLoading(false);
-        };
-        fetchData();
-    }, []);
-
-    // console.log(results);
+    const [loading, data, error] = useFetch(fetchConstructorStand);
 
     return (
         <>
@@ -58,9 +38,9 @@ const ConstructorStandings = () => {
                                 </td>
                                 <td></td>
                             </tr> : 
-                            error ? <tr className="h-[90vh]"><td>Something went wrong</td></tr> :
-                            results.length > 0 ?
-                            results.map((elem, i) => <ConstructorRow key={i + 1} team={elem} />) :
+                            error ? <tr><td>Something went wrong</td></tr> :
+                            data.length > 0 ?
+                            data.map((elem, i) => <ConstructorRow key={i + 1} team={elem} />) :
                             <tr className="h-[90vh]"><td>No results</td></tr>
                         }
                     </tbody>

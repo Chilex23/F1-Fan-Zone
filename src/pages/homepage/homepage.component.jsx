@@ -18,13 +18,9 @@ const HomePage = () => {
 
     useEffect(() => {
         const fetchData = async () => {
-            // try {
-                const data = await fetchNews();
-                setResults(data.data.value);
-                // console.log(data.data.value)
-            // } catch (error) {
-            //     setIsError(true);
-            // }
+            const data = await fetchNews();
+            if (data.data.value) setResults(data.data.value);
+            else setIsError(true);
             setLoading(false);
         };
 

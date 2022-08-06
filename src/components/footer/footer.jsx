@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { ReactComponent as Logo } from "../../assets/img/f1_logo.svg";
 
 const Footer = () => (
-    <div className="bg-stone-900 h-fit text-white py-12 px-4 mt-8">
+    <div className="bg-stone-900 h-fit text-white py-12 px-4 mt-8 relative bottom-0">
         <div className="flex">
             <div className="w-fit mx-auto">
                 <h3 className="font-bold text-lg">Standings</h3>
@@ -21,9 +21,9 @@ const Footer = () => (
             </div>
         </div>
 
-         <div className="flex justify-between mt-12 border-stone-500 border-t-2 pt-2">
-            <Logo className="w-20" />
-            <p>Developed By Chima Onumaegbu</p>
+         <div className="flex items-center justify-between mt-12 border-stone-500 border-t-2 pt-2">
+            <Logo className="w-[20%]" />
+            <p>Developed By Chima</p>
          </div>
     </div>
 );

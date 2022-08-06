@@ -1,31 +1,14 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import NavBar from "../../components/Navbar/navbar.component";
 import DriverListItem from "../../components/driverListItem/driverListItem";
 import Footer from "../../components/footer/footer";
 import NavProvider from "../../provider/navbar/navbar.provider";
+import useFetch from "../../hooks/useFetch";
 import fetchDriversStand from "../../utils/fetchDriversStandings";
 import { TailSpin } from "react-loader-spinner";
 
 const DriversList = () => {
-    const [loading, setLoading] = useState(false);
-    const [results, setResults] = useState([]);
-    const [error, setError] = useState(false);
-
-    useEffect(() => {
-        const fetchData = async () => {
-            setLoading(true);
-            try {
-                const data = await fetchDriversStand();
-                setResults(data);
-                // console.log(data);
-            } catch (error) {
-                console.log(error);
-                setError(true);
-            }
-            setLoading(false);
-        };
-        fetchData();
-    }, []);
+    const [loading, data, error] = useFetch(fetchDriversStand);
 
     return (
         <>
@@ -42,12 +25,12 @@ const DriversList = () => {
             <div className="overflow-clip grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 grid-rows-6 mx-6 gap-x-4 gap-y-10 mt-4">
                 {
                     loading ? 
-                    <div className="h-40 flex items-center justify-center">
+                    <div className="flex items-center justify-center">
                         <TailSpin color="#b90202" height={80} width={80} />
                     </div> 
                 :
-                    error ? <p>Error...</p> :
-                    results.map(driver => <DriverListItem key={driver.Driver.driverId} driver={driver} />)
+                    error ? <div className="flex items-center justify-center">Error...</div> :
+                    data.map(driver => <DriverListItem key={driver.Driver.driverId} driver={driver} />)
                 }
             </div>
             <Footer />

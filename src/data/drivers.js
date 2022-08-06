@@ -315,7 +315,7 @@ const Drivers = [
         "givenName": "Kevin",
         "number": 20,
         "country": denmark,
-        "team": "Haas",
+        "team": "Haas F1 Team",
         "numberPic": kevinNum,
         "pic": kevinShort,
         "fullPic": kevinFull,

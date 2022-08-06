@@ -19,7 +19,6 @@ const fetchNews = async () => {
     };
       
     try {
-        // const { data } = await axios(options);
         return axios(options);
     } catch(error) {
         console.log("Fetch news failed with an error of ", error);
