@@ -33,10 +33,10 @@ const NavBar = () => {
     return (
         <>
             <div className="navbar bg-red-600 text-white fixed top-0 z-40 shadow-lg">
-                <div className="flex-1">
+                <div className="flex-none">
                     <Logo className="w-20" />
                 </div>
-                <div className="flex-none">
+                <div className="flex-1 justify-end">
                     { navBarWidth < 700 ? <div onClick={toggleNavBar} className="cursor-pointer">
                         {
                             navBarHidden ?
