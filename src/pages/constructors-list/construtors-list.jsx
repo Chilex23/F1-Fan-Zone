@@ -34,7 +34,7 @@ const ConstructorsList= () => {
                     data.map(constructor => <ConstructorListItem key={constructor.Constructor.constructorId} constructor={constructor} />)
                 }
             </div>
-            <Footer />
+            { loading ? null : <Footer /> }
         </>
     )
 };

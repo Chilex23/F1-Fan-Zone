@@ -72,7 +72,7 @@ const ConstructorCard = () => {
             </div>
             }
             
-            <Footer />
+            { loading ? null : <Footer /> }
         </>
     );
 }

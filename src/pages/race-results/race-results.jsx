@@ -63,7 +63,7 @@ const RaceResults = () => {
                     </div>
                 </div>
             }
-            <Footer />
+            { loading ? null : <Footer /> }
         </>
     )
 };

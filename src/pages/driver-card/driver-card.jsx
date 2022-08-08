@@ -73,7 +73,7 @@ const DriverCard = () => {
                     </div>
                 </div>
             }
-            <Footer />
+            { loading ? null : <Footer /> }
         </>
     );
 }

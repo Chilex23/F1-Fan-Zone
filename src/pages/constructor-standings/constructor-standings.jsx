@@ -28,7 +28,7 @@ const ConstructorStandings = () => {
                     </tr>
                     </thead>
 
-                    <tbody>
+                    <tbody className="h-[80vh]">
                         {
                             loading ? 
                             <tr className="h-[90vh]">
@@ -46,7 +46,7 @@ const ConstructorStandings = () => {
                     </tbody>
                 </table>
             </div>
-            <Footer />
+            { loading ? null : <Footer /> }
         </>
     );
 }

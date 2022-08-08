@@ -50,7 +50,7 @@ const DriverStandings = () => {
                     </tbody>
                 </table>
             </div>
-            <Footer />
+            { loading ? null : <Footer /> }
         </>
     );
 }

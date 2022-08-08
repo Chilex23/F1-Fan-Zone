@@ -33,7 +33,7 @@ const DriversList = () => {
                     data.map(driver => <DriverListItem key={driver.Driver.driverId} driver={driver} />)
                 }
             </div>
-            <Footer />
+            { loading ? null : <Footer /> }
         </>
     );
 }
