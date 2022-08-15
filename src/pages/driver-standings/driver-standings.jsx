@@ -12,7 +12,7 @@ const DriverStandings = () => {
         <>
             <div className="overflow-x-auto mt-20 mx-1 md:mx-6">
                 <h1 className="text-xl md:text-5xl uppercase font-extrabold text-center mb-8 mt-3">
-                    2022 Driver's Standings
+                    2022 Drivers' Standings
                 </h1>
                 <table className={`table table-zebra w-full ${loading ? "h-screen" : "h-fit" }`}>
                     <thead>

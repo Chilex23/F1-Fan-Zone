@@ -1,5 +1,5 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import fetchConstructorInfo from "../../utils/fetchConstructorInfo";
 import FindTeam from "../../utils/findTeam";
 import FindTeamDrivers from "../../utils/findTeamDrivers";
@@ -42,7 +42,7 @@ const ConstructorCard = () => {
                         <div className="flex gap-x-5">
                             {
                                 FindTeamDrivers(data.name).slice(0, 2).map((elem) => 
-                                <div key={elem.driverId} className="sm2:h-[20rem] lg:h-full flex flex-col border border-gray-500 rounded-lg">
+                                <Link to={`/drivers_list/${elem.driverId}`} key={elem.driverId} className="sm2:h-[20rem] lg:h-full flex flex-col border border-gray-500 rounded-lg">
                                     <img className="w-full" src={elem.fullPic} alt="driver" />
                                     <div className="flex flex-col p-4">
                                         <span className="text-5xl font-extrabold">{elem.number}</span>
@@ -51,7 +51,7 @@ const ConstructorCard = () => {
                                         </span>
                                         <span className="text-gray-600">{elem.team}</span>
                                     </div>
-                                </div>
+                                </Link>
                                 )
                             }
                         </div>

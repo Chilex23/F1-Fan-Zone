@@ -7,11 +7,13 @@ export const NavBarContext = createContext({
     standHidden: true,
     driverHidden: true,
     teamHidden: true,
+    sideBarHidden: true,
     drivers: Drivers,
     TEAMS: TEAMS,
     toggleDriverHidden: () => {},
     toggleStandHidden: () => {},
-    toggleTeamHidden: () => {}
+    toggleTeamHidden: () => {},
+    toggleSideBarHidden: () => {}
 });
 
 
@@ -19,6 +21,7 @@ const NavProvider = ({ children }) => {
     const [standHidden, setStandHidden] = useState(true);
     const [driverHidden, setDriverHidden] = useState(true);
     const [teamHidden, setTeamHidden] = useState(true);
+    const [sideBarHidden, setSideBarHidden] = useState(true);
 
     const toggleStandHidden = () => {
         setStandHidden(!standHidden);
@@ -34,6 +37,9 @@ const NavProvider = ({ children }) => {
         setTeamHidden(!teamHidden);
         setStandHidden(true);
         setDriverHidden(true);
+    };
+    const toggleSideBarHidden = () => {
+        setSideBarHidden(!sideBarHidden);
     }
 
     return (
@@ -45,7 +51,9 @@ const NavProvider = ({ children }) => {
             teamHidden,
             toggleTeamHidden,
             Drivers,
-            TEAMS
+            TEAMS,
+            sideBarHidden,
+            toggleSideBarHidden
         }}>
             {children}
         </NavBarContext.Provider>

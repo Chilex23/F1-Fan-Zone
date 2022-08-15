@@ -12,16 +12,15 @@ import { IoCloseSharp } from "react-icons/io5";
 const NavBar = () => {
     const { standHidden, 
             driverHidden, 
-            teamHidden, 
+            teamHidden,
+            sideBarHidden,
+            toggleSideBarHidden, 
             toggleStandHidden, 
             toggleDriverHidden, 
             toggleTeamHidden } = useContext(NavBarContext);
 
     const [navBarWidth, setNavBarWidth] = useState(window.innerWidth);
-    const [navBarHidden, setNavBarHidden] = useState(true);
-
-    const toggleNavBar = () => setNavBarHidden(!navBarHidden);
-
+    
     useEffect(() => {
         function handleResize() {
             // console.log('resized to: ', window.innerWidth, 'x', window.innerHeight)
@@ -37,9 +36,9 @@ const NavBar = () => {
                     <Logo className="w-20" />
                 </div>
                 <div className="flex-none">
-                    { navBarWidth < 700 ? <div onClick={toggleNavBar} className="cursor-pointer">
+                    { navBarWidth < 700 ? <div onClick={toggleSideBarHidden} className="cursor-pointer">
                         {
-                            navBarHidden ?
+                            sideBarHidden ?
                             <GiHamburgerMenu className='text-4xl' />
                             : <IoCloseSharp className='text-4xl' />
                         
@@ -84,7 +83,7 @@ const NavBar = () => {
             {
                 teamHidden || navBarWidth < 700 ? null : <TeamsMenu />
             }
-            { navBarWidth < 700 ? <SideBar hidden={navBarHidden} /> : null}
+            { navBarWidth < 700 ? <SideBar /> : null}
         </>
     )    
 };

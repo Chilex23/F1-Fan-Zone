@@ -28,7 +28,7 @@ const HomePage = () => {
 
     return (
         <>  
-            <h1 className="text-5xl uppercase font-extrabold top-20 relative text-center mb-8 mt-3">Latest News</h1>
+            <h1 className="text-4xl homePhone:text-5xl uppercase font-extrabold top-20 relative text-center mb-8 mt-3">Latest News</h1>
 
             { isLoading ? <div className='h-56 top-20 relative mb-40 flex items-center justify-center'>
                     <TailSpin color="#b90202" height={80} width={80} />

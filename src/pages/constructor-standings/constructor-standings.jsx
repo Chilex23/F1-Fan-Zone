@@ -12,7 +12,7 @@ const ConstructorStandings = () => {
         <>
             <div className="overflow-x-auto mt-20 mx-1 md:mx-6">
                 <h1 className="text-xl md:text-5xl uppercase font-extrabold text-center mb-8 mt-3">
-                    2022 Constructor's Standings
+                    2022 Constructors' Standings
                 </h1>
                 <table className="table table-zebra w-full">
                     <thead>
@@ -23,7 +23,7 @@ const ConstructorStandings = () => {
                     </tr>
                     </thead>
 
-                    <tbody className="h-[90vh]">
+                    <tbody className="h-screen">
                         {
                             loading ? 
                             <tr>
