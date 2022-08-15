@@ -1,11 +1,9 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import fetchResults from "../../utils/fetchResults";
-import NavBar from "../../components/Navbar/navbar.component";
 import Footer from "../../components/footer/footer";
 import useFetch from "../../hooks/useFetch";
 import RaceResultsRowItem from "../../components/race-results-row-item/race-results-row-item";
-import NavProvider from "../../provider/navbar/navbar.provider";
 import { TailSpin } from "react-loader-spinner";
 
 const RaceResults = () => {
@@ -14,9 +12,6 @@ const RaceResults = () => {
 
     return (
         <>
-            <NavProvider>
-                <NavBar />
-            </NavProvider>
             {
                 loading ? 
                 <div className="flex justify-center mt-[6rem]">

@@ -1,8 +1,6 @@
 import React from "react";
-import NavBar from "../../components/Navbar/navbar.component";
 import DriverListItem from "../../components/driverListItem/driverListItem";
 import Footer from "../../components/footer/footer";
-import NavProvider from "../../provider/navbar/navbar.provider";
 import useFetch from "../../hooks/useFetch";
 import fetchDriversStand from "../../utils/fetchDriversStandings";
 import { TailSpin } from "react-loader-spinner";
@@ -12,9 +10,6 @@ const DriversList = () => {
 
     return (
         <>
-            <NavProvider>
-                <NavBar />
-            </NavProvider>
             <div className="border-t-8 border-r-8 border-stone-900 rounded-tr-3xl pt-4 mt-24 mx-6">
                 <h1 className="text-5xl uppercase font-extrabold mb-8 text-stone-900">
                     F1 Drivers 2022

@@ -8,7 +8,7 @@ const TopThree = ({ driver, order }) => {
     return (
         <div className={`h-fit w-[25%] order-${order} rounded-lg relative top-[-2rem] bg-stone-800`}>
             <div className="bg-white rounded-t-lg relative">
-                <p className="text-red-600 font-extrabold text-7xl absolute left-5">{position}</p>
+                <p className="text-red-600 font-extrabold text-7xl absolute left-8 top-5">{position}</p>
                 <img src={findDriver(givenName).pic} alt="driver" />
             </div>
             <div className="px-2 py-4">

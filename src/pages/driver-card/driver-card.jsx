@@ -2,10 +2,8 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import fetchDriverInfo from "../../utils/fetchDriverInfo";
 import findDriver from "../../utils/find-driver";
-import NavBar from "../../components/Navbar/navbar.component";
 import Footer from "../../components/footer/footer";
 import useFetch from "../../hooks/useFetch";
-import NavProvider from "../../provider/navbar/navbar.provider";
 import { TailSpin } from "react-loader-spinner";
 
 const DriverCard = () => {
@@ -13,9 +11,6 @@ const DriverCard = () => {
     const [loading, data, error] = useFetch(fetchDriverInfo, driverId);
     return (
         <>
-            <NavProvider>
-                <NavBar />
-            </NavProvider>
             {
                 loading ? <div className="flex mt-[10rem] justify-center">
                     <TailSpin color="#b90202" height={80} width={80} />

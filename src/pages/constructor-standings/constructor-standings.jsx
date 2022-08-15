@@ -1,6 +1,4 @@
 import React from "react";
-import NavBar from "../../components/Navbar/navbar.component";
-import NavProvider from "../../provider/navbar/navbar.provider";
 import fetchConstructorStand from "../../utils/fetchConstructorStandings";
 import ConstructorRow from "../../components/constructor-row/constructor-row";
 import Footer from "../../components/footer/footer";
@@ -12,9 +10,6 @@ const ConstructorStandings = () => {
 
     return (
         <>
-            <NavProvider>
-                <NavBar />
-            </NavProvider>
             <div className="overflow-x-auto mt-20 mx-1 md:mx-6">
                 <h1 className="text-xl md:text-5xl uppercase font-extrabold text-center mb-8 mt-3">
                     2022 Constructor's Standings
@@ -28,10 +23,10 @@ const ConstructorStandings = () => {
                     </tr>
                     </thead>
 
-                    <tbody className="h-[80vh]">
+                    <tbody className="h-[90vh]">
                         {
                             loading ? 
-                            <tr className="h-[90vh]">
+                            <tr>
                                 <td></td>
                                 <td>
                                     <TailSpin color="#b90202" height={80} width={80} />

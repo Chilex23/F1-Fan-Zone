@@ -2,6 +2,8 @@ import './App.css';
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import HomePage from './pages/homepage/homepage.component';
+import NavBar from './components/Navbar/navbar.component';
+import NavProvider from './provider/navbar/navbar.provider';
 import DriverStandings from './pages/driver-standings/driver-standings';
 import ConstructorStandings from './pages/constructor-standings/constructor-standings';
 import DriversList from './pages/drivers-list/drivers-list';
@@ -14,6 +16,10 @@ function App() {
  
   return (
     <Router>
+      <NavProvider>
+        <NavBar />
+      </NavProvider>
+      
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/driver_standings" element={<DriverStandings />} />

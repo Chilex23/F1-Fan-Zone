@@ -3,10 +3,8 @@ import { useParams } from "react-router-dom";
 import fetchConstructorInfo from "../../utils/fetchConstructorInfo";
 import FindTeam from "../../utils/findTeam";
 import FindTeamDrivers from "../../utils/findTeamDrivers";
-import NavBar from "../../components/Navbar/navbar.component";
 import Footer from "../../components/footer/footer";
 import useFetch from "../../hooks/useFetch";
-import NavProvider from "../../provider/navbar/navbar.provider";
 import { TailSpin } from "react-loader-spinner";
 
 const ConstructorCard = () => {
@@ -16,12 +14,10 @@ const ConstructorCard = () => {
     // console.log(constructor);
     return (
         <>
-            <NavProvider>
-                <NavBar />
-                <h1 className="text-5xl uppercase font-extrabold top-20 relative text-center mb-8 mt-3">
-                    { loading ? "" : data.name }
-                </h1>
-            </NavProvider>
+
+            <h1 className="text-5xl uppercase font-extrabold top-20 relative text-center mb-8 mt-3">
+                { loading ? "" : data.name }
+            </h1>
             {
                 loading ? <div className="mt-[10rem] flex justify-center">
                     <TailSpin color="#b90202" height={80} width={80} />

@@ -1,7 +1,5 @@
 import React from "react";
-import NavBar from "../../components/Navbar/navbar.component";
 import ConstructorListItem from "../../components/constructorListItem/constructorListItem";
-import NavProvider from "../../provider/navbar/navbar.provider";
 import fetchConstructorStand from "../../utils/fetchConstructorStandings";
 import useFetch from "../../hooks/useFetch";
 import Footer from "../../components/footer/footer";
@@ -12,9 +10,6 @@ const ConstructorsList= () => {
 
     return (
         <>
-            <NavProvider>
-                <NavBar />
-            </NavProvider>
             <div className="border-t-8 border-r-8 border-stone-900 rounded-tr-3xl pt-4 mt-24 mx-6">
                 <h1 className="text-5xl uppercase font-extrabold mb-8 text-stone-900">
                     F1 Teams 2022

@@ -1,12 +1,10 @@
 import React, { useEffect, useState } from 'react';
 
-import NavBar from '../../components/Navbar/navbar.component';
 import News from '../../components/news/news.component';
 import ScheduleWrapper from '../../components/schedule/schedule-wrapper.component';
 import StandingsWrapper from '../../components/standings-wrapper/standings-wrapper';
 import Footer from '../../components/footer/footer';
 
-import NavProvider from '../../provider/navbar/navbar.provider';
 import fetchNews from '../../utils/fetchNews';
 import { TailSpin } from "react-loader-spinner";
 
@@ -30,18 +28,16 @@ const HomePage = () => {
 
     return (
         <>  
-            <NavProvider>
-                <NavBar />
-                <h1 className="text-5xl uppercase font-extrabold top-20 relative text-center mb-8 mt-3">Latest News</h1>
-            </NavProvider>
-                { isLoading ? <div className='h-56 top-20 relative mb-40 flex items-center justify-center'>
-                        <TailSpin color="#b90202" height={80} width={80} />
-                    </div>  : 
-                    isError ? <div className='h-56 top-20 relative mb-40 flex items-center justify-center'>
-                        Something went wrong
-                    </div>  :
-                    <News results={results} />
-                }
+            <h1 className="text-5xl uppercase font-extrabold top-20 relative text-center mb-8 mt-3">Latest News</h1>
+
+            { isLoading ? <div className='h-56 top-20 relative mb-40 flex items-center justify-center'>
+                    <TailSpin color="#b90202" height={80} width={80} />
+                </div>  : 
+                isError ? <div className='h-56 top-20 relative mb-40 flex items-center justify-center'>
+                    Something went wrong
+                </div>  :
+                <News results={results} />
+            }
             <ScheduleWrapper />
             <StandingsWrapper />
             <Footer />

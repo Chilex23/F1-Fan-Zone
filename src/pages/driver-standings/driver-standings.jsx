@@ -1,6 +1,4 @@
 import React from "react";
-import NavBar from "../../components/Navbar/navbar.component";
-import NavProvider from "../../provider/navbar/navbar.provider";
 import fetchDriversStand from "../../utils/fetchDriversStandings";
 import TableRow from "../../components/table-row/table-row";
 import Footer from "../../components/footer/footer";
@@ -12,9 +10,6 @@ const DriverStandings = () => {
 
     return (
         <>
-            <NavProvider>
-                <NavBar />
-            </NavProvider>
             <div className="overflow-x-auto mt-20 mx-1 md:mx-6">
                 <h1 className="text-xl md:text-5xl uppercase font-extrabold text-center mb-8 mt-3">
                     2022 Driver's Standings
