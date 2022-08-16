@@ -13,7 +13,7 @@ const RaceResults = () => {
   return (
     <div className="dark:bg-gray-800 mt-[4rem] pt-5">
       {loading ? (
-        <div className="flex justify-center mt-[6rem]">
+        <div className="flex justify-center mt-[6rem] min-h-screen">
           <TailSpin color="#b90202" height={80} width={80} />
         </div>
       ) : error ? (
@@ -29,7 +29,7 @@ const RaceResults = () => {
           </h1>
 
           <div className="overflow-x-auto w-full">
-            <table className="table w-full mb-20">
+            <table className="table w-full mb-20 min-h">
               <thead>
                 <tr className="text-center">
                   <th>Pos</th>
