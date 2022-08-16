@@ -5,33 +5,39 @@ import useFetch from "../../hooks/useFetch";
 import Footer from "../../components/footer/footer";
 import { TailSpin } from "react-loader-spinner";
 
-const ConstructorsList= () => {
-    const [loading, data, error] = useFetch(fetchConstructorStand);
+const ConstructorsList = () => {
+  const [loading, data, error] = useFetch(fetchConstructorStand);
 
-    return (
-        <div className="dark:bg-gray-800 mt-[4rem] pt-[2rem]">
-            <div className="border-t-8 border-r-8 border-stone-900 dark:border-gray-300 rounded-tr-3xl pt-4 mx-6">
-                <h1 className="text-5xl uppercase font-extrabold mb-8 text-stone-900 dark:text-gray-300">
-                    F1 Teams 2022
-                </h1>
-                <p className="bg-gray-200 text-black px-2 py-4 rounded-l-md">
-                    Click on a team's card to view the team's details
-                </p>
-            </div>
+  return (
+    <div className="dark:bg-gray-800 mt-[4rem] pt-[2rem] min-h-screen">
+      <div className="border-t-8 border-r-8 border-stone-900 dark:border-gray-300 rounded-tr-3xl pt-4 mx-6">
+        <h1 className="text-5xl uppercase font-extrabold mb-8 text-stone-900 dark:text-gray-300">
+          F1 Teams 2022
+        </h1>
+        <p className="bg-gray-200 text-black px-2 py-4 rounded-l-md">
+          Click on a team's card to view the team's details
+        </p>
+      </div>
 
-            <div className="grid md:grid-cols-2 mx-6 mt-4 gap-x-6 gap-y-10">
-                {
-                    loading ? <div className="flex justify-center ml-auto">
-                        <TailSpin color="#b90202" height={80} width={80} />
-                    </div>  
-                    :
-                    error ? <div className="flex justify-center">Error...</div> :
-                    data.map(constructor => <ConstructorListItem key={constructor.Constructor.constructorId} constructor={constructor} />)
-                }
-            </div>
-            { loading ? null : <Footer /> }
-        </div>
-    )
+      <div className="grid md:grid-cols-2 mx-6 mt-4 gap-x-6 gap-y-10">
+        {loading ? (
+          <div className="flex justify-center md:ml-auto">
+            <TailSpin color="#b90202" height={80} width={80} />
+          </div>
+        ) : error ? (
+          <div className="flex justify-center">Error...</div>
+        ) : (
+          data.map((constructor) => (
+            <ConstructorListItem
+              key={constructor.Constructor.constructorId}
+              constructor={constructor}
+            />
+          ))
+        )}
+      </div>
+      {loading ? null : <Footer />}
+    </div>
+  );
 };
 
 export default ConstructorsList;
