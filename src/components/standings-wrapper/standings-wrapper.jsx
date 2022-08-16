@@ -34,8 +34,8 @@ const StandingsWrapper = () => {
     } else if (data.length > 0) {
         return (
             <div className="sm2:mx-1 mx-4 bg-gray-200 pb-48 mb-[-2rem] relative top-36 rounded-t-lg">
-                <div className="bg-white flex justify-center uppercase">
-                    <div className={`${driverStand ? "border-red-600" : ""} border-t-4 border-r-4 rounded-tr-xl px-2 py-4 cursor-pointer lg:myLink lg:hover:text-white mr-6 sm2:text-xs font-bold`} onClick={toggleDriverStand}>
+                <div className="bg-gray-200 pt-4 flex justify-center uppercase text-black">
+                    <div className={`${driverStand ? "border-red-600" : ""} lg:myLink border-t-4 border-r-4 px-2 py-4 cursor-pointer lg:hover:text-white mr-6 sm2:text-xs font-bold`} onClick={toggleDriverStand}>
                         Drivers Standings
                     </div>
                     <div className={`${teamStand ? "border-red-600" : ""} border-t-4 border-r-4 rounded-tr-xl px-2 py-4 cursor-pointer lg:myLink lg:hover:text-white sm2:text-xs font-bold`} onClick={toggleTeamStand}>
@@ -43,7 +43,7 @@ const StandingsWrapper = () => {
                     </div>
                 </div>
 
-                <div className="bg-stone-900 h-56 flex justify-center items-center mb-6 rounded-t-lg">
+                <div className="bg-stone-900 h-56 flex justify-center items-center mb-6">
                     <h1 className="sm2:text-xl text-3xl font-extrabold text-white text-center uppercase">
                         {driverStand ? "2022 Drivers' Standings" : "2022 Constructors' Standings"}
                     </h1>

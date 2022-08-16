@@ -11,7 +11,7 @@ const RaceResults = () => {
     const [loading, data, error] = useFetch(fetchResults, circuitId);
 
     return (
-        <>
+        <div className="dark:bg-gray-800 mt-[4rem] pt-5">
             {
                 loading ? 
                 <div className="flex justify-center mt-[6rem]">
@@ -21,13 +21,13 @@ const RaceResults = () => {
                 data.length === 0 || data[0].length === 0 ? 
                     <p className="mt-[6rem] h-screen">"No results..."</p> 
                 : 
-                <div className="w-full md:w-[90%] mx-auto mt-[6rem]">
-                    <h1 className="mt-2 py-4 font-black text-xl md:text-3xl text-center">
+                <div className="w-full md:w-[90%] mx-auto">
+                    <h1 className="mt-2 py-4 font-black text-xl md:text-3xl text-center dark:text-gray-300">
                         {data[0].raceName} Results
                     </h1>
 
                     <div className="overflow-x-auto w-full">
-                        <table className="table w-full">
+                        <table className="table w-full mb-20">
                             <thead>
                             <tr className="text-center">
                                 <th>Pos</th>
@@ -59,7 +59,7 @@ const RaceResults = () => {
                 </div>
             }
             { loading ? null : <Footer /> }
-        </>
+        </div>
     )
 };
 

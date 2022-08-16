@@ -9,9 +9,9 @@ const DriverStandings = () => {
     const [loading, data, error] = useFetch(fetchDriversStand);
 
     return (
-        <>
-            <div className="overflow-x-auto mt-20 mx-1 md:mx-6">
-                <h1 className="text-xl md:text-5xl uppercase font-extrabold text-center mb-8 mt-3">
+        <div className="dark:bg-gray-800">
+            <div className="overflow-x-auto mt-[4rem] mx-1 md:mx-6 mb-20">
+                <h1 className="text-xl md:text-5xl uppercase font-extrabold text-center mb-8 mt-10 dark:text-gray-300">
                     2022 Drivers' Standings
                 </h1>
                 <table className={`table table-zebra w-full ${loading ? "h-screen" : "h-fit" }`}>
@@ -31,7 +31,7 @@ const DriverStandings = () => {
                             <tr className="text-center">
                                 <td></td>
                                 <td></td>
-                                <td>
+                                <td className="flex justify-center">
                                     <TailSpin color="#b90202" height={80} width={80} />
                                 </td>
                                 <td></td>
@@ -40,13 +40,21 @@ const DriverStandings = () => {
                             error ? <tr><td>Something went wrong</td></tr> :
                             data.length > 0 ?
                             data.map((elem, i) => <TableRow key={i + 1} driver={elem} />) :
-                            <tr className="h-[90vh]"><td>No results</td></tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td className="flex justify-center">
+                                    No results
+                                </td>
+                                <td></td>
+                                <td></td>
+                            </tr>
                         }
                     </tbody>
                 </table>
             </div>
             { loading ? null : <Footer /> }
-        </>
+        </div>
     );
 }
 

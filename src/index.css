@@ -11,3 +11,23 @@
 @layer components {
   .myLink { @apply bg-bgGradient px-3 py-2 hover:bg-[position:100%] transition-all duration-[.7s] homePhone:bg-[length:250%] rounded-sm}
 }
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: gray;
+  scroll-behavior: smooth;
+}
+
+*::-webkit-scrollbar {
+  width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+  background: rgb(252, 251, 248);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: gray;
+  border-radius: 20px;
+  border: 3px solid gray;
+}

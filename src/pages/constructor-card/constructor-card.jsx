@@ -13,19 +13,19 @@ const ConstructorCard = () => {
 
     // console.log(constructor);
     return (
-        <>
+        <div className="dark:bg-gray-800 mt-[4rem] pt-5">
 
-            <h1 className="text-5xl uppercase font-extrabold top-20 relative text-center mb-8 mt-3">
+            <h1 className="text-5xl dark:text-gray-300 uppercase font-extrabold top-2 relative text-center mb-8 mt-3">
                 { loading ? "" : data.name }
             </h1>
             {
-                loading ? <div className="mt-[10rem] flex justify-center">
+                loading ? <div className="h-screen mt-[5rem] flex justify-center">
                     <TailSpin color="#b90202" height={80} width={80} />
                 </div> 
                 :
                 error ? <p className="mt-[6rem] h-screen">"Error..."</p> : 
                 data.length === 0 ? <p className="mt-[6rem] h-screen">"No results..."</p> :
-                <div className="w-[90%] mx-auto mt-[6rem]">
+                <div className="w-[90%] mx-auto">
                     <div className="flex gap-x-6 flex-col md:flex-row">
                         <div className="w-[100%]">
                             <div className="h-full">
@@ -44,12 +44,12 @@ const ConstructorCard = () => {
                                 FindTeamDrivers(data.name).slice(0, 2).map((elem) => 
                                 <Link to={`/drivers_list/${elem.driverId}`} key={elem.driverId} className="sm2:h-[20rem] lg:h-full flex flex-col border border-gray-500 rounded-lg">
                                     <img className="w-full" src={elem.fullPic} alt="driver" />
-                                    <div className="flex flex-col p-4">
+                                    <div className="flex flex-col p-4 dark:text-gray-300">
                                         <span className="text-5xl font-extrabold">{elem.number}</span>
                                         <span className="text-xl font-extrabold">
                                             {elem.givenName} {elem.familyName}
                                         </span>
-                                        <span className="text-gray-600">{elem.team}</span>
+                                        <span className="text-gray-600 dark:text-gray-300">{elem.team}</span>
                                     </div>
                                 </Link>
                                 )
@@ -58,8 +58,8 @@ const ConstructorCard = () => {
                     </div>
 
                 <div className="mt-6 max-w-4xl">
-                    <h3 className="py-4 font-bold text-3xl">In profile</h3>
-                    <p className="leading-7">
+                    <h3 className="py-4 font-bold text-3xl dark:text-gray-300">In profile</h3>
+                    <p className="leading-7 dark:text-gray-300">
                        {
                             FindTeam(data.name).bio
                        }
@@ -69,7 +69,7 @@ const ConstructorCard = () => {
             }
             
             { loading ? null : <Footer /> }
-        </>
+        </div>
     );
 }
 

@@ -10,7 +10,7 @@ const ConstructorListItem = ({ constructor }) => {
         Constructor: { name, constructorId },
     } = constructor;
     return (
-        <Link to={`/constructors_list/${constructorId} `} className={"cursor-pointer border-t-2 border-r-2 border-stone-900 rounded-tr-xl pr-1 homePhone:pr-3 hover:border-red-600"}>
+        <Link to={`/constructors_list/${constructorId} `} className={"cursor-pointer border-t-2 border-r-2 border-stone-900 dark:border-gray-400 rounded-tr-xl dark:text-gray-300 pr-1 homePhone:pr-3 hover:border-red-600"}>
             <div className="flex justify-between items-center border-gray-400 py-2">
                 <p className="font-black text-3xl">{position}</p>
                 <div className="flex flex-col items-center leading-3">
@@ -30,9 +30,9 @@ const ConstructorListItem = ({ constructor }) => {
             <div className="flex justify-between border-b border-r rounded-br-xl border-gray-400 mb-4 pb-1">
                 {
                     FindTeamDrivers(name).slice(0,2).map(driver => (
-                        <div className="flex items-center justify-between" key={driver.givenName}>
-                            <span className="text-base font-extrabold mr-2">{driver.givenName}</span>
-                            <span className="text-base font-extrabold">{driver.familyName}</span>
+                        <div className="flex items-center justify-between text-base font-extrabold" key={driver.givenName}>
+                            <span className="mr-2">{driver.givenName}</span>
+                            <span>{driver.familyName}</span>
                             <img src={driver.pic} className="w-10 h-10 lg:w-16 lg:h-16 hidden md:block" alt="driver" />
                         </div>
                     ))

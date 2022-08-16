@@ -8,6 +8,7 @@ import SideBar from '../side-bar/side-bar';
 import { Link } from 'react-router-dom';
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoCloseSharp } from "react-icons/io5";
+import { toggleTheme } from '../../utils/theme';
 
 const NavBar = () => {
     const { standHidden, 
@@ -28,7 +29,7 @@ const NavBar = () => {
         }
         window.addEventListener('resize', handleResize);
     });
-    
+
     return (
         <>
             <div className="navbar bg-red-600 text-white fixed top-0 z-40 shadow-lg">
@@ -36,7 +37,12 @@ const NavBar = () => {
                     <Logo className="w-20" />
                 </div>
                 <div className="flex-none">
-                    { navBarWidth < 700 ? <div onClick={toggleSideBarHidden} className="cursor-pointer">
+                    <div>
+                        <p onClick={toggleTheme}>Light Mode</p>
+                        <p onClick={toggleTheme}>Dark Mode</p>
+                    </div>
+                    { navBarWidth < 700 ? 
+                    <div onClick={toggleSideBarHidden} className="cursor-pointer">
                         {
                             sideBarHidden ?
                             <GiHamburgerMenu className='text-4xl' />

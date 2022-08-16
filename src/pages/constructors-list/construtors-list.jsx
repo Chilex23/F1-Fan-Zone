@@ -9,9 +9,9 @@ const ConstructorsList= () => {
     const [loading, data, error] = useFetch(fetchConstructorStand);
 
     return (
-        <>
-            <div className="border-t-8 border-r-8 border-stone-900 rounded-tr-3xl pt-4 mt-24 mx-6">
-                <h1 className="text-5xl uppercase font-extrabold mb-8 text-stone-900">
+        <div className="dark:bg-gray-800 mt-[4rem] pt-[2rem]">
+            <div className="border-t-8 border-r-8 border-stone-900 dark:border-gray-300 rounded-tr-3xl pt-4 mx-6">
+                <h1 className="text-5xl uppercase font-extrabold mb-8 text-stone-900 dark:text-gray-300">
                     F1 Teams 2022
                 </h1>
                 <p className="bg-gray-200 text-black px-2 py-4 rounded-l-md">
@@ -21,7 +21,7 @@ const ConstructorsList= () => {
 
             <div className="grid md:grid-cols-2 mx-6 mt-4 gap-x-6 gap-y-10">
                 {
-                    loading ? <div className="flex justify-center">
+                    loading ? <div className="flex justify-center ml-auto">
                         <TailSpin color="#b90202" height={80} width={80} />
                     </div>  
                     :
@@ -30,7 +30,7 @@ const ConstructorsList= () => {
                 }
             </div>
             { loading ? null : <Footer /> }
-        </>
+        </div>
     )
 };
 

@@ -9,8 +9,8 @@ const DriverListItem = ({ driver }) => {
         Constructors
     } = driver;
     return (
-        <Link to={`/drivers_list/${driverId}`} className="cursor-pointer border-t-2 border-r-2 border-stone-900 rounded-tr-xl pr-3 hover:border-red-600">
-            <div className="flex justify-between items-center border-b-[1px] border-gray-400 mb-2 py-2">
+        <Link to={`/drivers_list/${driverId}`} className="cursor-pointer border-t-2 border-r-2 border-stone-900 rounded-tr-xl pr-3 hover:border-red-600 dark:border-gray-400">
+            <div className="flex justify-between items-center border-b-[1px] border-gray-400 mb-2 py-2 dark:text-gray-300">
                 <p className="font-black text-3xl">{position}</p>
                 <div className="flex flex-col items-center leading-3">
                     <p className="text-xl font-extrabold">{points}</p>
@@ -19,7 +19,7 @@ const DriverListItem = ({ driver }) => {
             </div>
 
             <div className="flex justify-between items-center border-b-[1px] border-gray-400 mb-2 pb-2">
-                <div className="flex flex-col items-left leading-3">
+                <div className="flex flex-col items-left leading-3 dark:text-gray-300">
                     <span className="uppercase font-medium">{givenName}</span>
                     <span className="uppercase font-extrabold text-2xl">{familyName}</span>
                 </div>
