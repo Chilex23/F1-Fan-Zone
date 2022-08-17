@@ -13,8 +13,8 @@ const ConstructorCard = () => {
 
   // console.log(constructor);
   return (
-    <div className="dark:bg-gray-800 mt-[4rem] pt-5">
-      <h1 className="text-5xl dark:text-gray-300 uppercase font-extrabold top-2 relative text-center mb-8 mt-3">
+    <div className="dark:bg-gray-800 mt-[3rem] pt-5">
+      <h1 className="text-3xl md:text-5xl dark:text-gray-300 uppercase font-extrabold top-2 relative text-center mb-8 mt-1">
         {loading ? "" : data.name}
       </h1>
       {loading ? (

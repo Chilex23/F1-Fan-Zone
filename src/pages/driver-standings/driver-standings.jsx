@@ -10,16 +10,16 @@ const DriverStandings = () => {
 
   return (
     <div className="dark:bg-gray-800 min-h-screen">
-      <div className="overflow-x-auto mt-[4rem] mx-1 md:mx-6 mb-20">
+      <div className="overflow-x-auto mt-[3rem] mx-1 md:mx-6 mb-20">
         <h1 className="text-xl md:text-5xl uppercase font-extrabold text-center mb-8 mt-10 dark:text-gray-300">
           2022 Drivers' Standings
         </h1>
         <table
-          className={`table table-zebra w-full ${
+          className={`w-full dark:text-gray-300 ${
             loading ? "h-screen" : "h-fit"
           }`}
         >
-          <thead>
+          <thead className="bg-gray-100 dark:bg-gray-700">
             <tr className="text-center">
               <th>Pos</th>
               <th>Driver</th>
@@ -29,7 +29,7 @@ const DriverStandings = () => {
             </tr>
           </thead>
 
-          <tbody>
+          <tbody className="text-center sm2:text-sm">
             {loading ? (
               <tr className="text-center">
                 <td></td>
@@ -42,7 +42,11 @@ const DriverStandings = () => {
               </tr>
             ) : error ? (
               <tr>
+                <td></td>
+                <td></td>
                 <td>Something went wrong</td>
+                <td></td>
+                <td></td>
               </tr>
             ) : data.length > 0 ? (
               data.map((elem, i) => <TableRow key={i + 1} driver={elem} />)

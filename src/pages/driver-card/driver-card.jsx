@@ -10,7 +10,7 @@ const DriverCard = () => {
   const { driverId } = useParams();
   const [loading, data, error] = useFetch(fetchDriverInfo, driverId);
   return (
-    <div className="dark:bg-gray-800 mt-[4rem] pt-12">
+    <div className="dark:bg-gray-800 mt-[3rem] pt-12">
       {loading ? (
         <div className="h-screen flex mt-[5rem] justify-center">
           <TailSpin color="#b90202" height={80} width={80} />
@@ -69,9 +69,9 @@ const DriverCard = () => {
             </h1>
 
             <h3 className="py-4 font-bold text-3xl">Biography</h3>
-            <p className="leading-7 max-w-3xl">
-              {findDriver(data.givenName).biography}
-            </p>
+            <div className="leading-7 max-w-3xl">
+              {findDriver(data.givenName).biography.split("<p>").map(elem => <p className="mb-6">{elem}</p>)}
+            </div>
           </div>
         </div>
       )}

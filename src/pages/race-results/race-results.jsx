@@ -11,7 +11,7 @@ const RaceResults = () => {
   const [loading, data, error] = useFetch(fetchResults, circuitId);
 
   return (
-    <div className="dark:bg-gray-800 mt-[4rem] pt-5">
+    <div className="dark:bg-gray-800 mt-[3rem] pt-5">
       {loading ? (
         <div className="flex justify-center mt-[6rem] min-h-screen">
           <TailSpin color="#b90202" height={80} width={80} />
@@ -29,13 +29,13 @@ const RaceResults = () => {
           </h1>
 
           <div className="overflow-x-auto w-full">
-            <table className="table w-full mb-20 min-h">
-              <thead>
+            <table className="w-full mb-20 dark:text-gray-300">
+              <thead className="dark:bg-gray-700">
                 <tr className="text-center">
                   <th>Pos</th>
                   <th>Driver</th>
-                  <th>Laps</th>
-                  <th>Pts</th>
+                  <th className="px-2">Laps</th>
+                  <th className="px-2">Pts</th>
                   <th>Status</th>
                 </tr>
               </thead>
@@ -45,7 +45,7 @@ const RaceResults = () => {
                 ))}
               </tbody>
 
-              <tfoot className="w-full">
+              <tfoot className="w-full dark:bg-gray-700">
                 <tr className="text-center">
                   <th>Pos</th>
                   <th>Driver</th>

@@ -10,12 +10,12 @@ const ConstructorStandings = () => {
 
   return (
     <div className="dark:bg-gray-800 min-h-screen">
-      <div className="overflow-x-auto mt-[4rem] mx-1 md:mx-6">
+      <div className="overflow-x-auto mt-[3rem] mx-1 md:mx-6">
         <h1 className="text-xl md:text-5xl uppercase font-extrabold text-center mb-8 mt-10 dark:text-gray-300">
           2022 Constructors' Standings
         </h1>
-        <table className="table table-zebra w-full">
-          <thead>
+        <table className="w-full dark:text-gray-300 mb-40">
+          <thead className="bg-gray-100 dark:bg-gray-700">
             <tr>
               <th>Pos</th>
               <th>Team</th>
@@ -23,7 +23,7 @@ const ConstructorStandings = () => {
             </tr>
           </thead>
 
-          <tbody>
+          <tbody className="text-center sm2:text-sm">
             {loading ? (
               <tr>
                 <td></td>

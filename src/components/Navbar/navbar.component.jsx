@@ -50,13 +50,13 @@ const NavBar = () => {
 
   return (
     <>
-      <div className="navbar bg-red-600 text-white fixed top-0 z-40 shadow-lg">
-        <div className="flex-1">
+      <div className="w-full bg-red-600 text-white fixed top-0 z-40 shadow-lg flex items-center justify-between py-4 pl-4 pr-4 md:pr-0">
+        <div className="flex-grow-0">
           <Logo className="w-20" />
         </div>
-        <div className="flex-none">
+        <div className="flex">
           <div
-            className="flex mr-4 justify-between cursor-pointer"
+            className="flex mr-4 lg:mr-6 justify-between items-center cursor-pointer"
             onClick={toggleThemeHandler}
           >
             {theme === "light" ? (
@@ -74,14 +74,14 @@ const NavBar = () => {
               )}
             </div>
           ) : (
-            <ul className="menu menu-horizontal p-0">
-              <li tabIndex="0">
+            <ul className="flex justify-between items-center p-0 w-[100%]">
+              <li tabIndex="0" className="mr-4 lg:mr-6">
                 <Link to="/">Home</Link>
               </li>
 
-              <NavBarLink toggleFn={toggleStandHidden} label="Standings" />
-              <NavBarLink toggleFn={toggleDriverHidden} label="Drivers" />
-              <NavBarLink toggleFn={toggleTeamHidden} label="Teams" />
+              <NavBarLink toggleFn={toggleStandHidden} label="Standings" animate={standHidden} />
+              <NavBarLink toggleFn={toggleDriverHidden} label="Drivers" animate={driverHidden} />
+              <NavBarLink toggleFn={toggleTeamHidden} label="Teams" animate={teamHidden} />
             </ul>
           )}
         </div>

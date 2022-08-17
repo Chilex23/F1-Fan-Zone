@@ -1,18 +1,13 @@
 import React from "react";
+import { RiArrowDropDownLine } from "react-icons/ri";
+import { RiCloseFill } from "react-icons/ri";
 
-const NavBarLink = ({ toggleFn, label }) => (
-  <li tabIndex="0">
-    <button onClick={toggleFn}>
+
+const NavBarLink = ({ toggleFn, label, animate }) => (
+  <li tabIndex="0" className="mr-4 lg:mr-6">
+    <button onClick={toggleFn} className="flex items-center">
       { label }
-      <svg
-        className="fill-current"
-        xmlns="http://www.w3.org/2000/svg"
-        width="20"
-        height="20"
-        viewBox="0 0 24 24"
-      >
-        <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
-      </svg>
+      {animate ? <RiArrowDropDownLine className="text-3xl" /> : <RiCloseFill className="text-xl" />}
     </button>
   </li>
 );
