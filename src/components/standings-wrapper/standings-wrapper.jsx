@@ -38,7 +38,7 @@ const StandingsWrapper = () => {
   } else if (data.length > 0) {
     return (
       <div className="sm2:mx-1 mx-4 bg-gray-200 pb-48 mb-[-2rem] relative top-36 rounded-t-lg">
-        <div className="bg-gray-200 pt-4 flex justify-center uppercase text-black">
+        <div className="bg-gray-200 pt-4 flex justify-center gap-2 uppercase text-black">
           <StandingsTab stand={driverStand} toggleFn={toggleDriverStand}>
             Drivers' Standings
           </StandingsTab>

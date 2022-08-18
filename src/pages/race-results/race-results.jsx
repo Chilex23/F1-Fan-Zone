@@ -11,7 +11,7 @@ const RaceResults = () => {
   const [loading, data, error] = useFetch(fetchResults, circuitId);
 
   return (
-    <div className="dark:bg-gray-800 mt-[3rem] pt-5">
+    <div className="dark:bg-gray-800 mt-[3rem] pt-5 dark:text-gray-300">
       {loading ? (
         <div className="flex justify-center mt-[6rem] min-h-screen">
           <TailSpin color="#b90202" height={80} width={80} />

@@ -18,7 +18,7 @@ const DriverCard = () => {
       ) : error ? (
         <p className="mt-[1rem] h-screen">😔 Snap! An error occured"</p>
       ) : data.length === 0 ? (
-        <p className="mt-[1rem] h-screen">🤷 No results...</p>
+        <p className="mt-[1rem] h-screen dark:text-gray-300">🤷 No results...</p>
       ) : (
         <div className="w-[90%] mx-auto">
           <div className="flex gap-x-2 tablet:gap-x-6 lg:gap-x-10 flex-col tablet:flex-row">
