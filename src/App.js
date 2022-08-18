@@ -26,14 +26,14 @@ function App() {
           path="/constructor_standings"
           element={<ConstructorStandings />}
         />
-        <Route path="/drivers_list" element={<DriversList />} />
-        <Route path="/drivers_list/:driverId" element={<DriverCard />} />
-        <Route path="/constructors_list" element={<ConstructorsList />} />
+        <Route path="/drivers" element={<DriversList />} />
+        <Route path="/drivers/:driverId" element={<DriverCard />} />
+        <Route path="/constructors" element={<ConstructorsList />} />
         <Route
-          path="/constructors_list/:constructorId"
+          path="/constructors/:constructorId"
           element={<ConstructorCard />}
         />
-        <Route path="/race_results/:circuitId" element={<RaceResults />} />
+        <Route path="/results/:circuitId" element={<RaceResults />} />
       </Routes>
     </Router>
   );

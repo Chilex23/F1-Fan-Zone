@@ -9,7 +9,7 @@ const ConstructorStandItem = ({ constructor }) => {
   } = constructor;
   return (
     <Link
-      to={`/constructors_list/${constructorId}`}
+      to={`/constructors/${constructorId}`}
       className="group sm2:w-[97%] w-[80%] relative tablet:top-[-5rem] mt-2 mx-auto bg-white px-4 py-3 hover:bg-gray-800 hover:dark:text-white hover:text-white rounded-lg flex justify-between cursor-pointer text-black"
     >
       <div className="flex gap-2 sm:gap-3 items-center dark:text-black group-hover:text-white">

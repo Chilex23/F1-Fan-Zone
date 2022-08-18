@@ -18,10 +18,10 @@ const RaceResults = () => {
         </div>
       ) : error ? (
         <p className="mt-[10rem] flex items-center justify-center">
-          "Error..."
+          😔 Snap! An error occured
         </p>
       ) : data.length === 0 || data[0].length === 0 ? (
-        <p className="mt-[6rem] h-screen">"No results..."</p>
+        <p className="mt-[6rem] h-screen">🤷 No results yet...</p>
       ) : (
         <div className="w-full md:w-[90%] mx-auto">
           <h1 className="mt-2 py-4 font-black text-xl md:text-3xl text-center dark:text-gray-300">

@@ -9,7 +9,7 @@ const ConstructorsList = () => {
   const [loading, data, error] = useFetch(fetchConstructorStand);
 
   return (
-    <div className="dark:bg-gray-800 mt-[3rem] pt-[2rem] min-h-screen">
+    <div className="dark:bg-gray-800 mt-[3rem] pt-[2rem] min-h-screen dark:text-gray-300">
       <div className="border-t-8 border-r-8 border-stone-900 dark:border-gray-300 rounded-tr-3xl pt-4 mx-6 sm2:mx-4">
         <h1 className="text-3xl md:text-5xl uppercase font-extrabold mb-8 text-stone-900 dark:text-gray-300">
           F1 Teams 2022
@@ -25,7 +25,7 @@ const ConstructorsList = () => {
             <TailSpin color="#b90202" height={80} width={80} />
           </div>
         ) : error ? (
-          <div className="flex justify-center">Error...</div>
+          <div className="flex justify-center h-screen">😔 Snap! An error occured</div>
         ) : (
           data.map((constructor) => (
             <ConstructorListItem

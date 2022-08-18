@@ -44,7 +44,7 @@ const DriverStandings = () => {
               <tr>
                 <td></td>
                 <td></td>
-                <td>Something went wrong</td>
+                <td>😔 Snap! An error occured</td>
                 <td></td>
                 <td></td>
               </tr>
@@ -54,7 +54,7 @@ const DriverStandings = () => {
               <tr>
                 <td></td>
                 <td></td>
-                <td className="flex justify-center">No results</td>
+                <td className="flex justify-center">🤷 No results...</td>
                 <td></td>
                 <td></td>
               </tr>

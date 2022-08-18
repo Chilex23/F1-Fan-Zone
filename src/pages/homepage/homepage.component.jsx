@@ -37,7 +37,7 @@ const HomePage = () => {
         </div>
       ) : isError ? (
         <div className="h-56 top-20 relative mb-40 flex items-center justify-center">
-          Something went wrong
+         😔 Snap! An error occured
         </div>
       ) : (
         <News results={results} />

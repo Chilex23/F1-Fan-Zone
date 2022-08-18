@@ -10,7 +10,7 @@ const DriverMenuDropDwn = () => {
       <div className="flex text-white w-5/6 mx-auto justify-start gap-12 p-3 rounded-br-2xl border-b-2 border-r-2 border-gray-400">
         <div className="border-b-2 hover:border-red-600 border-transparent">
           <Link
-            to="/drivers_list"
+            to="/drivers"
             className="font-semibold text-xl"
             onClick={toggleDriverHidden}
           >

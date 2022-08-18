@@ -11,7 +11,7 @@ const DriverListItem = ({ driver }) => {
   } = driver;
   return (
     <Link
-      to={`/drivers_list/${driverId}`}
+      to={`/drivers/${driverId}`}
       className="cursor-pointer border-t-2 border-r-2 border-stone-900 rounded-tr-xl pr-3 hover:border-red-600 dark:border-gray-400"
     >
       <div className="flex justify-between items-center border-b-[1px] border-gray-400 mb-2 py-2 dark:text-gray-300">

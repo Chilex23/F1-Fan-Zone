@@ -75,7 +75,7 @@ const ScheduleItem = ({ details }) => {
             className="text-center mt-8"
           >
             <Link
-              to={`/race_results/${circuitId}`}
+              to={`/results/${circuitId}`}
               className="bg-red-600 reltive top-20 py-2 px-4 rounded-md"
             >
               View Race Results

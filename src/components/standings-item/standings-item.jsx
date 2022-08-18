@@ -10,7 +10,7 @@ const StandingsItem = ({ driver }) => {
   } = driver;
   return (
     <Link
-      to={`/drivers_list/${driverId}`}
+      to={`/drivers/${driverId}`}
       className="group sm2:w-[97%] w-[80%] mt-2 mx-auto bg-white px-4 py-3 hover:bg-gray-800 text-black hover:text-white rounded-lg flex justify-between relative md:top-10 lg:top-32 cursor-pointer"
     >
       <div className="flex gap-2 sm:gap-3 items-center group-hover:text-white">

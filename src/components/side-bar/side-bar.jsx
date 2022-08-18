@@ -38,7 +38,7 @@ const SideBar = () => {
         </div>
         <div className="mb-7">
           <Link
-            to="/drivers_list"
+            to="/drivers"
             className="myLink"
             onClick={toggleSideBarHidden}
           >
@@ -47,7 +47,7 @@ const SideBar = () => {
         </div>
         <div>
           <Link
-            to="/constructors_list"
+            to="/constructors"
             className="myLink"
             onClick={toggleSideBarHidden}
           >

@@ -19,10 +19,10 @@ const Footer = () => (
       <div className="w-fit mx-auto">
         <h3 className="font-bold text-lg uppercase">Lists</h3>
         <ul className="sm2:text-sm">
-          <Link to="/drivers_list">
+          <Link to="/drivers">
             <li>Drivers List</li>
           </Link>
-          <Link to="/constructors_list">
+          <Link to="/constructors">
             <li>Constructors Lists</li>
           </Link>
         </ul>

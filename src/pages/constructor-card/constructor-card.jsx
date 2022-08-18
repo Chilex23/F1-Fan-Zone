@@ -13,7 +13,7 @@ const ConstructorCard = () => {
 
   // console.log(constructor);
   return (
-    <div className="dark:bg-gray-800 mt-[3rem] pt-5">
+    <div className="dark:bg-gray-800 mt-[3rem] pt-5 dark:text-gray-300">
       <h1 className="text-3xl md:text-5xl dark:text-gray-300 uppercase font-extrabold top-2 relative text-center mb-8 mt-1">
         {loading ? "" : data.name}
       </h1>
@@ -22,9 +22,9 @@ const ConstructorCard = () => {
           <TailSpin color="#b90202" height={80} width={80} />
         </div>
       ) : error ? (
-        <p className="mt-[6rem] h-screen">"Error..."</p>
+        <p className="mt-[1rem] h-screen">😔 Snap! An error occured</p>
       ) : data.length === 0 ? (
-        <p className="mt-[6rem] h-screen">"No results..."</p>
+        <p className="mt-[1rem] h-screen">🤷 No results...</p>
       ) : (
         <div className="w-[90%] mx-auto">
           <div className="flex gap-x-6 flex-col md:flex-row">
@@ -51,7 +51,7 @@ const ConstructorCard = () => {
                 .slice(0, 2)
                 .map((elem) => (
                   <Link
-                    to={`/drivers_list/${elem.driverId}`}
+                    to={`/drivers/${elem.driverId}`}
                     key={elem.driverId}
                     className="sm2:h-[20rem] lg:h-full flex flex-col border border-gray-500 rounded-lg"
                   >

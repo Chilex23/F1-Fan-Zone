@@ -34,14 +34,14 @@ const ConstructorStandings = () => {
               </tr>
             ) : error ? (
               <tr>
-                <td>Something went wrong</td>
+                <td>😔 Snap! An error occured</td>
               </tr>
             ) : data.length > 0 ? (
               data.map((elem, i) => <ConstructorRow key={i + 1} team={elem} />)
             ) : (
               <tr>
                 <td></td>
-                <td className="flex justify-center">No results</td>
+                <td className="flex justify-center">🤷 No results...</td>
                 <td></td>
               </tr>
             )}

@@ -50,7 +50,7 @@ const NavBar = () => {
 
   return (
     <>
-      <div className="w-full bg-red-600 text-white fixed top-0 z-40 shadow-lg flex items-center justify-between py-4 pl-4 pr-4 md:pr-0">
+      <div className="w-full bg-red-600 text-white fixed top-0 z-40 shadow-lg flex items-center justify-between py-3 md:py-4 pl-4 pr-4 md:pr-0">
         <div className="flex-grow-0">
           <Logo className="w-20" />
         </div>

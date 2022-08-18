@@ -10,15 +10,15 @@ const DriverCard = () => {
   const { driverId } = useParams();
   const [loading, data, error] = useFetch(fetchDriverInfo, driverId);
   return (
-    <div className="dark:bg-gray-800 mt-[3rem] pt-12">
+    <div className="dark:bg-gray-800 mt-[3rem] pt-12 dark:text-gray-300">
       {loading ? (
         <div className="h-screen flex mt-[5rem] justify-center">
           <TailSpin color="#b90202" height={80} width={80} />
         </div>
       ) : error ? (
-        <p className="mt-[6rem] h-[70vh]">"Error..."</p>
+        <p className="mt-[1rem] h-screen">😔 Snap! An error occured"</p>
       ) : data.length === 0 ? (
-        <p className="mt-[6rem] h-screen">"No results..."</p>
+        <p className="mt-[1rem] h-screen">🤷 No results...</p>
       ) : (
         <div className="w-[90%] mx-auto">
           <div className="flex gap-x-2 tablet:gap-x-6 lg:gap-x-10 flex-col tablet:flex-row">

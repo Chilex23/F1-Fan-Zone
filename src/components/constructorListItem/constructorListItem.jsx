@@ -11,7 +11,7 @@ const ConstructorListItem = ({ constructor }) => {
   } = constructor;
   return (
     <Link
-      to={`/constructors_list/${constructorId} `}
+      to={`/constructors/${constructorId} `}
       className={
         "cursor-pointer border-t-2 border-r-2 border-stone-900 dark:border-gray-400 rounded-tr-xl dark:text-gray-300 pr-1 homePhone:pr-3 hover:border-red-600"
       }
