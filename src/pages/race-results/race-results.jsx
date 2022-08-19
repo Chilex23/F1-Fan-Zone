@@ -9,6 +9,7 @@ import { TailSpin } from "react-loader-spinner";
 const RaceResults = () => {
   const { circuitId } = useParams();
   const [loading, data, error] = useFetch(fetchResults, circuitId);
+  window.scrollTo(0, 0);
 
   return (
     <div className="dark:bg-gray-800 mt-[3rem] pt-5 dark:text-gray-300">

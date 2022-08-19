@@ -164,7 +164,7 @@ const SCHEDULE = [
         "circuitId": "zandvoort",
         "country": "Netherlands",
         "day": 4,
-        "month": "Aug",
+        "month": "Sep",
         "name": "Formula 1 Heineken Dutch Grand Prix 2022",
         "imgUrl": holland,
         "raceTime": "Sun 14:00"

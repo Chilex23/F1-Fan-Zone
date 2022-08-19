@@ -10,8 +10,8 @@ import { TailSpin } from "react-loader-spinner";
 const ConstructorCard = () => {
   const { constructorId } = useParams();
   const [loading, data, error] = useFetch(fetchConstructorInfo, constructorId);
-
-  // console.log(constructor);
+  window.scrollTo(0, 0);
+  
   return (
     <div className="dark:bg-gray-800 mt-[3rem] pt-5 dark:text-gray-300">
       <h1 className="text-3xl md:text-5xl dark:text-gray-300 uppercase font-extrabold top-2 relative text-center mb-8 mt-1">
@@ -22,9 +22,9 @@ const ConstructorCard = () => {
           <TailSpin color="#b90202" height={80} width={80} />
         </div>
       ) : error ? (
-        <p className="mt-[1rem] h-screen">😔 Snap! An error occured</p>
+        <p className="mt-[1rem] h-screen text-center">😔 Snap! An error occured</p>
       ) : data.length === 0 ? (
-        <p className="mt-[1rem] h-screen">🤷 No results...</p>
+        <p className="mt-[1rem] h-screen text-center">🤷 No results...</p>
       ) : (
         <div className="w-[90%] mx-auto">
           <div className="flex gap-x-6 flex-col md:flex-row">

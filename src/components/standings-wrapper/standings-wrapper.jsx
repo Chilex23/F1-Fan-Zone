@@ -31,8 +31,8 @@ const StandingsWrapper = () => {
     );
   } else if (error || error2) {
     return (
-      <div className="top-36 h-56 relative flex justify-center mb-16">
-        Something went wrong
+      <div className="top-36 h-56 dark:text-gray-300 relative flex justify-center mb-16">
+        😔 Snap! An error occured
       </div>
     );
   } else if (data.length > 0) {

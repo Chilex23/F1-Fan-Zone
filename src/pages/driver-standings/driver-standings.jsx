@@ -7,6 +7,7 @@ import { TailSpin } from "react-loader-spinner";
 
 const DriverStandings = () => {
   const [loading, data, error] = useFetch(fetchDriversStand);
+  window.scrollTo(0, 0);
 
   return (
     <div className="dark:bg-gray-800 min-h-screen">

@@ -9,6 +9,7 @@ import { TailSpin } from "react-loader-spinner";
 const DriverCard = () => {
   const { driverId } = useParams();
   const [loading, data, error] = useFetch(fetchDriverInfo, driverId);
+  window.scrollTo(0, 0);
   return (
     <div className="dark:bg-gray-800 mt-[3rem] pt-12 dark:text-gray-300">
       {loading ? (

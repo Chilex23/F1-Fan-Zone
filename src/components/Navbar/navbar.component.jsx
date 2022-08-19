@@ -12,6 +12,7 @@ import { IoCloseSharp } from "react-icons/io5";
 import { toggleTheme, setInitalTheme } from "../../utils/theme";
 import { BsSun } from "react-icons/bs";
 import { BsMoon } from "react-icons/bs";
+import { motion } from "framer-motion";
 
 const NavBar = () => {
   const {
@@ -60,9 +61,21 @@ const NavBar = () => {
             onClick={toggleThemeHandler}
           >
             {theme === "light" ? (
-              <BsSun className="text-2xl" />
+              <motion.div
+                initial={{opacity: 0}}
+                animate={{ opacity: [0, 0, 1] }}
+                transition={{ duration: .5 }}
+              >
+                <BsSun className="text-2xl" />
+              </motion.div>
             ) : (
-              <BsMoon className="text-2xl" />
+              <motion.div
+                initial={{opacity: 0}}
+                animate={{ opacity: [0, 1] }}
+                transition={{ duration: .5 }}
+              >
+                <BsMoon className="text-2xl" />
+              </motion.div>
             )}
           </div>
           {navBarWidth < 700 ? (
@@ -79,16 +92,28 @@ const NavBar = () => {
                 <Link to="/">Home</Link>
               </li>
 
-              <NavBarLink toggleFn={toggleStandHidden} label="Standings" animate={standHidden} />
-              <NavBarLink toggleFn={toggleDriverHidden} label="Drivers" animate={driverHidden} />
-              <NavBarLink toggleFn={toggleTeamHidden} label="Teams" animate={teamHidden} />
+              <NavBarLink
+                toggleFn={toggleStandHidden}
+                label="Standings"
+                animate={standHidden}
+              />
+              <NavBarLink
+                toggleFn={toggleDriverHidden}
+                label="Drivers"
+                animate={driverHidden}
+              />
+              <NavBarLink
+                toggleFn={toggleTeamHidden}
+                label="Teams"
+                animate={teamHidden}
+              />
             </ul>
           )}
         </div>
       </div>
-      {standHidden || navBarWidth < 700 ? null : <StandingsMenuDropDown />}
-      {driverHidden || navBarWidth < 700 ? null : <DriverMenuDropDwn />}
-      {teamHidden || navBarWidth < 700 ? null : <TeamsMenu />}
+      {navBarWidth < 700 ? null : <StandingsMenuDropDown />}
+      {navBarWidth < 700 ? null : <DriverMenuDropDwn />}
+      {navBarWidth < 700 ? null : <TeamsMenu />}
       {navBarWidth < 700 ? <SideBar /> : null}
     </>
   );

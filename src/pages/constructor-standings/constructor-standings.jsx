@@ -7,6 +7,7 @@ import { TailSpin } from "react-loader-spinner";
 
 const ConstructorStandings = () => {
   const [loading, data, error] = useFetch(fetchConstructorStand);
+  window.scrollTo(0, 0);
 
   return (
     <div className="dark:bg-gray-800 min-h-screen">

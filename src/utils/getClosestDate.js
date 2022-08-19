@@ -35,3 +35,7 @@ const getClosest = (arr) => {
 
 
 export let result = getClosest(SCHEDULE);
+
+export let lastRaceResultsIndex = SCHEDULE.findIndex(elem => elem.circuitId === result.circuitId );
+
+export let lastRaceResults = SCHEDULE[lastRaceResultsIndex - 1];

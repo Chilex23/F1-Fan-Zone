@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
@@ -24,10 +24,14 @@ const ScheduleItem = ({ details, isOpen }) => {
     });
   };
 
+  useEffect(() => {
+    if (open) scheduleItemRef.current.parentNode.scrollTo(scheduleItemRef.current.offsetLeft - 100, 0);
+  }, [open]);
+
   const toggleAnimate = () => {
-    // Set the elem open if open is true, only animate when open is false
+    // only animate when open is false
     if (!open) setAnimate(!animate);
-    setOpen(false);
+    if (open) setOpen(false);
     scrollIntoView();
   };
 
@@ -70,6 +74,7 @@ const ScheduleItem = ({ details, isOpen }) => {
         </motion.h1>
 
         <motion.div
+          initial={{opacity: 0}}
           animate={{
             display: animate || open ? "block" : "none",
             opacity: animate || open ? 1 : 0,

@@ -2,11 +2,17 @@ import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import DriverLink from "../driverLink/driverLink.component";
 import { NavBarContext } from "../../provider/navbar/navbar.provider";
+import { motion } from "framer-motion";
 
 const DriverMenuDropDwn = () => {
-  const { toggleDriverHidden, Drivers } = useContext(NavBarContext);
+  const { toggleDriverHidden, Drivers, driverHidden } =
+    useContext(NavBarContext);
   return (
-    <div className="overflow-y-auto w-screen h-screen bg-stone-800 fixed pb-20 border-b-2 border-red-600 top-16 z-20">
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ y: driverHidden ? -1000 : 0, opacity: 1 }}
+      className="overflow-y-auto w-screen h-screen bg-stone-800 fixed pb-20 border-b-2 border-red-600 top-14 z-20"
+    >
       <div className="flex text-white w-5/6 mx-auto justify-start gap-12 p-3 rounded-br-2xl border-b-2 border-r-2 border-gray-400">
         <div className="border-b-2 hover:border-red-600 border-transparent">
           <Link
@@ -31,7 +37,7 @@ const DriverMenuDropDwn = () => {
           />
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 };
 

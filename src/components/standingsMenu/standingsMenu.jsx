@@ -1,11 +1,16 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { NavBarContext } from "../../provider/navbar/navbar.provider";
+import { motion } from "framer-motion";
 
 const StandingsMenuDropDown = () => {
-  const { toggleStandHidden } = useContext(NavBarContext);
+  const { toggleStandHidden, standHidden } = useContext(NavBarContext);
   return (
-    <div className="w-screen h-fit bg-stone-800 fixed py-4 border-b-2 border-red-600 top-16 z-20">
+    <motion.div
+      initial={{opacity: 0}}
+      animate={{ y: standHidden ? -1000 : 0, opacity: 1 }}
+      className="w-screen h-fit bg-stone-800 fixed py-4 border-b-2 border-red-600 top-14 z-20"
+    >
       <div className="flex flex-col tablet:flex-row text-white w-[90%] md:w-5/6 mx-auto justify-between p-3 rounded-br-2xl border-b-2 border-r-2 border-gray-400">
         <div className="border-b-2 hover:border-red-600 border-transparent">
           <p className="font-semibold text-xl">
@@ -34,7 +39,7 @@ const StandingsMenuDropDown = () => {
           </div>
         </Link>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
