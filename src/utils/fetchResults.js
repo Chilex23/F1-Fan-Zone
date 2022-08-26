@@ -10,7 +10,7 @@ const fetchResults = async (circuitId) => {
     const { data } = await axios(options);
     return data.MRData.RaceTable.Races;
   } catch (error) {
-    console.log("Fetch driver's info failed with an error of ", error);
+    console.log("Fetch result info failed with an error of ", error);
     throw new Error(error);
   }
 };

@@ -1,6 +1,7 @@
 import React from "react";
 import { Link, useParams } from "react-router-dom";
 import fetchConstructorInfo from "../../utils/fetchConstructorInfo";
+import fetchCurrentResult from "../../utils/fetchCurrentResult";
 import FindTeam from "../../utils/findTeam";
 import FindTeamDrivers from "../../utils/findTeamDrivers";
 import Footer from "../../components/footer/footer";
@@ -10,18 +11,29 @@ import { TailSpin } from "react-loader-spinner";
 const ConstructorCard = () => {
   const { constructorId } = useParams();
   const [loading, data, error] = useFetch(fetchConstructorInfo, constructorId);
+  const [loading2, data2, error2] = useFetch(fetchCurrentResult);
+  // console.log(data2[0]?.Results.filter(elem => elem.Constructor.constructorId === constructorId));
+
   window.scrollTo(0, 0);
   
   return (
     <div className="dark:bg-gray-800 mt-[3rem] pt-5 dark:text-gray-300">
+      <div className="py-5">
+        <p className="text-center text-xl">{data2[0]?.raceName} Race Result</p>
+        <div className="flex justify-center mt-4">
+          {
+            data2[0]?.Results.filter(elem => elem.Constructor.constructorId === constructorId).map((elem) => <p className="mr-10 border-2 border-black dark:border-gray-300 p-2 rounded-md">{elem.Driver.givenName}  {elem.Driver.familyName}<span className="ml-10">Position: {elem.position}</span></p>)
+          }
+        </div>
+      </div>
       <h1 className="text-3xl md:text-5xl dark:text-gray-300 uppercase font-extrabold top-2 relative text-center mb-8 mt-1">
         {loading ? "" : data.name}
       </h1>
-      {loading ? (
+      {loading || loading2 ? (
         <div className="h-screen mt-[5rem] flex justify-center">
           <TailSpin color="#b90202" height={80} width={80} />
         </div>
-      ) : error ? (
+      ) : error || error2 ? (
         <p className="mt-[1rem] h-screen text-center">😔 Snap! An error occured</p>
       ) : data.length === 0 ? (
         <p className="mt-[1rem] h-screen text-center">🤷 No results...</p>
