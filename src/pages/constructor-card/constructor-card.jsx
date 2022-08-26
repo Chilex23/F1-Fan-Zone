@@ -18,11 +18,11 @@ const ConstructorCard = () => {
   
   return (
     <div className="dark:bg-gray-800 mt-[3rem] pt-5 dark:text-gray-300">
-      <div className="py-5">
+      <div className="py-5 px-2">
         <p className="text-center text-xl">{data2[0]?.raceName} Race Result</p>
         <div className="flex justify-center mt-4">
           {
-            data2[0]?.Results.filter(elem => elem.Constructor.constructorId === constructorId).map((elem) => <p className="mr-10 border-2 border-black dark:border-gray-300 p-2 rounded-md">{elem.Driver.givenName}  {elem.Driver.familyName}<span className="ml-10">Position: {elem.position}</span></p>)
+            data2[0]?.Results.filter(elem => elem.Constructor.constructorId === constructorId).map((elem) => <p className="mr-10 border-2 border-black dark:border-gray-300 p-2 rounded-md flex sm2:flex-col sm2:items-center">{elem.Driver.givenName}  {elem.Driver.familyName}<span className="ml-10 sm2:ml-0">Position: {elem.position}</span></p>)
           }
         </div>
       </div>
