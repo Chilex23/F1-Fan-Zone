@@ -65,7 +65,7 @@ const ConstructorCard = () => {
                   <Link
                     to={`/drivers/${elem.driverId}`}
                     key={elem.driverId}
-                    className="sm2:h-[20rem] lg:h-full flex flex-col border border-gray-500 rounded-lg"
+                    className="sm2:h-[20rem] w-[45%] overflow-clip lg:h-full flex flex-col border border-gray-500 rounded-lg"
                   >
                     <img className="w-full" src={elem.fullPic} alt="driver" />
                     <div className="flex flex-col p-4 dark:text-gray-300">
