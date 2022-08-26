@@ -54,7 +54,7 @@ const ScheduleItem = ({ details, isOpen }) => {
         </div>
 
         <motion.p
-          className="text-lg uppercase text-gray-400 text-center hover:text-white"
+          className="text-base uppercase text-gray-400 text-center hover:text-white"
           animate={yTransition}
           transition={timeTaken}
         >

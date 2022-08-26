@@ -2,6 +2,7 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import fetchResults from "../../utils/fetchResults";
 import Footer from "../../components/footer/footer";
+import findCircuit from "../../utils/findCircuit";
 import useFetch from "../../hooks/useFetch";
 import RaceResultsRowItem from "../../components/race-results-row-item/race-results-row-item";
 import { TailSpin } from "react-loader-spinner";
@@ -28,10 +29,17 @@ const RaceResults = () => {
           <h1 className="mt-2 py-4 font-black text-xl md:text-3xl text-center dark:text-gray-300">
             {data[0].raceName} Results
           </h1>
+          <div
+            className="py-36 px-2 mb-9 text-white rounded-md mx-auto sm2:w-[95%]"
+            style={{
+              backgroundImage: `linear-gradient(to right, rgba(0,0,0,0.1), rgba(0,0,0,0.1)),url(${findCircuit(circuitId)})`,
+              backgroundPosition: "center",
+            }}
+          ></div>
 
           <div className="overflow-x-auto w-full">
             <table className="w-full mb-20 dark:text-gray-300">
-              <thead className="dark:bg-gray-700">
+              <thead className="dark:bg-gray-700 bg-gray-200">
                 <tr className="text-center">
                   <th>Pos</th>
                   <th>Driver</th>
@@ -46,7 +54,7 @@ const RaceResults = () => {
                 ))}
               </tbody>
 
-              <tfoot className="w-full dark:bg-gray-700">
+              <tfoot className="w-full dark:bg-gray-700 bg-gray-200">
                 <tr className="text-center">
                   <th>Pos</th>
                   <th>Driver</th>

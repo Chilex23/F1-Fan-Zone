@@ -19,6 +19,29 @@ import saudiArabia from "../assets/img/Country/saudi.jpg";
 import singapore from "../assets/img/Country/singapore.jpg";
 import usa from "../assets/img/Country/usa.jpg";
 
+import hungaryPic from "../assets/img/Grandprix/hungaryPic.jpg";
+import abuDhabiPic from "../assets/img/Grandprix/abuDhabiPic.jpg";
+import australiaPic from "../assets/img/Grandprix/australia.jpg";
+import austriaPic from "../assets/img/Grandprix/austriaPic.jpg";
+import azerbaijaniPic from "../assets/img/Grandprix/azerbaijanPic.jpg";
+import bahrainPic from "../assets/img/Grandprix/bahrainPic.jpg";
+import belgiumPic from "../assets/img/Grandprix/belgiumPic.jpg";
+import brazilPic from "../assets/img/Grandprix/brazilPic.jpg";
+import britainPic from "../assets/img/Grandprix/britainPic.jpg";
+import canadaPic from "../assets/img/Grandprix/canadaPic.jpg";
+import dutchPic from "../assets/img/Grandprix/dutchPic.jpg";
+import emiliaPic from "../assets/img/Grandprix/emiliaPic.jpg";
+import francePic from "../assets/img/Grandprix/francePic.jpg";
+import italyPic from "../assets/img/Grandprix/italyPic.jpg";
+import japanPic from "../assets/img/Grandprix/japanPic.jpg";
+import mexicoPic from "../assets/img/Grandprix/mexicoPic.jpg";
+import miamiPic from "../assets/img/Grandprix/MiamiPic.jpg";
+import saudiPic from "../assets/img/Grandprix/saudiPic.jpg";
+import singaporePic from "../assets/img/Grandprix/singaporePic.jpg";
+import spainPic from "../assets/img/Grandprix/spainPic.jpg";
+import USPic from "../assets/img/Grandprix/usPic.jpg";
+import monacoPic from "../assets/img/Grandprix/monacoPic.jpg";
+
 const SCHEDULE = [
     {
         "circuitId": "bahrain",
@@ -27,7 +50,8 @@ const SCHEDULE = [
         "month": "Mar",
         "name": "Formula 1 Gulf Air Bahrain Grand Prix",
         "imgUrl": bahrain,
-        "raceTime": "Sun 16:00"
+        "raceTime": "Sun 16:00",
+        "bgImage": bahrainPic
     },
 
     {
@@ -37,7 +61,8 @@ const SCHEDULE = [
         "month": "Mar",
         "name": "Formula 1 STC Saudi Arabian Grand Prix 2022",
         "imgUrl": saudiArabia,
-        "raceTime": "Sun 18:00"
+        "raceTime": "Sun 18:00",
+        "bgImage": saudiPic
     },
 
     {
@@ -47,7 +72,8 @@ const SCHEDULE = [
         "month": "Apr",
         "name": "Formula 1 Heineken Australian Grand Prix",
         "imgUrl": australia,
-        "raceTime": "Sun 06:00"
+        "raceTime": "Sun 06:00",
+        "bgImage": australiaPic
     },
 
     {
@@ -57,7 +83,8 @@ const SCHEDULE = [
         "month": "Apr",
         "name": "Formula 1 E Dell'Emilia Romagna 2022",
         "imgUrl": italy,
-        "raceTime": "Sun 14:00"
+        "raceTime": "Sun 14:00",
+        "bgImage": emiliaPic
     },
 
     {
@@ -67,7 +94,8 @@ const SCHEDULE = [
         "month": "May",
         "name": "Formula 1 Crypto.Com Miami Grand Prix 2022",
         "imgUrl": usa,
-        "raceTime": "Sun 20:30"
+        "raceTime": "Sun 20:30",
+        "bgImage": miamiPic
     },
 
     {
@@ -77,7 +105,8 @@ const SCHEDULE = [
         "month": "May",
         "name": "Formula 1 Pirelli Gran Premio De Espana 2022",
         "imgUrl": spain,
-        "raceTime": "Sun 14:00"
+        "raceTime": "Sun 14:00",
+        "bgImage": spainPic
     },
 
     {
@@ -87,7 +116,8 @@ const SCHEDULE = [
         "month": "May",
         "name": "Formula 1 Grand Prix De Monaco 2022",
         "imgUrl": monaco,
-        "raceTime": "Sun 14:00"
+        "raceTime": "Sun 14:00",
+        "bgImage": monacoPic
     },
 
     {
@@ -97,7 +127,8 @@ const SCHEDULE = [
         "month": "Jun",
         "name": "Formula 1 Azerbaijan Grand Prix",
         "imgUrl": azerbaijan,
-        "raceTime": "Sun 12:00"
+        "raceTime": "Sun 12:00",
+        "bgImage": azerbaijaniPic
     },
 
     {
@@ -107,7 +138,8 @@ const SCHEDULE = [
         "month": "Jun",
         "name": "Formula 1 AWS Grand Prix Du Canada 2022",
         "imgUrl": canada,
-        "raceTime": "Sun 19:00"
+        "raceTime": "Sun 19:00",
+        "bgImage": canadaPic
     },
 
     {
@@ -117,7 +149,8 @@ const SCHEDULE = [
         "month": "Jul",
         "name": "Formula 1 Lenovo British Grand Prix 2022",
         "imgUrl": UK,
-        "raceTime": "Sun 15:00"
+        "raceTime": "Sun 15:00",
+        "bgImage": britainPic
     },
 
     {
@@ -127,7 +160,8 @@ const SCHEDULE = [
         "month": "Jul",
         "name": "Formula 1 Rolex Grossier Preis Von Osterreich 2022",
         "imgUrl": austria,
-        "raceTime": "Sun 14:00"
+        "raceTime": "Sun 14:00",
+        "bgImage": austriaPic
     },
 
     {
@@ -137,7 +171,8 @@ const SCHEDULE = [
         "month": "Jul",
         "name": "Formula 1 Paul Ricard Circuit Grand Prix",
         "imgUrl": france,
-        "raceTime": "Sun 14:00"
+        "raceTime": "Sun 14:00",
+        "bgImage": francePic
     },
 
     {
@@ -147,7 +182,8 @@ const SCHEDULE = [
         "month": "Jul",
         "name": "Formula 1 Aramco Magyar Nagydij 2022",
         "imgUrl": hungary,
-        "raceTime": "Sun 14:00"
+        "raceTime": "Sun 14:00",
+        "bgImage": hungaryPic
     },
 
     {
@@ -157,7 +193,8 @@ const SCHEDULE = [
         "month": "Aug",
         "name": "Formula 1 Rolex Belgian Grand Prix 2022",
         "imgUrl": belgium,
-        "raceTime": "Sun 14:00"
+        "raceTime": "Sun 14:00",
+        "bgImage": belgiumPic
     },
 
     {
@@ -167,7 +204,8 @@ const SCHEDULE = [
         "month": "Sep",
         "name": "Formula 1 Heineken Dutch Grand Prix 2022",
         "imgUrl": holland,
-        "raceTime": "Sun 14:00"
+        "raceTime": "Sun 14:00",
+        "bgImage": dutchPic
     },
 
     {
@@ -177,7 +215,8 @@ const SCHEDULE = [
         "month": "Sep",
         "name": "Formula 1 Pirelli Gran Premio D'Italia 2022",
         "imgUrl": italy,
-        "raceTime": "Sun 13:00"
+        "raceTime": "Sun 13:00",
+        "bgImage": italyPic
     },
 
     {
@@ -187,7 +226,8 @@ const SCHEDULE = [
         "month": "Sep",
         "name": "Formula 1 Singapore Airlines Singapore Grand Prix 2022",
         "imgUrl": singapore,
-        "raceTime": "Sun 14:00"
+        "raceTime": "Sun 14:00",
+        "bgImage": singaporePic
     },
   
     {
@@ -197,7 +237,8 @@ const SCHEDULE = [
         "month": "Oct",
         "name": "Formula 1 Honda Japanese Grand Prix 2022",
         "imgUrl": japan,
-        "raceTime": "Sun 06:00"
+        "raceTime": "Sun 06:00",
+        "bgImage": japanPic
     },
 
 
@@ -208,7 +249,8 @@ const SCHEDULE = [
         "month": "Oct",
         "name": "Formula 1 Aramco United States Grand Prix 2022",
         "imgUrl": usa,
-        "raceTime": "Sun 20:00"
+        "raceTime": "Sun 20:00",
+        "bgImage": USPic
     },
 
     {
@@ -218,7 +260,8 @@ const SCHEDULE = [
         "month": "Oct",
         "name": "Formula 1 Gran Premio De La Ciudad De Mexico 2022",
         "imgUrl": mexico,
-        "raceTime": "Sun 21:00"
+        "raceTime": "Sun 21:00",
+        "bgImage": mexicoPic
     },
 
     {
@@ -228,7 +271,8 @@ const SCHEDULE = [
         "month": "Nov",
         "name": "Formula 1 Heineken Grande Premio De Sao Paulo 2022",
         "imgUrl": brazil,
-        "raceTime": "Sun 19:00"
+        "raceTime": "Sun 19:00",
+        "bgImage": brazilPic
     },
 
     {
@@ -238,7 +282,8 @@ const SCHEDULE = [
         "month": "Nov",
         "name": "Formula 1 Etihad Airways Abu Dhabi Grand Prix 2022",
         "imgUrl": abuDhabi,
-        "raceTime": "Sun 14:00"
+        "raceTime": "Sun 14:00",
+        "bgImage": abuDhabiPic
     }
     
 ];

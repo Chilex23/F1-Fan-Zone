@@ -5,7 +5,7 @@ const NewsHero = ({ news }) => {
   return (
     <div className="rounded-tr-3xl border-t-8 border-r-8 border-red-500 py-3 pr-3 dark:text-gray-300">
       <p className="uppercase text-red-500 font-bold">Report</p>
-      <h3 className="text-xl sm:text-2xl md:text-4xl font-extrabold mb-2">
+      <h3 className="text-xl sm:text-2xl lg:text-4xl font-extrabold mb-2">
         {title}
       </h3>
       <img src={image.url} alt="news" />
