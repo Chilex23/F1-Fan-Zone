@@ -10,6 +10,7 @@ const TeamsMenu = () => {
     <motion.div
       initial={{opacity: 0}}
       animate={{ y: teamHidden ? -1000 : 0, opacity: 1 }}
+      transition={{ease: "easeOut", duration: 0.4 }}
       className="w-screen h-screen overflow-y-scroll bg-stone-800 fixed py-10 border-b-2 border-red-600 top-7 z-[18]"
     >
       <div className="flex text-white w-5/6 mx-auto justify-start gap-12 p-3 rounded-br-2xl border-b-2 border-r-2 border-gray-400">

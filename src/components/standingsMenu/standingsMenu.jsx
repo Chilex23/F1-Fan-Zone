@@ -8,7 +8,8 @@ const StandingsMenuDropDown = () => {
   return (
     <motion.div
       initial={{opacity: 0}}
-      animate={{ y: standHidden ? -1000 : 0, opacity: 1 }}
+      animate={{ y: standHidden ? -1200 : 0, opacity: 1 }}
+      transition={{ease: "easeOut", duration: 0.4 }}
       className="w-screen h-fit bg-stone-800 fixed py-4 border-b-2 border-red-600 top-14 z-20"
     >
       <div className="flex flex-col tablet:flex-row text-white w-[90%] md:w-5/6 mx-auto justify-between p-3 rounded-br-2xl border-b-2 border-r-2 border-gray-400">
