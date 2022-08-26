@@ -15,15 +15,21 @@ const ConstructorCard = () => {
   // console.log(data2[0]?.Results.filter(elem => elem.Constructor.constructorId === constructorId));
 
   window.scrollTo(0, 0);
-  
+
   return (
     <div className="dark:bg-gray-800 mt-[3rem] pt-5 dark:text-gray-300">
       <div className="py-5 px-2">
         <p className="text-center text-xl">{data2[0]?.raceName} Race Result</p>
         <div className="flex justify-center mt-4">
-          {
-            data2[0]?.Results.filter(elem => elem.Constructor.constructorId === constructorId).map((elem) => <p className="mr-10 border-2 border-black dark:border-gray-300 p-2 rounded-md flex sm2:flex-col sm2:items-center">{elem.Driver.givenName}  {elem.Driver.familyName}<span className="ml-10 sm2:ml-0">Position: {elem.position}</span></p>)
-          }
+          {/* filter out only the constructor's driver from the race results */}
+          {data2[0]?.Results.filter(
+            (elem) => elem.Constructor.constructorId === constructorId
+          ).map((elem) => (
+            <p className="mr-10 border-2 border-black dark:border-gray-300 p-2 rounded-md flex sm2:flex-col sm2:items-center">
+              {elem.Driver.givenName} {elem.Driver.familyName}
+              <span className="ml-10 sm2:ml-0">Position: {elem.position}</span>
+            </p>
+          ))}
         </div>
       </div>
       <h1 className="text-3xl md:text-5xl dark:text-gray-300 uppercase font-extrabold top-2 relative text-center mb-8 mt-1">
@@ -34,7 +40,9 @@ const ConstructorCard = () => {
           <TailSpin color="#b90202" height={80} width={80} />
         </div>
       ) : error || error2 ? (
-        <p className="mt-[1rem] h-screen text-center">😔 Snap! An error occured</p>
+        <p className="mt-[1rem] h-screen text-center">
+          😔 Snap! An error occured
+        </p>
       ) : data.length === 0 ? (
         <p className="mt-[1rem] h-screen text-center">🤷 No results...</p>
       ) : (

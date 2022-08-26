@@ -22,12 +22,14 @@ const DriverCard = () => {
         <p className="mt-[1rem] h-screen dark:text-gray-300">🤷 No results...</p>
       ) : (
         <div className="w-[90%] mx-auto">
-          <div className="flex gap-x-2 tablet:gap-x-6 lg:gap-x-10 flex-col tablet:flex-row">
-            <img
-              src={findDriver(data.givenName).fullPic}
-              alt="driver"
-              className="object-fill h-[23rem] tablet:h-[30rem] basis-[40%] rounded-lg"
-            />
+          <div className="flex gap-x-2 tablet:gap-x-6 lg:gap-x-10 flex-col md:flex-row">
+            <div className="overflow-clip object-cover aspect-square">
+              <img
+                src={findDriver(data.givenName).fullPic}
+                alt="driver"
+                className="object-fill h-[auto] w-full tablet:h-[30rem] basis-[40%] rounded-lg"
+              />
+            </div>
 
             <div className="flex flex-col grow">
               <img
@@ -71,7 +73,7 @@ const DriverCard = () => {
 
             <h3 className="py-4 font-bold text-3xl">Biography</h3>
             <div className="leading-7 max-w-3xl">
-              {findDriver(data.givenName).biography.split("<p>").map(elem => <p className="mb-6">{elem}</p>)}
+              {findDriver(data.givenName).biography.split("<p>").map((elem, i) => <p className="mb-6" key={i}>{elem}</p>)}
             </div>
           </div>
         </div>
