@@ -9,7 +9,7 @@ const TeamsMenu = () => {
   return (
     <motion.div
       initial={{opacity: 0}}
-      animate={{ y: teamHidden ? -1000 : 0, opacity: 1 }}
+      animate={{ y: teamHidden ? -1500 : 0, opacity: 1 }}
       transition={{ease: "easeOut", duration: 0.4 }}
       className="w-screen h-screen overflow-y-scroll bg-stone-800 fixed py-10 border-b-2 border-red-600 top-7 z-[18]"
     >
