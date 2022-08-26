@@ -79,6 +79,29 @@ import vettelFull from "../assets/img/DriverFull/vettelFull.jpg";
 import yukiFull from "../assets/img/DriverFull/yukiFull.jpg";
 import zhouFull from "../assets/img/DriverFull/zhouFull.jpg";
 
+// Webp Images
+import leclercWebpFull from "../assets/img/DriverFull/WebP/leclercFull.webp";
+import maxWebpFull from "../assets/img/DriverFull/WebP/versFull.webp";
+import perezWebpFull from "../assets/img/DriverFull/WebP/perezFull.webp";
+import alexWebpFull from "../assets/img/DriverFull/WebP/alexFull.webp";
+import alonsoWebpFull from "../assets/img/DriverFull/WebP/alonsoFull.webp";
+import bottasWebpFull from "../assets/img/DriverFull/WebP/bottasFull.webp";
+import danielWebpFull from "../assets/img/DriverFull/WebP/danielFull.webp";
+import gaslyWebpFull from "../assets/img/DriverFull/WebP/gaslyFull.webp";
+import kevinWebpFull from "../assets/img/DriverFull/WebP/kevinFull.webp";
+import lanceWebpFull from "../assets/img/DriverFull/WebP/strollFull.webp";
+import landoWebpFull from "../assets/img/DriverFull/WebP/landoFull.webp";
+import lewisWebpFull from "../assets/img/DriverFull/WebP/lewisFull.webp";
+import mickWebpFull from "../assets/img/DriverFull/WebP/mickFull.webp";
+import nicholasWebpFull from "../assets/img/DriverFull/WebP/nicholasFull.webp";
+// import nicoFull from "../assets/img/DriverFull/nicoFull.webp";
+import oconWebPFull from "../assets/img/DriverFull/WebP/oconFull.webp";
+import rusellWebpFull from "../assets/img/DriverFull/WebP/rusellFull.webp";
+import sainzWebpFull from "../assets/img/DriverFull/WebP/sainzFull.webp";
+import vettelWebpFull from "../assets/img/DriverFull/WebP/vettelFull.webp";
+import yukiWebpFull from "../assets/img/DriverFull/WebP/yukiFull.webp";
+import zhouWebpFull from "../assets/img/DriverFull/WebP/zhouFull.webp";
+
 import alexHelmet from "../assets/img/Helmets/alexHelmet.png";
 import alonsoHelmet from "../assets/img/Helmets/alonsoHelmet.png";
 import bottasHelmet from "../assets/img/Helmets/bottasHelmet.png";
@@ -112,6 +135,7 @@ const Drivers = [
         "team": "Mercedes",
         "numberPic": lewisNum,
         "pic": lewisShort,
+        "webpPic": lewisWebpFull,
         "fullPic": lewisFull,
         "helmetPic": lewisHelmet,
         "biography": `
@@ -132,6 +156,7 @@ const Drivers = [
         "team": "Mercedes",
         "numberPic": rusellNum,
         "pic": rusellShort,
+        "webpPic": rusellWebpFull,
         "fullPic": rusellFull,
         "helmetPic": rusellHelmet,
         "biography": `
@@ -162,6 +187,7 @@ const Drivers = [
         "team": "Ferrari",
         "numberPic": charlesNum,
         "pic": leclercShort,
+        "webpPic": leclercWebpFull,
         "fullPic": leclercFull,
         "helmetPic": leclercHelmet,
         "biography": `
@@ -188,6 +214,7 @@ const Drivers = [
         "team": "Ferrari",
         "numberPic": sainzNum,
         "pic": sainzShort,
+        "webpPic": sainzWebpFull,
         "fullPic": sainzFull,
         "helmetPic": sainzHelmet,
         "biography": `
@@ -212,6 +239,7 @@ const Drivers = [
         "team": "McLaren",
         "numberPic": landoNum,
         "pic": landoShort,
+        "webpPic": landoWebpFull,
         "fullPic": landoFull,
         "helmetPic": landoHelmet,
         "biography": `
@@ -238,6 +266,7 @@ const Drivers = [
         "team": "McLaren",
         "numberPic": danielNum,
         "pic": danielShort,
+        "webpPic": danielWebpFull,
         "fullPic": danielFull,
         "helmetPic": danielHelmet,
         "biography": `
@@ -261,6 +290,7 @@ const Drivers = [
         "team": "Aston Martin",
         "numberPic": vettelNum,
         "pic": vettelShort,
+        "webpPic": vettelWebpFull,
         "fullPic": vettelFull,
         "helmetPic": vettelHelmet,
         "biography": `
@@ -285,6 +315,7 @@ const Drivers = [
         "team": "Aston Martin",
         "numberPic": lanceNum,
         "pic": lanceShort,
+        "webpPic": lanceWebpFull,
         "fullPic": lanceFull,
         "helmetPic": lanceHelmet,
         "biography": `
@@ -319,6 +350,7 @@ const Drivers = [
         "team": "Haas F1 Team",
         "numberPic": kevinNum,
         "pic": kevinShort,
+        "webpPic": kevinWebpFull,
         "fullPic": kevinFull,
         "helmetPic": kevinHelmet,
         "biography": `
@@ -344,6 +376,7 @@ const Drivers = [
         "team": "Haas F1 Team",
         "numberPic": mickNum,
         "pic": mickShort,
+        "webpPic": mickWebpFull,
         "fullPic": mickFull,
         "helmetPic": mickHelmet,
         "biography": `
@@ -366,6 +399,7 @@ const Drivers = [
         "team": "Alpine F1 Team",
         "numberPic": oconNum,
         "pic": oconShort,
+        "webpPic": oconWebPFull,
         "fullPic": oconFull,
         "helmetPic": oconHelmet,
         "biography": `
@@ -392,6 +426,7 @@ const Drivers = [
         "team": "Alpine F1 Team",
         "numberPic": alonsoNum,
         "pic": alonsoShort,
+        "webpPic": alonsoWebpFull,
         "fullPic": alonsoFull,
         "helmetPic": alonsoHelmet,
         "biography": `
@@ -413,6 +448,7 @@ const Drivers = [
         "team": "AlphaTauri",
         "numberPic": gaslyNum,
         "pic": gaslyShort,
+        "webpPic": gaslyWebpFull,
         "fullPic": gaslyFull,
         "helmetPic": gaslyHelmet,
         "biography": `
@@ -439,6 +475,7 @@ const Drivers = [
         "team": "AlphaTauri",
         "numberPic": yukiNum,
         "pic": yukiShort,
+        "webpPic": yukiWebpFull,
         "fullPic": yukiFull,
         "helmetPic": yukiHelmet,
         "biography": `
@@ -461,6 +498,7 @@ const Drivers = [
         "team": "Williams",
         "numberPic": alexNum,
         "pic": alexShort,
+        "webpPic": alexWebpFull,
         "fullPic": alexFull,
         "helmetPic": alexHelmet,
         "biography": `
@@ -486,6 +524,7 @@ const Drivers = [
         "team": "Williams",
         "numberPic": nicholasNum,
         "pic": nicholasShort,
+        "webpPic": nicholasWebpFull,
         "fullPic": nicholasFull,
         "helmetPic": nicholasHelmet,
         "biography": `
@@ -508,6 +547,7 @@ const Drivers = [
         "team": "Alfa Romeo",
         "numberPic": bottasNum,
         "pic": bottasShort,
+        "webpPic": bottasWebpFull,
         "fullPic": bottasFull,
         "helmetPic": bottasHelmet,
         "biography": `
@@ -536,6 +576,7 @@ const Drivers = [
         "team": "Alfa Romeo",
         "numberPic": zhouNum,
         "pic": zhouShort,
+        "webpPic": zhouWebpFull,
         "fullPic": zhouFull,
         "helmetPic": zhouHelmet,
         "biography": `
@@ -560,6 +601,7 @@ const Drivers = [
         "team": "Red Bull",
         "numberPic": maxNum,
         "pic": maxShort,
+        "webpPic": maxWebpFull,
         "fullPic": maxFull,
         "helmetPic": maxHelmet,
         "biography": `
@@ -583,6 +625,7 @@ const Drivers = [
         "team": "Red Bull",
         "numberPic": perezNum,
         "pic": perezShort,
+        "webpPic": perezWebpFull,
         "fullPic": perezFull,
         "helmetPic": perezHelmet,
         "biography": `

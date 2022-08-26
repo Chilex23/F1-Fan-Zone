@@ -32,7 +32,9 @@ const RaceResults = () => {
           <div
             className="py-36 px-2 mb-9 text-white rounded-md mx-auto sm2:w-[95%]"
             style={{
-              backgroundImage: `linear-gradient(to right, rgba(0,0,0,0.1), rgba(0,0,0,0.1)),url(${findCircuit(circuitId)})`,
+              backgroundImage: `linear-gradient(to right, rgba(0,0,0,0.1), rgba(0,0,0,0.1)),url(${findCircuit(
+                circuitId
+              )})`,
               backgroundPosition: "center",
             }}
           ></div>

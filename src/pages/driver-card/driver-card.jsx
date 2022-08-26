@@ -4,6 +4,7 @@ import fetchDriverInfo from "../../utils/fetchDriverInfo";
 import findDriver from "../../utils/find-driver";
 import Footer from "../../components/footer/footer";
 import useFetch from "../../hooks/useFetch";
+import ImgWithFallback from "../../components/imgWithFallBack/imgWithFallback";
 import { TailSpin } from "react-loader-spinner";
 
 const DriverCard = () => {
@@ -24,11 +25,12 @@ const DriverCard = () => {
         <div className="w-[90%] mx-auto">
           <div className="flex gap-x-2 tablet:gap-x-6 lg:gap-x-10 flex-col md:flex-row">
             <div className="overflow-clip">
-              <img
+              <ImgWithFallback fallback={findDriver(data.givenName).fullPic} src={findDriver(data.givenName).webpPic} alt="driver" />
+              {/* <img
                 src={findDriver(data.givenName).fullPic}
                 alt="driver"
                 className="h-[auto] w-full tablet:h-[30rem] basis-[40%] rounded-lg object-cover aspect-square"
-              />
+              /> */}
             </div>
 
             <div className="flex flex-col grow">
