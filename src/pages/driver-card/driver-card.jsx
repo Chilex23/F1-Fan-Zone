@@ -17,24 +17,24 @@ const DriverCard = () => {
           <TailSpin color="#b90202" height={80} width={80} />
         </div>
       ) : error ? (
-        <p className="mt-[1rem] h-screen">😔 Snap! An error occured"</p>
+        <p className="mt-[1rem] h-screen text-center">😔 Snap! An error occured"</p>
       ) : data.length === 0 ? (
         <p className="mt-[1rem] h-screen dark:text-gray-300">🤷 No results...</p>
       ) : (
         <div className="w-[90%] mx-auto">
           <div className="flex gap-x-2 tablet:gap-x-6 lg:gap-x-10 flex-col md:flex-row">
-            <div className="overflow-clip object-cover aspect-square">
+            <div className="overflow-clip">
               <img
                 src={findDriver(data.givenName).fullPic}
                 alt="driver"
-                className="object-fill h-[auto] w-full tablet:h-[30rem] basis-[40%] rounded-lg"
+                className="h-[auto] w-full tablet:h-[30rem] basis-[40%] rounded-lg object-cover aspect-square"
               />
             </div>
 
             <div className="flex flex-col grow">
               <img
                 src={findDriver(data.givenName).helmetPic}
-                alt="Helmet"
+                alt="Driver's Helmet"
                 className="h-[10rem] w-[10rem] object-contain"
               />
               <div className="text-left grid gap-x-10 sm:gap-x-3 lg:gap-x-10 items-center grid-cols-1/2 dark:text-gray-300">

@@ -9,7 +9,7 @@
 }
 
 @layer components {
-  .myLink { @apply bg-bgGradient px-3 py-2 hover:bg-[position:100%] transition-all duration-[.7s] homePhone:bg-[length:250%] rounded-lg}
+  .myLink { @apply bg-bgGradient px-3 py-2 hover:bg-[position:100%] transition-all duration-[.7s] homePhone:bg-[length:250%] rounded-t-md}
 }
 
 * {
@@ -19,7 +19,7 @@
 }
 
 *::-webkit-scrollbar {
-  width: 10px;
+  width: 6px;
 }
 
 *::-webkit-scrollbar-track {
@@ -28,6 +28,6 @@
 
 *::-webkit-scrollbar-thumb {
   background-color: rgb(185, 181, 181);
-  border-radius: 20px;
+  border-radius: 10px;
   border: 3px solid rgb(185, 181, 181);
 }
