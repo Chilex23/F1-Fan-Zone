@@ -4,7 +4,7 @@ const NewsCard = ({ news }) => {
   const { title, image, provider, url } = news;
   return (
     <div className="card card-compact w-full mx-auto homePhone:w-[48%] bg-base-100 shadow-2xl dark:bg-gray-800">
-      <figure className="h-[10rem] overflow-clip">
+      <figure className="h-[10rem] overflow-clip bg-gray-200">
         <img src={image.url} alt="headline" className="w-full h-auto" />
       </figure>
       <div className="card-body border-r-2 border-b-2 hover:border-red-600 rounded-br-2xl">

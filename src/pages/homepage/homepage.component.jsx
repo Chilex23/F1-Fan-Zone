@@ -23,8 +23,7 @@ const HomePage = () => {
 
     fetchData();
   }, []);
-  // console.log(results);
-
+  
   return (
     <div className="dark:bg-gray-800">
       <h1 className="text-4xl homePhone:text-5xl uppercase font-extrabold top-20 relative text-center mb-8 mt-3 dark:text-gray-300">
