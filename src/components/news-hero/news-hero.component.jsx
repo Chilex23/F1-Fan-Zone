@@ -8,8 +8,8 @@ const NewsHero = ({ news }) => {
       <h3 className="text-xl sm:text-2xl lg:text-4xl font-extrabold mb-2">
         {title}
       </h3>
-      <figure className="h-[20rem] bg-gray-200 overflow-hidden">
-        <img src={image.url} alt="news" className="h-auto object-contain w-full" />
+      <figure className="sm2:h-[15rem] h-[20rem] md:h-[25rem] bg-gray-200 overflow-hidden">
+        <img src={image.url} alt="news" className="object-cover w-full" />
       </figure>
       
       <div className="flex justify-between items-center mt-2">
