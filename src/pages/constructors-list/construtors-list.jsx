@@ -11,7 +11,7 @@ const ConstructorsList = () => {
 
   return (
     <div className="dark:bg-gray-800 mt-[3rem] pt-[2rem] min-h-screen dark:text-gray-300">
-      <div className="border-t-8 border-r-8 border-stone-900 dark:border-gray-300 rounded-tr-3xl pt-4 mx-6 sm2:mx-4">
+      <div className="border-t-8 border-r-8 border-stone-900 dark:border-gray-300 rounded-tr-3xl pt-4 mx-6 sm2:mx-2">
         <h1 className="text-3xl md:text-5xl uppercase font-extrabold mb-8 text-stone-900 dark:text-gray-300">
           F1 Teams 2022
         </h1>
@@ -20,7 +20,7 @@ const ConstructorsList = () => {
         </p>
       </div>
 
-      <div className="grid md:grid-cols-2 mx-6 sm2:mx-4 mt-4 gap-x-6 gap-y-10">
+      <div className="grid md:grid-cols-2 mx-6 sm2:mx-2 mt-4 gap-x-6 gap-y-10">
         {loading ? (
           <div className="flex justify-center md:ml-auto">
             <TailSpin color="#b90202" height={80} width={80} />

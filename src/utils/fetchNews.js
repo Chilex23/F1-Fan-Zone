@@ -5,7 +5,7 @@ const fetchNews = async () => {
     method: "GET",
     url: "https://contextualwebsearch-websearch-v1.p.rapidapi.com/api/search/NewsSearchAPI",
     params: {
-      q: "f1",
+      q: "formula 1",
       pageNumber: "1",
       pageSize: "11",
       autoCorrect: "true",

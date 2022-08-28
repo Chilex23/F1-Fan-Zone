@@ -116,13 +116,34 @@ import maxHelmet from "../assets/img/Helmets/maxHelmet.png";
 import perezHelmet from "../assets/img/Helmets/perezHelmet.png";
 import mickHelmet from "../assets/img/Helmets/mickHelmet.png";
 import nicholasHelmet from "../assets/img/Helmets/nicholasHelmet.png";
-// import nicoHelmet from "../assets/img/Helmets/nicoHelmet.png";
 import oconHelmet from "../assets/img/Helmets/oconHemet.png";
 import rusellHelmet from "../assets/img/Helmets/rusellHelmet.png";
 import sainzHelmet from "../assets/img/Helmets/sainzHelmet.png";
 import vettelHelmet from "../assets/img/Helmets/vettelHelmet.png";
 import yukiHelmet from "../assets/img/Helmets/yukiHelmet.png";
 import zhouHelmet from "../assets/img/Helmets/zhouHelmet.png";
+
+// Webp Helmet Images
+import alexWebpHelmet from "../assets/img/Helmets/webp/alexHelmet.webp";
+import alonsoWebpHelmet from "../assets/img/Helmets/webp/alonsoHelmet.webp";
+import bottasWebpHelmet from "../assets/img/Helmets/webp/bottasHelmet.webp";
+import leclercWebpHelmet from "../assets/img/Helmets/webp/leclercHelmet.webp";
+import danielWebpHelmet from "../assets/img/Helmets/webp/danielHelmet.webp";
+import gaslyWebpHelmet from "../assets/img/Helmets/webp/gaslyHelmet.webp";
+import kevinWebpHelmet from "../assets/img/Helmets/webp/kevinHelmet.webp";
+import lanceWebpHelmet from "../assets/img/Helmets/webp/strollHelmet.webp";
+import landoWebpHelmet from "../assets/img/Helmets/webp/landoHelmet.webp";
+import lewisWebpHelmet from "../assets/img/Helmets/webp/lewisHelmet.webp";
+import maxWebpHelmet from "../assets/img/Helmets/webp/versHelmet.webp";
+import perezWebpHelmet from "../assets/img/Helmets/webp/perezHelmet.webp";
+import mickWebpHelmet from "../assets/img/Helmets/webp/mickHelmet.webp";
+import nicholasWebpHelmet from "../assets/img/Helmets/webp/nicholasHelmet.webp";
+import oconWebpHelmet from "../assets/img/Helmets/webp/oconHelmet.webp";
+import rusellWebpHelmet from "../assets/img/Helmets/webp/rusellHelmet.webp";
+import sainzWebpHelmet from "../assets/img/Helmets/webp/sainzHelmet.webp";
+import vettelWebpHelmet from "../assets/img/Helmets/webp/vettelHelmet.webp";
+import yukiWebpHelmet from "../assets/img/Helmets/webp/yukiHelmet.webp";
+import zhouWebpHelmet from "../assets/img/Helmets/webp/zhouHelmet.webp";
 
 
 const Drivers = [
@@ -138,6 +159,7 @@ const Drivers = [
         "webpPic": lewisWebpFull,
         "fullPic": lewisFull,
         "helmetPic": lewisHelmet,
+        "webpHelmetPic": lewisWebpHelmet,
         "biography": `
             <p>‘Still I Rise’ – these are the words emblazoned across the back of Lewis Hamilton’s helmet and tattooed across his shoulders, and ever since annihilating expectations with one of the greatest rookie performances in F1 history in 2007, that’s literally all he’s done: risen to the top of the all-time pole positions list ahead of his hero Ayrton Senna, surged into first place in the wins column surpassing the inimitable Michael Schumacher, and then matched the legendary German’s seven world titles.<p>
 
@@ -159,6 +181,7 @@ const Drivers = [
         "webpPic": rusellWebpFull,
         "fullPic": rusellFull,
         "helmetPic": rusellHelmet,
+        "webpHelmetPic": rusellWebpHelmet,
         "biography": `
             <p>He’s the driver with the motto: “If in doubt, go flat out”.<p>
 
@@ -190,6 +213,7 @@ const Drivers = [
         "webpPic": leclercWebpFull,
         "fullPic": leclercFull,
         "helmetPic": leclercHelmet,
+        "webpHelmetPic": leclercWebpHelmet,
         "biography": `
             <p>Born in the Mediterranean idyll of Monaco, Leclerc arrived in F1 on a tidal wave of expectation.<p> 
 
@@ -217,6 +241,7 @@ const Drivers = [
         "webpPic": sainzWebpFull,
         "fullPic": sainzFull,
         "helmetPic": sainzHelmet,
+        "webpHelmetPic": sainzWebpHelmet,
         "biography": `
             <p>He’s the matador from Madrid racing royalty.<p> 
 
@@ -242,6 +267,7 @@ const Drivers = [
         "webpPic": landoWebpFull,
         "fullPic": landoFull,
         "helmetPic": landoHelmet,
+        "webpHelmetPic": landoWebpHelmet,
         "biography": `
             <p>Lando Norris may not be named after Star Wars rebel Lando Calrissian - his Mum just liked the moniker - but he has flair and fighting spirit in bountiful supply.<p>
 
@@ -269,6 +295,7 @@ const Drivers = [
         "webpPic": danielWebpFull,
         "fullPic": danielFull,
         "helmetPic": danielHelmet,
+        "webpHelmetPic": danielWebpHelmet,
         "biography": `
             <p>The self-styled “Honey Badger” is fuzzy on the outside and feisty on the inside. Drivers beware because behind Ricciardo’s laidback persona and big grin is a razor-sharp racer with a bite.<p> 
 
@@ -293,6 +320,7 @@ const Drivers = [
         "webpPic": vettelWebpFull,
         "fullPic": vettelFull,
         "helmetPic": vettelHelmet,
+        "webpHelmetPic": vettelWebpHelmet,
         "biography": `
             <p>Born and raised a Bull, then a Prancing Horse, and now the face of Aston Martin’s Formula 1 revival, F1's poster boy of early achievement had won more than all but two drivers in history by the time he was just 26, including back-to-back world titles between 2010 and 2013.<p>
 
@@ -318,6 +346,7 @@ const Drivers = [
         "webpPic": lanceWebpFull,
         "fullPic": lanceFull,
         "helmetPic": lanceHelmet,
+        "webpHelmetPic": lanceWebpHelmet,
         "biography": `
             <p>There is no such thing as too much too soon for Stroll, a teenage sensation with a wet weather predilection. One of the cool kids on the grid, Stroll was unveiled shortly after his 18th birthday by Williams – before he finished high school and got his road licence.<p> 
 
@@ -353,6 +382,7 @@ const Drivers = [
         "webpPic": kevinWebpFull,
         "fullPic": kevinFull,
         "helmetPic": kevinHelmet,
+        "webpHelmetPic": kevinWebpHelmet,
         "biography": `
             <p>Call him a lone ranger or a maverick, but Magnussen is back in Formula 1 for one reason only – to race.<p>
 
@@ -379,6 +409,7 @@ const Drivers = [
         "webpPic": mickWebpFull,
         "fullPic": mickFull,
         "helmetPic": mickHelmet,
+        "webpHelmetPic": mickWebpHelmet,
         "biography": `
             <p>Plenty of sons of former F1 drivers have joined the sport over the years – two have even emulated their fathers to become world champions – but carrying the Schumacher name is surely an extra level of pressure for Mick, given his father Michael’s extraordinary achievements in Formula 1.<p>
 
@@ -402,6 +433,7 @@ const Drivers = [
         "webpPic": oconWebPFull,
         "fullPic": oconFull,
         "helmetPic": oconHelmet,
+        "webpHelmetPic": oconWebpHelmet,
         "biography": `
             <p>If there’s one word that dominates Esteban Ocon’s career, it’s ‘sacrifice’.<p>
 
@@ -429,6 +461,7 @@ const Drivers = [
         "webpPic": alonsoWebpFull,
         "fullPic": alonsoFull,
         "helmetPic": alonsoHelmet,
+        "webpHelmetPic": alonsoWebpHelmet,
         "biography": `
             <p>Michael Schumacher was the undisputed king of Formula 1 in the early 2000s, picking up wins and championships at a rate that was simply unheard of at the time. It was going to take someone very special to topple the Ferrari legend from his throne – and that it was Fernando Alonso who did it, tells you all you need to know about the Spaniard.<p>
 
@@ -451,6 +484,7 @@ const Drivers = [
         "webpPic": gaslyWebpFull,
         "fullPic": gaslyFull,
         "helmetPic": gaslyHelmet,
+        "webpHelmetPic": gaslyWebpHelmet,
         "biography": `
             <p>If there’s one man who knows how big a rollercoaster ride an F1 driver’s career can be, it’s Pierre Gasly!<p>
 
@@ -478,6 +512,7 @@ const Drivers = [
         "webpPic": yukiWebpFull,
         "fullPic": yukiFull,
         "helmetPic": yukiHelmet,
+        "webpHelmetPic": yukiWebpHelmet,
         "biography": `
             <p>In the entire history of Formula 1, no Japanese driver has ever won a World Championship Grand Prix. Could Yuki Tsunoda be the first? Red Bull certainly think so, with the youngster very much on the path to their senior team if he continues to impress as he has done over the past few years.<p>
 
@@ -501,6 +536,7 @@ const Drivers = [
         "webpPic": alexWebpFull,
         "fullPic": alexFull,
         "helmetPic": alexHelmet,
+        "webpHelmetPic": alexWebpHelmet,
         "biography": `
             <p>Born in London but racing under the flag of Thailand, Alexander Albon’s first word was in fact Italian. That word was Ferrari – though it was with another Italian team that he got his big F1 break.<p>
             
@@ -527,6 +563,7 @@ const Drivers = [
         "webpPic": nicholasWebpFull,
         "fullPic": nicholasFull,
         "helmetPic": nicholasHelmet,
+        "webpHelmetPic": nicholasWebpHelmet,
         "biography": `
             <p>Thirteen is an advanced age to begin your karting career these days. But that’s how old Toronto native Nicholas Latifi was when he took his first steps in motorsport. Just 11 years later, he became a fully-fledged Formula 1 driver.<p>
 
@@ -550,6 +587,7 @@ const Drivers = [
         "webpPic": bottasWebpFull,
         "fullPic": bottasFull,
         "helmetPic": bottasHelmet,
+        "webpHelmetPic": bottasWebpHelmet,
         "biography": `
             <p>Learning his craft on Finnish roads of ice and snow, he was born to be a Grand Prix racer.<p>
 
@@ -579,6 +617,7 @@ const Drivers = [
         "webpPic": zhouWebpFull,
         "fullPic": zhouFull,
         "helmetPic": zhouHelmet,
+        "webpHelmetPic": zhouWebpHelmet,
         "biography": `
             <p>China has never boasted a Grand Prix starter among its citizens – but Zhou Guanyu is the driver charged with changing that state of affairs, after receiving the call-up to make his F1 debut for Alfa Romeo in 2022.<p> 
 
@@ -604,6 +643,7 @@ const Drivers = [
         "webpPic": maxWebpFull,
         "fullPic": maxFull,
         "helmetPic": maxHelmet,
+        "webpHelmetPic": maxWebpHelmet,
         "biography": `
             <p>He's Max by name, and max by nature.
             Arriving as Formula 1's youngest ever competitor at just 17 years old, Verstappen pushed his car, his rivals and the sport's record books to the limit. The baby-faced Dutchman with the heart of a lion took the Toro Rosso – and then the Red Bull - by the horns with his instinctive racing style.
@@ -628,6 +668,7 @@ const Drivers = [
         "webpPic": perezWebpFull,
         "fullPic": perezFull,
         "helmetPic": perezHelmet,
+        "webpHelmetPic": perezWebpHelmet,
         "biography": `
             <p>He’s the fighter with a gentle touch from the land of the Lucha Libre.<p>
 

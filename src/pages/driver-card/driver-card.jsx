@@ -24,21 +24,14 @@ const DriverCard = () => {
       ) : (
         <div className="w-[90%] mx-auto">
           <div className="flex gap-x-2 tablet:gap-x-6 lg:gap-x-10 flex-col md:flex-row">
-            <div className="overflow-clip">
-              <ImgWithFallback fallback={findDriver(data.givenName).fullPic} src={findDriver(data.givenName).webpPic} alt="driver" />
-              {/* <img
-                src={findDriver(data.givenName).fullPic}
-                alt="driver"
-                className="h-[auto] w-full tablet:h-[30rem] basis-[40%] rounded-lg object-cover aspect-square"
-              /> */}
+            <div className="overflow-hidden h-[50%] bg-gray-100 rounded-md">
+              <ImgWithFallback fallback={findDriver(data.givenName).fullPic} src={findDriver(data.givenName).webpPic} alt="driver" classList={"h-[auto] w-full tablet:h-[30rem] basis-[40%] object-cover aspect-square"} />
             </div>
 
             <div className="flex flex-col grow">
-              <img
-                src={findDriver(data.givenName).helmetPic}
-                alt="Driver's Helmet"
-                className="h-[10rem] w-[10rem] object-contain"
-              />
+              <picture className="h-[10rem] w-[10rem]">
+                <ImgWithFallback fallback={findDriver(data.givenName).helmetPic} src={findDriver(data.givenName).webpHelmetPic} alt="Driver's Helmet" classList={"object-contain"} />
+              </picture>
               <div className="text-left grid gap-x-10 sm:gap-x-3 lg:gap-x-10 items-center grid-cols-1/2 dark:text-gray-300">
                 <span className="font-black text-xl lg:text-2xl">Team</span>
                 <span className="text-lg">
@@ -58,7 +51,7 @@ const DriverCard = () => {
             </div>
           </div>
 
-          <div className="mt-6 dark:text-gray-300">
+          <div className="mt-6 dark:text-gray-300 pb-10">
             <div className="flex items-center gap-x-4">
               <span className="font-bold text-3xl text-gray-500 dark:text-gray-300">
                 {data.permanentNumber}
@@ -73,7 +66,7 @@ const DriverCard = () => {
               {data.givenName} {data.familyName}
             </h1>
 
-            <h3 className="py-4 font-bold text-3xl">Biography</h3>
+            <h2 className="py-4 font-bold text-3xl">Biography</h2>
             <div className="leading-7 max-w-3xl">
               {findDriver(data.givenName).biography.split("<p>").map((elem, i) => <p className="mb-6" key={i}>{elem}</p>)}
             </div>

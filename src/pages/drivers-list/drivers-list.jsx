@@ -11,7 +11,7 @@ const DriversList = () => {
 
   return (
     <div className="dark:bg-gray-800 mt-[3rem] pt-[2rem] min-h-screen dark:text-gray-300">
-      <div className="border-t-8 border-r-8 border-stone-900 dark:border-gray-300 rounded-tr-3xl pt-4 mx-6 sm2:mx-4">
+      <div className="border-t-8 border-r-8 border-stone-900 dark:border-gray-300 rounded-tr-3xl pt-4 mx-6 sm2:mx-2">
         <h1 className="text-3xl md:text-5xl uppercase font-extrabold mb-8 text-stone-900 dark:text-gray-300">
           F1 Drivers 2022
         </h1>
@@ -25,7 +25,7 @@ const DriversList = () => {
           loading
             ? ""
             : "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 grid-rows-6"
-        } mx-6 sm2:mx-4 gap-x-4 gap-y-10 mt-4`}
+        } mx-6 sm2:mx-2 gap-x-4 gap-y-10 mt-4`}
       >
         {loading ? (
           <div className="flex justify-center">

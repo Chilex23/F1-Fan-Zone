@@ -4,7 +4,7 @@
 
 @layer base {
   html {
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Fira Sans', sans-serif;
   }
 }
 
@@ -14,7 +14,7 @@
 
 * {
   scrollbar-width: thin;
-  scrollbar-color: gray;
+  scrollbar-color: rgb(85, 84, 84);
   scroll-behavior: smooth;
 }
 

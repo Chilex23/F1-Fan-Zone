@@ -8,7 +8,7 @@ const NewsHero = ({ news }) => {
       <h3 className="text-xl sm:text-2xl lg:text-4xl font-extrabold mb-2">
         {title}
       </h3>
-      <figure className="h-auto bg-gray-200 overflow-clip">
+      <figure className="h-auto bg-gray-200 overflow-hidden">
         <img src={image.url} alt="news" />
       </figure>
       
