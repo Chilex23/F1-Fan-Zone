@@ -9,7 +9,7 @@ const NewsHero = ({ news }) => {
         {title}
       </h3>
       <figure className="h-[20rem] bg-gray-200 overflow-hidden">
-        <img src={image.url} alt="news" className="h-auto object-cover" />
+        <img src={image.url} alt="news" className="h-auto object-contain w-full" />
       </figure>
       
       <div className="flex justify-between items-center mt-2">
