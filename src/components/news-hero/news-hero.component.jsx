@@ -3,13 +3,13 @@ import React from "react";
 const NewsHero = ({ news }) => {
   const { title, image, provider, url } = news;
   return (
-    <div className="rounded-tr-3xl border-t-8 border-r-8 border-red-500 py-3 pr-3 dark:text-gray-300 w-full h-full">
+    <div className="rounded-tr-3xl border-t-8 border-r-8 border-red-500 py-3 pr-3 dark:text-gray-300 w-full h-fit">
       <p className="uppercase text-red-500 font-bold">Report</p>
       <h3 className="text-xl sm:text-2xl lg:text-4xl font-extrabold mb-2">
         {title}
       </h3>
-      <figure className="h-auto bg-gray-200 overflow-hidden">
-        <img src={image.url} alt="news" />
+      <figure className="h-[20rem] bg-gray-200 overflow-hidden">
+        <img src={image.url} alt="news" className="h-auto object-cover" />
       </figure>
       
       <div className="flex justify-between items-center mt-2">
