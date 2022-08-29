@@ -29,9 +29,9 @@ const DriverCard = () => {
             </div>
 
             <div className="flex flex-col grow">
-              <picture className="h-[10rem] w-[10rem]">
+              <div className="h-[10rem] w-[10rem]">
                 <ImgWithFallback fallback={findDriver(data.givenName).helmetPic} src={findDriver(data.givenName).webpHelmetPic} alt="Driver's Helmet" classList={"object-contain"} />
-              </picture>
+              </div>
               <div className="text-left grid gap-x-10 sm:gap-x-3 lg:gap-x-10 items-center grid-cols-1/2 dark:text-gray-300">
                 <span className="font-black text-xl lg:text-2xl">Team</span>
                 <span className="text-lg">
