@@ -46,7 +46,7 @@ const ConstructorListItem = ({ constructor }) => {
             >
               <span className="mr-2">{driver.givenName}</span>
               <span>{driver.familyName}</span>
-              <picture className="w-10 h-10 sm2:w-7 sm2:h-7">
+              <picture className="">
                 <img
                   src={driver.pic}
                   className="h-auto w-full lg:w-16 lg:h-16 hidden md:block"
